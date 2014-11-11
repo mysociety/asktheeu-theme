@@ -1,33 +1,22 @@
 asktheeu-theme
 ==============
 
-This is the AskTheEU theme for Alaveteli. The intention is to 
-support simple overlaying of templates and resources without the 
-need to touch the core Alaveteli software.
+This is the AskTheEU theme for Alaveteli. The intention is to support
+simple overlaying of templates and resources without the need to touch
+the core Alaveteli software.
 
-This theme contains:
 
- * CSS-based customisations in lib/views/general/custom_css.rhtml
+## To install:
 
- * Custom versions of non-functional pages (like "about
-   us", at lib/views/help/about.rhtml -- and/or localised versions at
-   lib/views/help/about.es.rhtml)
+In the Alaveteli `general.yml` configuration file change the default
+mysociety theme repository to your theme repository in the
+[`THEME_URLS`](http://alaveteli.org/docs/customising/config/#theme_urls)
+setting:
 
-Look in the lib/ folder of the plugin to see how the overrides happen.
+    THEME_URLS:
+      - 'git://github.com/mysociety/asktheeu-theme.git'
 
-To install:
------------
- 
-  ./script/plugin install git://github.com/dcabo/asktheeu-theme.git
+You can then switch the theme the application is using:
 
-A symbolic link will be created automatically in the `public/` folder
-of the main app, pointing to the `public/` folder of the theme, in 
-order to serve static assets.
+    bundle exec rake themes:install
 
-To uninstall:
--------------
-
-  ./script/plugin remove git://github.com/dcabo/asktheeu-theme.git
-
-The symbolic link created during the installation will be removed 
-automatically.
