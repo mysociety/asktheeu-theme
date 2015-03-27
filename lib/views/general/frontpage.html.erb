@@ -79,14 +79,15 @@
           <% if item && item['thumbnail']  %>
 
             <img <%= item['thumbnail'].to_s.html_safe %> style="border:1px solid #B2DCDE; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px;  border-bottom-right-radius: 5px;" width="250" height="150"/>
+            <br>
+            <a href='<%= item['link'] %>'><%= item['title'][0] %></a>
+            <br/>
+            <p><%= h excerpt(item['description'][0].to_s, "", :radius => 198) %></p>
           <% else %>
             <p>NO THUMBNAIL</p>
           <% end %>
 
-          <br>
-          <a href='<%= item['link'] %>'><%= item['title'][0] %></a>
-          <br/>
-          <p><%= h excerpt(item['description'][0].to_s, "", :radius => 198) %></p>
+
         </div>
         <!--<div class="part1">
           <% item = @blog_items[0]; %>
@@ -113,14 +114,15 @@
           <% if item && item['thumbnail']  %>
 
             <img <%= item['thumbnail'].to_s.html_safe %> style="border:1px solid #B2DCDE; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px;  border-bottom-right-radius: 5px;" width="250" height="150"/>
+            <br>
+            <a href='<%= item['link'] %>'><%= item['title'][0] %></a>
+            <br/>
+            <p><%= h excerpt(item['description'][0].to_s, "", :radius => 198) %></p>
           <% else %>
             <p>NO THUMBNAIL</p>
           <% end %>
 
-          <br>
-          <a href='<%= item['link'] %>'><%= item['title'][0] %></a>
-          <br/>
-          <p><%= h excerpt(item['description'][0].to_s, "", :radius => 198) %></p>
+
         </div>
 
             </div>
@@ -131,14 +133,15 @@
           <% if item && item['thumbnail']  %>
 
             <img <%= item['thumbnail'].to_s.html_safe %> style="border:1px solid #B2DCDE; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px;  border-bottom-right-radius: 5px;" width="250" height="150"/>
+            <br>
+            <a href='<%= item['link'] %>'><%= item['title'][0] %></a>
+            <br/>
+            <p><%= h excerpt(item['description'][0].to_s, "", :radius => 198) %></p>
           <% else %>
             <p>NO THUMBNAIL</p>
           <% end %>
 
-          <br>
-          <a href='<%= item['link'] %>'><%= item['title'][0] %></a>
-          <br/>
-          <p><%= h excerpt(item['description'][0].to_s, "", :radius => 198) %></p>
+
         </div>
         <br/><br/><br/>
         <!--<div class="part2">
@@ -156,14 +159,15 @@
           <% if item && item['thumbnail']  %>
 
             <img <%= item['thumbnail'].to_s.html_safe %> style="border:1px solid #B2DCDE; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px;  border-bottom-right-radius: 5px;" width="250" height="150"/>
+            <br>
+            <a href='<%= item['link'] %>'><%= item['title'][0] %></a>
+            <br/>
+            <p><%= h excerpt(item['description'][0].to_s, "", :radius => 198) %></p>
           <% else %>
             <p>NO THUMBNAIL</p>
           <% end %>
 
-          <br>
-          <a href='<%= item['link'] %>'><%= item['title'][0] %></a>
-          <br/>
-          <p><%= h excerpt(item['description'][0].to_s, "", :radius => 198) %></p>
+
         </div>
             </div>
 
