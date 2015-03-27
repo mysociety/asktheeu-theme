@@ -76,51 +76,35 @@
          <div class="part1">
           <% item = @blog_items[0]; %>
           <p>
-          <% if item['thumbnail']  %>
+          <% if item && item['thumbnail']  %>
 
             <img <%= item['thumbnail'].to_s.html_safe %> style="border:1px solid #B2DCDE; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px;  border-bottom-right-radius: 5px;" width="250" height="150"/>
+            <br>
+            <a href='<%= item['link'] %>'><%= item['title'][0] %></a>
+            <br/>
+            <p><%= h excerpt(item['description'][0].to_s, "", :radius => 198) %></p>
           <% else %>
             <p>NO THUMBNAIL</p>
           <% end %>
 
-          <br>
-          <a href='<%= item['link'] %>'><%= item['title'][0] %></a>
-          <br/>
-          <p><%= h excerpt(item['description'][0].to_s, "", :radius => 198) %></p>
-        </div>
-        <!--<div class="part1">
-          <% item = @blog_items[0]; %>
-          <p>
-                                        <%= image_tag('2.jpg', :style => "border:1px solid #B2DCDE; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px;  border-bottom-right-radius: 5px;", :width => "250", :height => "150") %>
-          <br>
-          <a href='<%= "#{blog_url}\##{Time.parse(item['pubDate'][0]).to_i}" %>'><%= item['title'][0] %></a>
-          <br/>
-          <p><%= h excerpt(item['description'][0].to_s, "", :radius => 198) %></p>
+
         </div>
         <br/><br/><br/>
-        <div class="part2">
-          <% item = @blog_items[2]; %>
-          <p>
-                                        <%= image_tag('4.jpg', :style => "border:1px solid #B2DCDE; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px;  border-bottom-right-radius: 5px;", :width => "250", :height => "150") %>
-          <br>
-          <a href='<%= "#{blog_url}\##{Time.parse(item['pubDate'][0]).to_i}" %>'><%= item['title'][0] %></a>
-          <br/>
-          <p><%= h excerpt(item['description'][0].to_s, "", :radius => 198) %></p>
-        </div>--><br/><br/><br/>
 <div class="part2">
           <% item = @blog_items[2]; %>
           <p>
-          <% if item['thumbnail']  %>
+          <% if item && item['thumbnail']  %>
 
             <img <%= item['thumbnail'].to_s.html_safe %> style="border:1px solid #B2DCDE; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px;  border-bottom-right-radius: 5px;" width="250" height="150"/>
+            <br>
+            <a href='<%= item['link'] %>'><%= item['title'][0] %></a>
+            <br/>
+            <p><%= h excerpt(item['description'][0].to_s, "", :radius => 198) %></p>
           <% else %>
             <p>NO THUMBNAIL</p>
           <% end %>
 
-          <br>
-          <a href='<%= item['link'] %>'><%= item['title'][0] %></a>
-          <br/>
-          <p><%= h excerpt(item['description'][0].to_s, "", :radius => 198) %></p>
+
         </div>
 
             </div>
@@ -128,42 +112,36 @@
         <div class="part1">
           <% item = @blog_items[1]; %>
           <p>
-          <% if item['thumbnail']  %>
+          <% if item && item['thumbnail']  %>
 
             <img <%= item['thumbnail'].to_s.html_safe %> style="border:1px solid #B2DCDE; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px;  border-bottom-right-radius: 5px;" width="250" height="150"/>
+            <br>
+            <a href='<%= item['link'] %>'><%= item['title'][0] %></a>
+            <br/>
+            <p><%= h excerpt(item['description'][0].to_s, "", :radius => 198) %></p>
           <% else %>
             <p>NO THUMBNAIL</p>
           <% end %>
 
-          <br>
-          <a href='<%= item['link'] %>'><%= item['title'][0] %></a>
-          <br/>
-          <p><%= h excerpt(item['description'][0].to_s, "", :radius => 198) %></p>
+
         </div>
         <br/><br/><br/>
-        <!--<div class="part2">
-          <% item = @blog_items[3]; %>
-          <p>
-                                        <%= image_tag('2.jpg', :style => "border:1px solid #B2DCDE; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px;  border-bottom-right-radius: 5px;", :width => "250", :height => "150") %>
-          <br>
-          <a href='<%= "#{blog_url}\##{Time.parse(item['pubDate'][0]).to_i}" %>'><%= item['title'][0] %></a>
-          <br/>
-          <p><%= h excerpt(item['description'][0].to_s, "", :radius => 198) %></p>
-        </div>-->
+
 <div class="part2">
           <% item = @blog_items[3]; %>
           <p>
-          <% if item['thumbnail']  %>
+          <% if item && item['thumbnail']  %>
 
             <img <%= item['thumbnail'].to_s.html_safe %> style="border:1px solid #B2DCDE; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px;  border-bottom-right-radius: 5px;" width="250" height="150"/>
+            <br>
+            <a href='<%= item['link'] %>'><%= item['title'][0] %></a>
+            <br/>
+            <p><%= h excerpt(item['description'][0].to_s, "", :radius => 198) %></p>
           <% else %>
             <p>NO THUMBNAIL</p>
           <% end %>
 
-          <br>
-          <a href='<%= item['link'] %>'><%= item['title'][0] %></a>
-          <br/>
-          <p><%= h excerpt(item['description'][0].to_s, "", :radius => 198) %></p>
+
         </div>
             </div>
 
@@ -179,19 +157,7 @@
 
 
 
-            <!--<div id="TopFollows">
 
-              <% info_request = InfoRequest.find_by_url_title!('dg_sanco_contacts_with_industry') %>
-              <h1><a href="#"><%= info_request.title %></a> </h1>
-              <div class="request-tracker-frontpage">
-                <% follower_count = TrackThing.count(:all, :conditions => ["info_request_id = ?", info_request.id]) + 1 %>
-                <div class="counter"><%= follower_count %></div>
-                <div class="counter-label">People following this request </div>
-
-
-
-              </div>
-            </div> -->
             <% info_request = InfoRequest.find(1421) %>
             <% follower_count = TrackThing.count(:all, :conditions => ["info_request_id = ?", info_request.id]) + 1 %>
                <%= render :partial => 'track/tracking_request_links',
