@@ -158,6 +158,13 @@ Rails.configuration.to_prepare do
               annotation below telling people about your writing.</p>",:law_used_full=>@info_request.law_used_full,
               :late_number_of_days => AlaveteliConfiguration::reply_late_after_days)
 
+          flash[:notice] = flash[:notice] += _(%Q(
+    <div id="ms_srv_wrapper" style="display:none;">
+        <p><a href="https://www.surveygizmo.co.uk/s3/1979939/2014-Baselining-AskTheEU" id="ms_srv_link" data-transaction="report">
+            We're running a short survey to help us understand how well AskTheEU works. If you'd like to take it, click here.
+        </a></p>
+    </div>))
+
           redirect_to show_new_request_path(:url_title => @info_request.url_title)
       end
     end
