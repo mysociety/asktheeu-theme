@@ -12,12 +12,12 @@
         <p>
         <% if item %>
           <% if item['thumbnail'] %>
-            <img <%= item['thumbnail'].to_s.html_safe %> width="250" height="150"/>
+            <img <%= item['thumbnail'][0].to_s.html_safe %> width="250" height="150"/>
           <% else %>
            <p>NO THUMBNAIL</p>
           <% end %>
           <br>
-          <a href='<%= item['link'] %>'><%= item['title'][0] %></a>
+          <a href='<%= item['link'][0] %>'><%= item['title'][0] %></a>
           <br/>
           <p><%= h excerpt(item['description'][0].to_s, "", :radius => 200) %></p>
         <% else %>
@@ -33,12 +33,12 @@
         <p>
         <% if item %>
           <% if item['thumbnail'] %>
-            <img <%= item['thumbnail'].to_s.html_safe %> width="250" height="150"/>
+            <img <%= item['thumbnail'][0].to_s.html_safe %> width="250" height="150"/>
           <% else %>
             <p>NO THUMBNAIL</p>
           <% end %>
           <br>
-          <a href='<%= item['link'] %>'><%= item['title'][0] %></a>
+          <a href='<%= item['link'][0] %>'><%= item['title'][0] %></a>
           <br/>
           <p><%= h excerpt(item['description'][0].to_s, "", :radius => 200) %></p>
         <% else %>
@@ -52,12 +52,12 @@
         <p>
         <% if item %>
           <% if item['thumbnail'] %>
-            <img <%= item['thumbnail'].to_s.html_safe %> width="250" height="150"/>
+            <img <%= item['thumbnail'][0].to_s.html_safe %> width="250" height="150"/>
           <% else %>
             <p>NO THUMBNAIL</p>
           <% end %>
           <br>
-          <a href='<%= item['link'] %>'><%= item['title'][0] %></a>
+          <a href='<%= item['link'][0] %>'><%= item['title'][0] %></a>
           <br/>
           <p><%= h excerpt(item['description'][0].to_s, "", :radius => 200) %></p>
 
@@ -77,12 +77,12 @@
         <p>
         <% if item %>
           <% if item['thumbnail'] %>
-            <img <%= item['thumbnail'].to_s.html_safe %> width="250" height="150"/>
+            <img <%= item['thumbnail'][0].to_s.html_safe %> width="250" height="150"/>
           <% else %>
              <p>NO THUMBNAIL</p>
           <% end %>
           <br>
-          <a href='<%= item['link'] %>'><%= item['title'][0] %></a>
+          <a href='<%= item['link'][0] %>'><%= item['title'][0] %></a>
           <br/>
           <p><%= h excerpt(item['description'][0].to_s, "", :radius => 200) %></p>
         <% else %>
@@ -99,12 +99,12 @@
         <p>
         <% if item %>
           <% if item['thumbnail'] %>
-            <img <%= item['thumbnail'].to_s.html_safe %> width="250" height="150"/>
+            <img <%= item['thumbnail'][0].to_s.html_safe %> width="250" height="150"/>
           <% else %>
            <p>NO THUMBNAIL</p>
           <% end %>
           <br>
-          <a href='<%= item['link'] %>'><%= item['title'][0] %></a>
+          <a href='<%= item['link'][0] %>'><%= item['title'][0] %></a>
           <br/>
           <p><%= h excerpt(item['description'][0].to_s, "", :radius => 200) %></p>
         <% else %>
@@ -118,12 +118,12 @@
         <p>
         <% if item %>
           <% if item['thumbnail'] %>
-            <img <%= item['thumbnail'].to_s.html_safe %> width="250" height="150"/>
+            <img <%= item['thumbnail'][0].to_s.html_safe %> width="250" height="150"/>
           <% else %>
             <p>NO THUMBNAIL</p>
           <% end %>
           <br>
-          <a href='<%= item['link'] %>'><%= item['title'][0] %></a>
+          <a href='<%= item['link'][0] %>'><%= item['title'][0] %></a>
           <br/>
           <p><%= h excerpt(item['description'][0].to_s, "", :radius => 200) %></p>
         <% else %>
