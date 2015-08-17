@@ -137,13 +137,6 @@
             <h1><%= _("TOP REQUESTS") %></h1>
             <div class="picture-frame">
 
-
-
-
-
-
-
-
             <% info_request = InfoRequest.find(1421) %>
             <% follower_count = TrackThing.count(:all, :conditions => ["info_request_id = ?", info_request.id]) + 1 %>
                <%= render :partial => 'track/tracking_request_links',
@@ -164,10 +157,6 @@
                     } %>
                 <div style="clear:both"></div>
 
-<!--  <%= _("Search over<br/>
-                <strong>{{number_of_requests}} requests</strong> <span>and</span><br/>
-                <strong>{{number_of_authorities}} authorities</strong>",
-                :number_of_requests => InfoRequest.visible.count, :number_of_authorities => PublicBody.visible.count) %>-->
             </div>
 
 
