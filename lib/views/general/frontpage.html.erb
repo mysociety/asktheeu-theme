@@ -137,26 +137,28 @@
             <h1><%= _("TOP REQUESTS") %></h1>
             <div class="picture-frame">
 
-            <% info_request = InfoRequest.find(1421) %>
-            <% follower_count = TrackThing.count(:all, :conditions => ["info_request_id = ?", info_request.id]) + 1 %>
-               <%= render :partial => 'track/tracking_request_links',
+            <% info_request = InfoRequest.find_by_id(1421) %>
+            <% if info_request %>
+              <% follower_count = TrackThing.count(:all, :conditions => ["info_request_id = ?", info_request.id]) + 1 %>
+              <%= render :partial => 'track/tracking_request_links',
+                  :locals => {
+                  :track_thing => TrackThing.create_track_for_request(info_request),
+                  :own_request => info_request.user == @user,
+                  :location => "frontpage"
+                  } %>
+              <div style="clear:both"></div>
+            <% end %>
+            <% info_request = InfoRequest.find_by_id(235) %>
+            <% if info_request %>
+              <% follower_count = TrackThing.count(:all, :conditions => ["info_request_id = ?", info_request.id]) + 1 %>
+              <%= render :partial => 'track/tracking_request_links',
                     :locals => {
                     :track_thing => TrackThing.create_track_for_request(info_request),
                     :own_request => info_request.user == @user,
                     :location => "frontpage"
                     } %>
-                <div style="clear:both"></div>
-
-            <% info_request = InfoRequest.find(235) %>
-            <% follower_count = TrackThing.count(:all, :conditions => ["info_request_id = ?", info_request.id]) + 1 %>
-            <%= render :partial => 'track/tracking_request_links',
-                    :locals => {
-                    :track_thing => TrackThing.create_track_for_request(info_request),
-                    :own_request => info_request.user == @user,
-                    :location => "frontpage"
-                    } %>
-                <div style="clear:both"></div>
-
+              <div style="clear:both"></div>
+            <% end %>
             </div>
 
 
