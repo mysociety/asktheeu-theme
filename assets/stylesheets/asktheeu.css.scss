@@ -783,14 +783,10 @@ a,
 form input[type="submit"], a.link_button_green, a.link_button_green_large {
   font-family: 'Open Sans', Helvetica, Arial;
   font-weight: 600;
-  margin-right: 63px;
-  margin-top: 5px;
-  margin-left: 64px;
   padding: 10px 30px 10px 30px;
   line-height: 18px;
   border: solid 1px #69952F;
   text-shadow: 1px 1px 0 #5B841D;
-  float: left;
   border-radius: 5px;
 }
 
@@ -1101,6 +1097,12 @@ TODO: Need to add states for
 
 
 /** MODAL SIGN-IN **/
+
+#sign_together {
+  text-align: left;
+}
+
+
 #signin-successful,
 #signin-successful a {
   font-family: Helvetica, Arial;
@@ -1112,11 +1114,6 @@ TODO: Need to add states for
 
 #sign_together h1 {
   margin-top: 10px;
-}
-
-#sign_together .errorExplanation {
-  width: 360px;
-  text-align: left;
 }
 
 /** USER PROFILE **/
