@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 # Add a callback - to be executed before each request in development,
 # and at startup in production - to plug in theme locale strings.
 Rails.configuration.to_prepare do
