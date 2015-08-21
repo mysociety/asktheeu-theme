@@ -32,13 +32,22 @@ Rails.configuration.to_prepare do
     end
 
     # Modify the search snippet to hide the intro paragraph.
-    # XXX: Need to have locale information in the model to improve this (issue #255)
-    def get_text_for_indexing
-      text = self.body.strip
-      text.sub!(/Dear .+,/, "")
-      text.sub!(/[^\n]+1049\/2001[^:\n]+:? ?/, "") # XXX: can't be more specific without locale
+    # TODO: Need to have locale information in the model to improve this (issue #255)
+    def get_text_for_indexing(strip_salutation = true, opts = {})
+      if opts.empty?
+        text = body.strip
+      else
+        text = body(opts).strip
+      end
+
+      # Remove salutation
+      text.sub!(/Dear .+,/, "") if strip_salutation
+      # TODO: can't be more specific without locale
+      text.sub!(/[^\n]+1049\/2001[^:\n]+:? ?/, "")
+      # Remove email addresses from display/index etc.
       self.remove_privacy_sensitive_things!(text)
-      return text
+
+      text
     end
 
   end
