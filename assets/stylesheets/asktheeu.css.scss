@@ -1002,7 +1002,9 @@ div[id|="incoming"] p {
 }
 
 #request_form label,
-label.form_label {
+label.form_label,
+.list-filter-item .form_label
+ {
   color: #00AAA6;
   font-family: Helvetica,Arial;
   font-size: 14px;
