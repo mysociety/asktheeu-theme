@@ -37,4 +37,3 @@ $alaveteli_route_extensions << 'custom-routes.rb'
 end
 
 Rails.application.config.assets.precompile.push 'asktheeu.css'
-Rails.application.config.assets.precompile.push 'survey-link.js'
