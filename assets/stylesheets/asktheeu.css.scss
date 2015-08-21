@@ -1002,7 +1002,6 @@ div[id|="incoming"] p {
 
 /** REQUEST FILTER **/
 #filter_requests_form {
-  width: 660px;       /* Need some extra space for types of requests */
   margin-top: 15px;
 }
 
@@ -1625,4 +1624,8 @@ body.general {
   padding-left:10px;
   padding-right:10px;
   font-size: 15px;
+}
+
+.filter-request-types {
+  width: inherit;
 }
