@@ -1,5 +1,5 @@
 body {
-    background: steelblue;
+  background: steelblue;
 }
 no { border: 1px solid red; }
 
@@ -11,71 +11,71 @@ html, body, div, form, fieldset, legend, label
 
 
 .alaveteli-widget {
-    width: 320px;
-    height: 215px;
-    background: url("widget-base.png") no-repeat;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 600;
-    font-size: 14px;
-    position: relative;
+  width: 320px;
+  height: 215px;
+  background: url("widget-base.png") no-repeat;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  position: relative;
 }
 .alaveteli-widget__title {
-    position: absolute;
-    top: 24px;
-    left: 22px;
-    width: 160px;
-    overflow: hidden;
-    color: #5a5a5a;
+  position: absolute;
+  top: 24px;
+  left: 22px;
+  width: 160px;
+  overflow: hidden;
+  color: #5a5a5a;
 }
 .alaveteli-widget__title a {
-    text-decoration: none;
-    color: #5a5a5a;
+  text-decoration: none;
+  color: #5a5a5a;
 }
 .alaveteli-widget__status {
-    position: absolute;
-    top: 113px;
-    left: 27px;
-    font-size: 12px;
-    font-weight: bold;
-    text-transform: uppercase;
+  position: absolute;
+  top: 113px;
+  left: 27px;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 .alaveteli-widget__left {
-    position: absolute;
-    width: 145px;
+  position: absolute;
+  width: 145px;
 }
 
 .alaveteli-widget__status.waiting_response,
 .alaveteli-widget__status.waiting_response_overdue,
 .alaveteli-widget__status.waiting_response_very_overdue {
-    color: #750096;
+  color: #750096;
 }
 .alaveteli-widget__status.not_held {
-    color: #830016;
+  color: #830016;
 }
 .alaveteli-widget__status.rejected {
-    color: #e62590;
+  color: #e62590;
 }
 .alaveteli-widget__status.successful {
-    color: #76b12c;
+  color: #76b12c;
 }
 .alaveteli-widget__status.partially_successful {
-    color: #559798;
+  color: #559798;
 }
 .alaveteli-widget__status.waiting_clarification {
-    color: #978f0b;
+  color: #978f0b;
 }
 .alaveteli-widget__status.gone_postal {
-    color: #959191;
+  color: #959191;
 }
 .alaveteli-widget__status.internal_review {
-    color: #7da49b;
+  color: #7da49b;
 }
 .alaveteli-widget__status.error_message {
-    color: #e57f12;
+  color: #e57f12;
 }
 .alaveteli-widget__status.user_withdrawn {
-    color: #5b8048;
+  color: #5b8048;
 }
 
 .alaveteli-widget__people-count {
@@ -88,14 +88,14 @@ html, body, div, form, fieldset, legend, label
   color: white;
 }
 .alaveteli-widget__count {
-    font-size: 55px;
-    line-height: 55px;
-    text-align: center;
-    font-weight: bold;
+  font-size: 55px;
+  line-height: 55px;
+  text-align: center;
+  font-weight: bold;
 }
 
 .alaveteli-widget__bottom a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 
