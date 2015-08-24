@@ -6,17 +6,22 @@
 # See http://stackoverflow.com/questions/7072758/plugin-not-reloading-in-development-mode
 #
 Rails.configuration.to_prepare do
+
   # Remove UK-specific references to FOI
   InfoRequest.class_eval do
+
     def law_used_full
       "access to information"
     end
+
     def law_used_short
       "information"
     end
+
   end
 
   OutgoingMessage.class_eval do
+
     # Add intro paragraph to new request template
     def default_letter
       return nil if self.message_type == 'followup'
@@ -35,13 +40,17 @@ Rails.configuration.to_prepare do
       self.remove_privacy_sensitive_things!(text)
       return text
     end
+
   end
 
   # Disable funcionality to let users of the site act on behalf of the public
   # body, since we aren't sure right now this is safe enough
   PublicBody.class_eval do
+
     def is_foi_officer?(user)
       false
     end
+
   end
+
 end
