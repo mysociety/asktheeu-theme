@@ -54,8 +54,6 @@
 		<body class="general">
 	<% end %>
 
-
-  <!--<body class="<%= 'front' if params[:action] == 'frontpage' %>">-->
   <% if AlaveteliConfiguration::force_registration_on_new_request && !@user %>
   <%= javascript_include_tag 'fancybox.js' %>
   <script type="text/javascript">
