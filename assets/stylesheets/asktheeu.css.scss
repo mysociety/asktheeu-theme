@@ -1,7 +1,4 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800);
-@import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700);
-@import url(http://fonts.googleapis.com/css?family=Open+Sans+Semibold:300,300italic,700);
-@import url(font-awesome/css/font-awesome.min.css);
 
 /** LAYOUT **/
 body {
@@ -806,11 +803,6 @@ a.link_button_green :hover{
   top: -32px;
   margin-left:268px;
   position: relative;
-}
-
-.icon-search{
-  content: "\f002";
-  font-family: FontAwesome;
 }
 
 #navigation_search_query{
