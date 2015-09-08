@@ -1615,3 +1615,9 @@ body.general {
 .filter-request-types {
   width: inherit;
 }
+
+/** SEARCH **/
+
+#search_form input[type="submit"] {
+  border-radius: 5px;
+}
