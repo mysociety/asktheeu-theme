@@ -25,9 +25,9 @@
 			  <%= image_tag("twitter-16.png", :alt => "twitter icon") %>
 			<% end %>
 			<%= link_to _("Tweet this request"), tweet_link %>
-	   	</div> 
-	<div class="icon_down icon_inline"><%= link_to _("Create a widget for this request"), create_widget_path(@info_request) %></div>
-	       
+	   	</div>
+	<div class="icon_down icon_inline"><%= link_to _("Create a widget for this request"), new_request_widget_path(@info_request) %></div>
+
 	</div>
 
 	<div id="offensive">
