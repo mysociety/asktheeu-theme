@@ -25,7 +25,7 @@ PublicBodyCategories.add(:de, [
         [ "executive_agency", "Exekutivagenturen", "eine Exekutivagentur"],
         [ "financial_supervisory", "Finanzaufsichtsbehörden", "eine Finanzaufsichtsbehörde"],
         [ "euratom", "Agenturen und sonstige Organe von EURATOM", "eine EURATOM Agentur"],
-        [ "other", "andere Organe", " "],
+        [ "other", "andere Organe", "eine Agentur"],
     "Mitgliedsstaaten",
         [ "permanent_representative", "Permanente Vertreter der EU-Mitgliedsstaaten", "ein/e permanente/r Vertreter/in eines EU-Mitgliedsstaates"]
 ])
