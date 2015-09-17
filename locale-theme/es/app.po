@@ -43,6 +43,3 @@ msgstr "Todas las noticias"
 
 msgid "Follow us"
 msgstr "Síguenos"
-
-msgid "\\n    <div id=\"ms_srv_wrapper\" style=\"display:none;\">\\n        <p><a href=\"https://www.surveygizmo.co.uk/s3/1979939/2014-Baselining-AskTheEU\" id=\"ms_srv_link\" data-transaction=\"report\">\\n            We're running a short survey to help us understand how well AskTheEU works. If you'd like to take it, click here.\\n        </a></p>\\n    </div>"
-msgstr "\\n    <div id=\"ms_srv_wrapper\" style=\"display:none;\">\\n        <p><a href=\"https://www.surveygizmo.co.uk/s3/1979939/2014-Baselining-AskTheEU\" id=\"ms_srv_link\" data-transaction=\"report\">\\n            Estamos llevando a cabo una breve encuesta para entender mejor cómo funciona AskTheEU. Si te gustaría participar, haz clic aquí.\\n        </a></p>\\n    </div>"

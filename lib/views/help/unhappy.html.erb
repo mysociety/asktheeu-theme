@@ -4,25 +4,25 @@
 
 <p>If ...</p>
 <ul>
-    <li>You didn't get a reply within 15 working days;</li>
-    <li>You did not get all of the information that you requested; <strong>or</strong></li>
-    <li>Your request was refused, but with no reasoning based on the exceptions included in Regulation 1049/2001</li>
+  <li>You didn't get a reply within 15 working days;</li>
+  <li>You did not get all of the information that you requested; <strong>or</strong></li>
+  <li>Your request was refused, but with no reasoning based on the exceptions included in Regulation 1049/2001</li>
 </ul>
 
 <p>... you can</p>
 <ol>
-    <li>Make an <strong>appeal</strong> (confirmatory application) by replying back to the same EU authority, telling them why you are unsatisfied with their reply.</li>
-    <li>If that doesn't help, complain to the <a href="http://www.ombudsman.europa.eu/start.faces"><strong>European Ombudsman</strong></a>.</li>
-    <li>If you can find a lawyer who has done the bar in an EU country, go to the European Court of Justice, to the General Court.</li>
+  <li>Make an <strong>appeal</strong> (confirmatory application) by replying back to the same EU authority, telling them why you are unsatisfied with their reply.</li>
+  <li>If that doesn't help, complain to the <a href="http://www.ombudsman.europa.eu/start.faces"><strong>European Ombudsman</strong></a>.</li>
+  <li>If you can find a lawyer who has done the bar in an EU country, go to the European Court of Justice, to the General Court.</li>
 </ol>
 
 <h1 id="internal_review">1. Make an appeal (confirmatory application)</h1>
 
 <p>
 <% if !@info_request.nil? %>
-    <%= link_to "Request an internal review", show_response_no_followup_url(:id => @info_request.id, :incoming_message_id => nil) + "?internal_review=1#followup" %> and then write a message asking the authority to review your request.
+  <%= link_to "Request an internal review", show_response_no_followup_url(:id => @info_request.id, :incoming_message_id => nil) + "?internal_review=1#followup" %> and then write a message asking the authority to review your request.
 <% else %>
-    At the bottom of the relevant request page on <%= site_name %> choose "make an appeal” . Then write a message asking for a review of the decision by the EU body not to grant you the information requested. 
+  At the bottom of the relevant request page on <%= site_name %> choose "make an appeal” . Then write a message asking for a review of the decision by the EU body not to grant you the information requested.
 <% end %>
 </p>
 
@@ -34,9 +34,9 @@
 
 <p>To make it easier to send the relevant information to the European Ombudsman, either include a link to your request
 <% if !@info_request.nil? %>
-    <strong><%=h main_url(request_url(@info_request)) %></strong>
+  <strong><%=h main_url(request_url(@info_request)) %></strong>
 <% else %>
-    on <%= site_name %>
+  on <%= site_name %>
 <% end %>
 in your complaint or print out the whole page of your request and all attachments.</p>
 
@@ -53,14 +53,14 @@ in your complaint or print out the whole page of your request and all attachment
 <h1 id="other_means">4. Think laterally!</h1>
 
 <ul>
-    <li>Make a <strong>new access to information request</strong> for summary information, or for documentation relating indirectly to matters in your refused request. <%= link_to 'Ask us', help_contact_path %> for ideas if you're stuck.</li>
+  <li>Make a <strong>new access to information request</strong> for summary information, or for documentation relating indirectly to matters in your refused request. <%= link_to 'Ask us', help_contact_path %> for ideas if you're stuck.</li>
 
-    <li>If any <strong>other public authorities</strong> or publicly owned companies are involved,
-    then make requests to them.</li>
-    
-    <li>Talk to civil society organisations, journalists or researchers who are interested in a similar issue to yours for ideas.</li>
-    
-    <li>Write to <strong>your MEPs</strong> or other politicians and ask for their help in finding the answer.</li>
+  <li>If any <strong>other public authorities</strong> or publicly owned companies are involved,
+  then make requests to them.</li>
+
+  <li>Talk to civil society organisations, journalists or researchers who are interested in a similar issue to yours for ideas.</li>
+
+  <li>Write to <strong>your MEPs</strong> or other politicians and ask for their help in finding the answer.</li>
 </ul>
 
 
