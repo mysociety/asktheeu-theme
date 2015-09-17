@@ -50,6 +50,3 @@ msgstr "Helpdesk"
 
 msgid "This website is powered by <a href='http://www.alaveteli.org/'>Alaveteli</a>. Other original content was developed by Access Info Europe and is made public under a <a  href='http://creativecommons.org/licenses/by-sa/3.0/'>Creative Commons Attribution, Share Alike licence</a>."
 msgstr "Diese Seite wurde durch <a href='http://www.alaveteli.org/'>Alaveteli</a> ermöglicht. Weitere Inhalte wurden von Access Info Europe entwickelt und unter der <a  href='http://creativecommons.org/licenses/by-sa/3.0/'>Creative Commons Attribution, Share Alike lizenziert</a>."
-
-msgid "\\n    <div id=\"ms_srv_wrapper\" style=\"display:none;\">\\n        <p><a href=\"https://www.surveygizmo.co.uk/s3/1979939/2014-Baselining-AskTheEU\" id=\"ms_srv_link\" data-transaction=\"report\">\\n            We're running a short survey to help us understand how well AskTheEU works. If you'd like to take it, click here.\\n        </a></p>\\n    </div>"
-msgstr "\\n    <div id=\"ms_srv_wrapper\" style=\"display:none;\">\\n        <p><a href=\"https://www.surveygizmo.co.uk/s3/1979939/2014-Baselining-AskTheEU\" id=\"ms_srv_link\" data-transaction=\"report\">\\n             Wir führen eine kurze Umfrage durch, die uns helfen soll zu erfahren, wie gut AskTheEU funktioniert. Wenn Sie daran teilnehmen möchten, klicken Sie hier\\n        </a></p>\\n    </div>"
