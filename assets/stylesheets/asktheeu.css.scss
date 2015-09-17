@@ -54,12 +54,10 @@ body.front {
   float: left;
 }
 
-#header_left h1, .authority__header h1
-{
+@mixin page-title() {
   background-color: #DEDD39;
   margin-top: 0px;
   color: #FFF;
-  padding-left: 62.7%;
   font-size: 30px;
   line-height: 49px;
   width: 1438px;
@@ -67,6 +65,56 @@ body.front {
   border-bottom: 22px solid #000;
   margin-bottom: 50px;
 }
+
+@mixin page-subtitle() {
+  background-color: #000;
+  color: #FFF;
+  font-size: 16px;
+  font-weight: 800;
+  width: 1438px;
+  margin-left: -458px;
+}
+
+#header_left h1 {
+  // pad for floated container
+  @include page-title();
+  padding-left: 62.7%;
+}
+
+.authority__header h1 {
+  // pad for non-floated container
+  @include page-title();
+  padding-left: 47.7%;
+}
+
+.page__header__title{
+  @include page-title();
+  // pad for non-floated container
+  padding-left: 47.7%;
+
+  // Subtitle should be immediately following
+  border-bottom:0;
+  margin-bottom:0;
+}
+
+.page__header__subtitle{
+  @include page-subtitle();
+  // pad for non-floated container
+  padding-left:47.7%;
+  // Subtitle immediately follows title
+  margin-top: 0;
+
+  padding-top:3px;
+  padding-bottom:3px;
+}
+
+.page__subtitle{
+  @include page-subtitle();
+  // pad for non-floated container
+  padding-left:47.7%;
+  margin-top: 317px;
+}
+
 #everypage {
   background-color: #666;
   opacity: 0.95;
@@ -1419,49 +1467,6 @@ TODO: Need to add states for
 #contentAbout{
   width:980px;
   margin:0 auto;
-}
-
-#titleAbout{
-  background-color: #DEDD39;
-  margin-top: 8px;
-  color: #FFF;
-  padding-left: 47.7%;
-  font-size: 30px;
-  line-height: 49px;
-  width: 1438px;
-  margin-left: -458px;
-}
-
-#subtitleAbout{
-  background-color: #000;
-  color: #FFF;
-  padding-left:47.7%;
-  font-size: 16px;
-  font-weight: 800;
-  width: 1438px;
-  margin-left: -458px;
-}
-
-#titleHow{
-  background-color: #DEDD39;
-  margin-top: -17px;
-  color: #FFF;
-  padding-left: 47.7%;
-  font-size: 30px;
-  line-height: 49px;
-  width: 1438px;
-  margin-left: -458px;
-}
-
-#subtitleNews{
-  background-color: #000;
-  color: #FFF;
-  padding-left:47.7%;
-  font-size: 16px;
-  font-weight: 800;
-  width: 1438px;
-  margin-left: -458px;
-  margin-top: 317px;
 }
 
 body.general {
