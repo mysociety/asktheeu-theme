@@ -34,7 +34,7 @@
 
 <p>To make it easier to send the relevant information to the European Ombudsman, either include a link to your request
 <% if !@info_request.nil? %>
-  <strong><%=h main_url(request_url(@info_request)) %></strong>
+  <strong><%=h request_url(@info_request) %></strong>
 <% else %>
   on <%= site_name %>
 <% end %>
