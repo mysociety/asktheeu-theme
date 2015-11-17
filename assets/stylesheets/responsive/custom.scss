@@ -19,12 +19,11 @@
 
 /* Selected menu item */
 %selected-menu-item {
-  font-weight: bold;
-  color: $color_primary;
-  background-color: $color_neutral_light;
+  color: $color_white;
+  background-color: darken($color_primary, 15%);
 
   &:hover, &:focus {
-    background-color: $color_neutral_light;
+    background-color: darken($color_primary, 15%);
   }
 }
 
@@ -442,7 +441,8 @@ a.link_button_green_large {
 
 @include respond-min( $main_menu-mobile_menu_cutoff ){
   #left_column,
-  .authority__body__foi-results {
+  .authority__body__foi-results,
+  #authority_selection {
     padding-right: 3em;
   }
 
@@ -668,13 +668,19 @@ a.link_to_this {
   }
 }
 
-/* Help pages */
+/* Help/About pages */
 
 dt {
   font-weight: 700;
   @include respond-min( $main_menu-mobile_menu_cutoff ){
     font-size: 2em;
     line-height: 1.1em;
+  }
+}
+
+#right_column_flip {
+  h2 {
+    font-size: 1.3em;
   }
 }
 
