@@ -1,38 +1,3 @@
-$color_sand: #f3f1eb;
-$color_black: #333333;
-$color_orange: #f4a140;
-$color_blue: #4faded;
-$color_green: #62b356;
-$color_yellow: #ffd836;
-$color_red: #e04b4b;
-$color_violet: #a94ca6;
-$color_purple: #5c377f;
-$color_white: #ffffff;
-
-$color_neutral_light: $color_sand;
-$color_neutral_dark: $color_black;
-$color_primary: $color_violet;
-$color_secondary: $color_orange;
-
-$body-bg: $color_neutral_light;
-
-$body-font-color: $color_neutral_dark;
-$link-color: darken($color_blue, 20%);
-$action-color: $color_green;
-$font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
-$form_input-bg: $color_white;
-
-$button-bg: $action-color;
-$button-color: $color_white;
-
-$status-success: $color_green;
-$status-failure: $color_red;
-$status-pending: $color_orange;
-
-$notice-color: $color_green;
-$error-color: $color_red;
-$action-color: $color_orange;
-
 /* Mixin styles */
 
 /* Hide text when it's replaced by an image */
@@ -44,17 +9,12 @@ $action-color: $color_orange;
 
 /* General styling of nav menu items */
 %menu-item {
-  text-decoration: none;
-  color: transparentize($color_white, 0.2);
-  @include ie8 {
-    color: $color_white;
-  }
-  transition: background-color 0.5s ease-out;
-  &:hover{
+  color: $color_white;
+
+  &:hover, &:focus {
     background-color: darken($color_primary, 15%);
     color: $color_white;
   }
-
 }
 
 /* Selected menu item */
@@ -62,8 +22,9 @@ $action-color: $color_orange;
   font-weight: bold;
   color: $color_primary;
   background-color: $color_neutral_light;
-  &:hover{
-      background-color: $color_neutral_light;
+
+  &:hover, &:focus {
+    background-color: $color_neutral_light;
   }
 }
 
@@ -173,28 +134,28 @@ input.use-datepicker[type=text] {
 
 @mixin button-secondary($args...) {
   @include button-base($args...);
-  background-color: desaturate(darken($color_sand, 10%), 5%);
+  background-color: desaturate(darken($color_neutral_light, 10%), 5%);
   color: $color_black;
   font-weight: normal;
   &:hover,
   &:active,
   &:focus {
     color: $color_black;
-    background-color: desaturate(darken($color_sand, 20%), 5%);
+    background-color: desaturate(darken($color_neutral_light, 20%), 5%);
   }
 }
 
 @mixin button-tertiary($args...) {
   @include button-base($args...);
-  background-color: desaturate(darken($color_sand, 5%), 5%);;
+  background-color: desaturate(darken($color_neutral_light, 5%), 5%);;
   color: $color_black;
   font-weight: normal;
-  border: 1px solid desaturate(darken($color_sand, 15%),5%);
+  border: 1px solid desaturate(darken($color_neutral_light, 15%),5%);
   &:hover,
   &:active,
   &:focus {
-    background-color: darken($color_sand, 7.5%);
-    border: 1px solid desaturate(darken($color_sand, 25%),5%);
+    background-color: darken($color_neutral_light, 7.5%);
+    border: 1px solid desaturate(darken($color_neutral_light, 25%),5%);
   }
 }
 
@@ -217,12 +178,56 @@ a.link_button_green_large {
 
 /* Header */
 
-#banner_inner {
-  background-color: $color_primary;
+#banner {
+  // Fill the header with a gradient background, then cover up most of it
+  // with the solid green background of #banner_inner (this has much better
+  // browser support than a border-image gradient)
+  background: darken($banner_inner_bg, 10%);
+  background: -webkit-linear-gradient(left, $color_asktheeu_green 0%, $color_asktheeu_yellow 50%, $color_asktheeu_blue 100%);
+  background: linear-gradient(to right, $color_asktheeu_green 0%, $color_asktheeu_yellow 50%, $color_asktheeu_blue 100%);
+  padding-top: 0.5em;
+
+  a {
+    text-decoration: none;
+  }
+
+  .rsp_menu_button {
+    position: absolute;
+    top: 22px; // vertically centre the button in the header
+    right: 10px;
+    @extend .image-replacement;
+    background: transparent image-url('hamburger@2.png') no-repeat center center;
+    background-size: 28px 28px;
+    width: 44px;
+    height: 40px;
+    padding: 0;
+
+    /* Make sure clickable area covers image */
+    a {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &:target {
+    .rsp_menu_button {
+      top: 22px;
+      right: 10px;
+    }
+  }
+
+  .banner_site-title {
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
 }
 
-#topnav {
-  background-color: darken($color_primary, 10%);
+#banner_inner {
+  background-color: $banner_inner_bg;
+}
+
+.topnav {
+  background-color: $topnav_bg;
 }
 
 .site-title__logo {
@@ -238,50 +243,134 @@ a.link_button_green_large {
   }
 }
 
-#navigation{
+// Override stupid id selector in core styles
+#navigation {
   border-bottom: none;
-  a {
+
+  a, a:link {
     @extend %menu-item;
   }
-  /* Show which section is currently selected */
-  li.selected a{
-    @extend %selected-menu-item;
-  }
 
-  /* Vertically align the search box */
-  #navigation_search{
-    input{
-      margin-top:0.313em;
-      margin-bottom:0.313em;
-      height: 1.875em;
-      @include ie8 {
-        height: 33px;
-        font-size: 1.1em;
-        padding: 0;
-      }
+  .selected {
+    a, a:link {
+      @extend %selected-menu-item;
     }
   }
 
-  /* Vertically align the label image for older IE*/
-  @include ie8 {
-    img {
-      margin-top: 0.626em;
+  @include respond-min( $main_menu-mobile_menu_cutoff ){
+    a {
+      line-height: 1em;
+      padding: 1em;
     }
   }
+}
 
-  #navigation_search_button{
-    background-color: $color_white;
+.navigation_search {
+  padding: 0.5em 1em; // match other navigation links
+
+  @include respond-min( $main_menu-mobile_menu_cutoff ){
+    width: 18em;
+    float: right !important // override `#navigation li`;
+  }
+
+  form {
+    margin: 0;
+  }
+
+  input, button {
+    display: block;
+    margin: 0;
+    float: left;
+    height: 2em;
+    line-height: 1em;
+    font-size: 1em;
+    padding: 0 0.5em;
+  }
+
+  input {
+    width: 75%;
+    border-radius: 0.2em 0 0 0.2em !important; // override `form input[type="search"]`
     border: none;
-    transition: all 0.3s ease-out;
-    color: $color_primary;
-    border-radius: 0;
-    font-size: inherit;
+  }
+
+  button {
+    width: 25%;
+    border-radius: 0 0.2em 0.2em 0;
+    text-transform: uppercase;
+    font-weight: bold;
+    background-color: darken($color_asktheeu_green, 20%);
+
+    &:hover, &:focus {
+      background-color: darken($color_asktheeu_green, 30%);
+    }
   }
 }
 
 .greeting {
   color: $body-bg;
 }
+
+
+#logged_in_bar {
+  padding-bottom: 0.5em; // better visual padding between this menu and #navigation
+
+  a {
+    display: block;
+    padding: 0.5em 1em;
+  }
+
+  @include respond-min( $main_menu-mobile_menu_cutoff ){
+    float: right;
+    clear: right;
+    width: auto;
+    padding: 0;
+    padding-right: 1.5%; // same as grid column padding
+
+    #logged_in_links {
+      position: static;
+
+      a {
+        display: block;
+        padding: 0.25em 0.5em;
+      }
+    }
+  }
+}
+
+
+#user_locale_switcher {
+  margin: 0;
+  padding: 0;
+  list-style: none outside none;
+
+  a {
+    display: block;
+    padding: 0.5em 1em;
+  }
+
+  .current-locale a {
+    font-weight: normal;
+    color: inherit;
+    cursor: default;
+  }
+
+  @include respond-min( $main_menu-mobile_menu_cutoff ){
+    float: right;
+    padding-right: 1.5%; // same as grid column padding
+    padding-top: 0.5em; // move it away from the top of the header
+
+    li {
+      float: left;
+    }
+
+    a {
+      font-weight: bold;
+      padding: 0.25em 0.5em;
+    }
+  }
+}
+
+
 /* Notices, errors */
 
 #notice, #error, .errorExplanation, #request_header_text, #hidden_request, .describe_state_form form, .undescribed_requests, .warning {
@@ -317,245 +406,6 @@ a.link_button_green_large {
 .undescribed_requests {
   background-color: desaturate(lighten($action-color, 30%),10%);
   border-color: $action-color;
-}
-
-/* Logged and local options act like submenus */
-#logged_in_bar{
-  a {
-    @extend %menu-item;
-    background-color: transparent;
-    font-weight: normal;
-    color: $color_white;
-    &:hover,
-    &:active,
-    &:focus {
-      background-color: transparent;
-    }
-  }
-  #logged_in_links {
-    top: 2em;
-    a {
-      font-weight: normal;
-    }
-  }
-}
-
-/* LANGUAGE SWITCHER */
-#user_locale_switcher {
-  background-color: $color_primary;
-  @include respond-min($main_menu-mobile_menu_cutoff) {
-    background-color: transparent;
-  }
-}
-
-/* Dropdown list for switching locale */
-.locale-list {
-  border-bottom: 0;
-  @include respond-min($main_menu-mobile_menu_cutoff) {
-    position: absolute;
-    left: ($logo-width + 40px);
-    top: 2.2em;
-    right: auto;
-  }
-  .locale-list-trigger {
-    margin-bottom: 0;
-    color: $color_white;
-    color: transparentize($color_white, 0.8);
-    @include respond-min($main_menu-mobile_menu_cutoff) {
-      margin-top: 0;
-      border: 1px solid desaturate(lighten($color_primary, 5%), 5%);
-      border-radius: 3px;
-      color: $link-color;
-      padding: 0;
-    }
-  }
-}
-
-.locale-list-trigger .current-locale {
-  position: relative;
-  z-index: 999;
-  border-radius: 3px;
-  color: $color_white;
-  @include respond-min($main_menu-mobile_menu_cutoff) {
-    padding: 0.66em 2em 0.66em 0.66em;
-  }
-}
-
-.locale-list-trigger .current-locale:after {
-  display: block;
-  position: absolute;
-  content: '';
-  right: 10px;
-  top: 12px;
-  width: 0;
-  height: 0;
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
-  @include ie8 {
-    border-top: 5px solid $color_white;
-  }
-  border-top: 5px solid transparentize($color_white, 0.6);
-}
-
-.locale-list-trigger .current-locale,
-.locale-list .available-languages a {
-  display: block;
-  cursor: pointer;
-  font-weight: normal;
-  @include respond-min($main_menu-mobile_menu_cutoff) {
-    font-size: 0.8125em;
-    line-height: 1em;
-  }
-}
-
-.locale-list .available-languages {
-  display: none;
-  padding: 0;
-  margin-bottom: 0;
-  margin-top: 0;
-  font-size: 0.8125em;
-  @include respond-min($main_menu-mobile_menu_cutoff) {
-    position: absolute;
-    top: 2em;
-    left: 0;
-    z-index: 1000;
-    border-radius: 3px;
-    font-size: 1em;
-    width: 100%;
-  }
-
-}
-
-.locale-list li {
-  list-style-type: none;
-  border-bottom: 1px solid desaturate(lighten($color_primary, 3%), 5%);
-  @include respond-min($main_menu-mobile_menu_cutoff) {
-    border-bottom-color: $color_neutral_dark;
-    display: block;
-  }
-  &:last-child {
-    @include respond-min($main_menu-mobile_menu_cutoff) {
-      border-bottom: 0;
-      a {
-        border-bottom-right-radius: 3px;
-        border-bottom-left-radius: 3px;
-      }
-    }
-  }
-}
-
-.locale-list .available-languages a,
-.locale-list .available-languages a:link,
-.locale-list .available-languages a:visited {
-  display: block;
-  background-color: $color_primary;
-  padding: 0.66em 1em;
-  width: 100%;
-  text-decoration: none;
-  color: transparentize($color_white, 0.2);
-  @include ie8 {
-    color: $color_white;
-  }
-  @include respond-min($main_menu-mobile_menu_cutoff) {
-    background-color: lighten($color_neutral_dark, 6%);
-  }
-  transition: background-color 0.5s ease-out;
-}
-
-.locale-list .available-languages a:hover,
-.locale-list .available-languages a:focus {
-  border-bottom: none;
-  background-color: darken($color_primary, 5%);
-  @include respond-min($main_menu-mobile_menu_cutoff) {
-    background-color: $color_neutral_dark
-  }
-  color: $color_white;
-
-}
-
-/* JS interactivity */
-.no-js .locale-list .available-languages,
-.locale-list.active .available-languages {
-  display: block;
-}
-
-.locale-list.active .current-locale {
-  background-color: $color_primary;
-  color: $color_white;
-  border-color: $color_primary;
-  @include respond-min($main_menu-mobile_menu_cutoff) {
-    background-color: lighten($color_neutral_dark, 6%);
-    border-bottom: 1px solid lighten($color_neutral_dark, 2%);
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
-  }
-}
-
-.locale-list.active .current-locale:after {
-  @include ie8 {
-    border-top-color: $color_white;
-  }
-  border-top-color: transparentize($color_white, 0.6);
-}
-
-
-.locale-list.active .locale-list-trigger {
-  border-color: transparent;
-  @include respond-min($main_menu-mobile_menu_cutoff) {
-    border-color: $color_neutral_dark;
-  }
-}
-
-
-#banner {
-
-  /* Hide the greeting on smaller devices */
-  .greeting {
-    display: none;
-  }
-
-  .rsp_menu_button{
-    position: absolute;
-    top: 5px; // vertically centre the button in the header
-    right: 4px; // 15px for margin minus 9 for background offset
-    @extend .image-replacement;
-    background-image: image-url('hamburger.png');
-    background-repeat: no-repeat;
-    background-position: center 10px;
-    background-size: 28px 26px;
-    width: 44px;
-    height: 38px;
-    padding: 0;
-    /* Make sure clickable area covers image */
-    a {
-      width: 100%;
-      height: 100%;
-    }
-  }
-
-  &:target {
-    .rsp_menu_button {
-      top: 5px;
-      right: 4px;
-    }
-  }
-
-  /* Pad evenly top and bottom on smaller devices */
-  #logo_wrapper{
-
-    @include respond-min( $main_menu-mobile_menu_cutoff ){
-      @include lte-ie7 {
-        padding-bottom: 2em;
-      }
-    }
-    @media(max-width: $main_menu-mobile_menu_cutoff ){
-      padding: 0.5em 0 0.5em 0.9375em;
-      img {
-        height: 30px;
-      }
-    }
-  }
-
 }
 
 
