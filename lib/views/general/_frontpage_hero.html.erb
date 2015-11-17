@@ -1,0 +1,14 @@
+<div class="homepage-hero">
+  <div class="row">
+    <div class="hero__intro">
+      <%= render :partial => "frontpage_intro_sentence" %>
+
+      <%= link_to select_authority_path, :class => "intro__cta intro__cta--request" do %>
+        <%= _("Send a request") %>
+      <% end %>
+      <%= link_to help_about_path, :class => "intro__cta intro__cta--help" do %>
+        <%= _("Find out more") %>
+      <% end %>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,12 @@
+<% cache_if_caching_fragments("frontpage-#{@locale}", :expires_in => 5.minutes) do %>
+
+  <h2>How to AskTheEU</h2>
+  <img src="http://placehold.it/1280x720">
+
+  <h2>Top requests</h2>
+  <p>(Some requests go here)</p>
+
+  <h2>Latest news and campaigns <a href="#">See all</a></h2>
+  <p>(For campaigns go here)</p>
+
+<% end %>
