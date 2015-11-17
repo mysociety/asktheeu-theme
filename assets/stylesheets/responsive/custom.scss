@@ -586,6 +586,58 @@ a.link_to_this {
   color: $status-success;
 }
 
+/* Authority page */
+
+.authority__header {
+  border-bottom: 0;
+}
+
+.authority__header__action-bar {
+  border-top: 0;
+  padding: 0;
+  margin-top: 2em;
+  font-size: 1em;
+}
+
+.action-bar__follower-count {
+  padding: 3px;
+  font-size: 1.1rem;
+}
+
+.action-bar__follow-button {
+  .link_button_green {
+    @include button-secondary();
+  }
+}
+
+.authority__body__sidebar form input[type=submit] {
+  @include button-secondary();
+}
+
+.authority__body .request_listing {
+  margin: 0;
+  padding: 2em 0;
+
+  .request_left, .request_right {
+    padding: 0;
+    width: auto;
+    float: none;
+  }
+
+  .bottomline {
+    margin-bottom: 0.5em;
+  }
+
+  .desc {
+    margin-bottom: 0;
+  }
+
+  // The "Only requests made using…" text
+  & + p {
+    margin-top: 2em;
+  }
+}
+
 /* Attachments*/
 
 .view_html_prefix {
@@ -701,22 +753,6 @@ dt {
   .button-secondary {
     @include button-secondary;
   }
-}
-
-/* Authority page */
-.action-bar__follower-count {
-  padding: 3px;
-  font-size: 1.1rem;
-}
-
-.action-bar__follow-button {
-  .link_button_green {
-    @include button-secondary();
-  }
-}
-
-.authority__body__sidebar form input[type=submit] {
-  @include button-secondary();
 }
 
 .homepage-hero {
