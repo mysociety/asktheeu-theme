@@ -133,20 +133,20 @@ input.use-datepicker[type=text] {
 
 @mixin button-secondary($args...) {
   @include button-base($args...);
-  background-color: mix($color_asktheeu_green, #eee, 10%);
+  background-color: mix($color_asktheeu_green, #f3f3f3, 12%);
   color: $color_black;
   font-weight: normal;
   &:hover,
   &:active,
   &:focus {
     color: $color_black;
-    background-color: darken(mix($color_asktheeu_green, #eee, 10%), 10%);
+    background-color: darken(mix($color_asktheeu_green, #f3f3f3, 12%), 10%);
   }
 }
 
 @mixin button-tertiary($args...) {
   @include button-base($args...);
-  background-color: desaturate(darken($color_neutral_light, 5%), 5%);;
+  background-color: desaturate(darken($color_neutral_light, 5%), 5%);
   color: $color_black;
   font-weight: normal;
   border: 1px solid desaturate(darken($color_neutral_light, 15%),5%);
@@ -543,6 +543,34 @@ a.link_to_this {
 
 .feed_link_sidebar .link_button_green {
   @include button-primary();
+}
+
+.track-request__badge {
+  margin-bottom: 2em;
+  padding: 1.5em;
+  border-radius: 5px;
+  background-color: mix($color_asktheeu_green, #f3f3f3, 12%);
+  text-align: center;
+
+  .link_button_green {
+    margin-top: 1em;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.track-request__badge__number {
+  display: block;
+  font-weight: bold;
+  font-size: 2em;
+  line-height: 84px;
+  padding-bottom: 10px;
+  margin-bottom: 0.25em;
+  color: $color_white;
+  background: transparent image-url('follower-count.png') center center no-repeat;
+  background-size: 80px 94px;
+  background-image: image-url('follower-count.svg'), none;
+  text-shadow: 0 1px 2px #7BBB58; // improve contrast in case number is so big it overflows background image
 }
 
 .report-this-request {
