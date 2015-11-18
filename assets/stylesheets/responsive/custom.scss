@@ -411,28 +411,64 @@ a.link_button_green_large {
 /* Footer */
 #footer {
   background-color: $color_neutral_dark;
-  color: darken($color_neutral_light, 10%);
+  color: mix(#fff, $color_neutral_dark, 60%);
+
   a {
     text-decoration: none;
     color: $color_white;
+
     &:hover,
     &:active,
     &:focus {
-      color: lighten($color_primary, 10%);
+      color: $color_asktheeu_yellow;
       text-decoration: underline;
     }
   }
 }
 
 .footer__about {
-  h2 {
-    color: $color_white;
+  width: 100% !important; // override the various grid-column() breakpoints in _footer_layout.scss
+
+  p {
+    font-size: 1em; // override 0.875em from _footer_layout.scss
+  }
+
+  .footer__credit {
+    font-size: 1.2em;
   }
 }
 
-.footer__final {
-  .row {
-    border-top: 1px solid lighten($color_neutral_dark, 6%);
+.footer__access-info {
+  @extend .image-replacement;
+  width: 100px;
+  height: 66px;
+  background: #E12625 image-url('access-info-logo.png') 0 0 no-repeat;
+  background-image: image-url('access-info-logo.svg'), none;
+  background-size: 100px 66px;
+  float: left;
+  margin: 0 1em 1em 0;
+}
+
+.footer__credit {
+  margin-bottom: 0.5em;
+}
+
+.about__contact-links {
+  margin: 0 0 0.8em 0;
+
+  & > li {
+    margin: 0 1em 0 0;
+  }
+}
+
+.frontpage-photo-attribution {
+  display: none;
+  clear: both;
+  margin: 0;
+  font-size: 0.875em;
+
+  .front & {
+    display: block;
   }
 }
 
