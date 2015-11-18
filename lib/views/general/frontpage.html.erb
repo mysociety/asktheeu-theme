@@ -1,12 +1,48 @@
 <% cache_if_caching_fragments("frontpage-#{@locale}", :expires_in => 5.minutes) do %>
 
-  <h2>How to AskTheEU</h2>
-  <img src="http://placehold.it/1280x720">
+  <div class="frontpage__primary">
+    <h2>How to AskTheEU</h2>
+    <div class="responsive-iframe responsive-iframe--16-9">
+      <iframe width="1280" height="720" src="https://www.youtube-nocookie.com/embed/0NBuYOPZn_4?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
 
-  <h2>Top requests</h2>
-  <p>(Some requests go here)</p>
+  <div class="frontpage__secondary">
+    <h2>Top requests</h2>
 
-  <h2>Latest news and campaigns <a href="#">See all</a></h2>
-  <p>(For campaigns go here)</p>
+    <% info_request = InfoRequest.where(:url_title => 'how_much_public_money_is_wasted_o').first %>
+    <% if info_request %>
+      <%= render :partial => 'general/frontpage_top_request', :locals => { :info_request => info_request } %>
+    <% end %>
+
+    <% info_request = InfoRequest.where(:url_title => 'why_do_you_have_such_a_fancy_dog').first %>
+    <% if info_request %>
+      <%= render :partial => 'general/frontpage_top_request', :locals => { :info_request => info_request } %>
+    <% end %>
+  </div>
+
+</div><%# close div#general_frontpage %>
+</div><%# close div#content %>
+</div><%# close div#wrapper %>
+
+<div class="frontpage__tertiary">
+
+  <div class="wrapper">
+    <div class="content">
+      <h2>Latest news and campaigns <a href="#">See all</a></h2>
+
+      <div class="frontpage__blog">
+        <% @blog_items[0..3].each do |item| %>
+          <div class="frontpage__blog__item">
+            <% if item['thumbnail'] %>
+              <a href='<%= item['link'][0] %>'>
+                <img <%= item['thumbnail'][0].to_s.html_safe %> width="250" height="150">
+              </a>
+            <% end %>
+            <h3><a href='<%= item['link'][0] %>'><%= item['title'][0] %></a></h3>
+            <p><%= h excerpt(item['description'][0].to_s, "", :radius => 198) %></p>
+          </div>
+        <% end %>
+      </div>
 
 <% end %>

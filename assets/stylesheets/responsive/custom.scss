@@ -790,12 +790,14 @@ dt {
 }
 
 .homepage-hero {
-  background: $color_neutral_dark;
+  background: $color_neutral_dark image-url('hero_small.jpg') center center no-repeat;
+  background-size: cover;
   color: $color_white;
-  padding: 2em 0;
+  padding: 2em 0 3em 0;
 
   @include respond-min($main_menu-mobile_menu_cutoff) {
-    padding: 5em 0;
+    background-image: image-url('hero_large.jpg');
+    padding: 5em 0 6em 0;
   }
 }
 
@@ -852,4 +854,153 @@ dt {
 .new-request__description {
   color: $color_white;
   color: transparentize($color_white, 0.2);
+}
+
+#general_frontpage {
+  @include clearfix();
+}
+
+.frontpage__primary,
+.frontpage__secondary,
+.frontpage__tertiary {
+  padding-top: 2em;
+  padding-bottom: 2em;
+
+  @include respond-min($main_menu-mobile_menu_cutoff) {
+    padding-top: 4em;
+    padding-bottom: 4em;
+  }
+
+  h2 {
+    margin-top: 0;
+    margin-bottom: 0.8em;
+    color: $color_asktheeu_green;
+  }
+}
+
+@include respond-min($main_menu-mobile_menu_cutoff) {
+  .frontpage__primary {
+    float: left;
+    width: 60%;
+  }
+
+  .frontpage__secondary {
+    float: right;
+    width: 33%;
+  }
+}
+
+.frontpage__tertiary {
+  background-color: $color_asktheeu_palegreen;
+
+  // The little "See all" link
+  h2 a {
+    text-decoration: none;
+    margin-left: 0.8em;
+    font-size: 0.6em;
+    font-weight: normal;
+  }
+
+  & + #footer {
+    margin-top: 0;
+  }
+}
+
+.front {
+  .track-request__badge {
+    @include clearfix();
+    background-color: $color_asktheeu_paleyellow;
+    text-align: left;
+
+    h3 {
+      margin: 0;
+      font-size: 1.2em;
+      font-weight: normal;
+      margin-bottom: 0.8em;
+
+      a {
+        display: block;
+        text-decoration: none;
+        color: $color_black;
+
+        &:hover,
+        &:focus {
+          color: $link-color;
+          text-decoration: underline;
+        }
+      }
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .track-request__badge__number-wrapper {
+    text-align: center;
+    float: right;
+    width: 80px; // width of the "balloons" background image
+    margin-left: 0.5em;
+  }
+
+  .link_button_green {
+    margin: 0;
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+}
+
+.responsive-iframe {
+  width: 100%;
+  position: relative;
+  height: 0;
+  padding-top: 100%; // this will make a square iframe, which probably isn't want you want
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.responsive-iframe--16-9 {
+  padding-top: (100% * (720/1280));
+}
+
+.frontpage__blog {
+  @include respond-min($main_menu-mobile_menu_cutoff / 2) {
+    @include clearfix();
+    margin: 0 -1em;
+  }
+}
+
+.frontpage__blog__item {
+  margin-bottom: 1em;
+
+  @include respond-min($main_menu-mobile_menu_cutoff / 2) {
+    float: left;
+    width: 50%;
+    padding: 0 1em;
+    margin-bottom: 0;
+  }
+
+  @include respond-min($main_menu-mobile_menu_cutoff) {
+    width: 25%;
+  }
+
+  h3 {
+    font-size: 1.3em; // down from default 1.6em
+
+    a {
+      text-decoration: none;
+      display: block; // make entire "box" clickable, not just words within it
+
+      &:hover,
+      &:focus {
+        text-decoration: underline;
+      }
+    }
+  }
 }
