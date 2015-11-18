@@ -1,14 +1,22 @@
 <div class="footer" id="footer">
   <div class="row">
     <div class="footer__about">
-      <h2><%= site_name %></h2>
-      <%= render :partial => 'general/responsive_credits' %>
+
+      <a href="http://www.access-info.org" class="footer__access-info">Access Info</a>
+
+      <p class="footer__credit">
+        A project by
+        <a href="http://www.access-info.org">Access Info Europe</a>,
+        powered by
+        <a href="https://alaveteli.org">Alaveteli</a>
+      </p>
+
       <ul class="about__contact-links">
         <li>
-          <%= link_to 'Contact us', help_contact_path %>
+          <%= link_to 'About', help_about_path %>
         </li>
         <li>
-          <%= link_to 'Help', help_path %>
+          <%= link_to 'Contact', help_contact_path %>
         </li>
         <li>
           <%= link_to 'Privacy and cookies', help_privacy_path %>
@@ -17,9 +25,9 @@
           <%= link_to 'API', help_api_path %>
         </li>
       </ul>
+
+      <p class="frontpage-photo-attribution">Homepage header photo © European Union 2014 - European Parliament <a href="https://www.flickr.com/photos/european_parliament/13064833244/">CC-BY-ND</a></p>
+
     </div>
-  </div>
-  <div class="footer__final">
-    <p class="frontpage-photo-attribution">Homepage photo © European Union 2014 - European Parliament <a href="https://www.flickr.com/photos/european_parliament/13064833244/">CC-BY-ND</a></p>
   </div>
 </div>
