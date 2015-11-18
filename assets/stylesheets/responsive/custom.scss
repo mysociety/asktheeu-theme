@@ -712,82 +712,8 @@ dt {
   }
 }
 
-/* Front page */
-/* Drop the extract indentation on small screens */
-#frontpage_examples {
-  .excerpt {
-    padding: 0.2em 0 0 0;
-    @include respond-min( $main_menu-mobile_menu_cutoff ){
-      padding: 0 0 0 2em;
-    }
-  }
-  p strong a {
-    @include button-secondary;
-  }
-}
 
-/* How it works section */
-.steps__list {
-  li {
-    @include respond-min( $main_menu-mobile_menu_cutoff ){
-      width: 33.3333%;
-      margin-left: 0 !important;
-    }
-  }
-}
-
-.steps__step-box {
-  background-color: $color_white;
-  padding: 2em;
-  box-shadow: 0 1px 2px transparentize($color_black, 0.75);
-  @include respond-min( $main_menu-mobile_menu_cutoff ){
-    min-height: 11em;
-  }
-  p {
-    line-height: 1.5em;
-    color: $color_neutral_dark;
-  }
-}
-
-.steps__step-number {
-  height: 3.5em;
-  width: 3.5em;
-  background-color: $color_primary;
-  box-shadow: 0 1px 2px transparentize($color_black, 0.75);
-  padding: 1em;
-  border-radius: 100%;
-  color: $color_white;
-  @include respond-min( $main_menu-mobile_menu_cutoff ){
-    left: 50%;
-    margin-left: -1.75em;
-    bottom: -1em;
-    top: auto;
-  }
-}
-
-.learn-more-foi {
-  @include respond-min( $main_menu-mobile_menu_cutoff ){
-    margin-top: 3em;
-  }
-  a {
-    @include button-secondary;
-  }
-}
-
-.learn-more-foi {
-  @include respond-min( $main_menu-mobile_menu_cutoff ){
-    margin-top: 3em;
-  }
-  a {
-    @include button-secondary;
-  }
-}
-
-.latest-requests {
-  .button-secondary {
-    @include button-secondary;
-  }
-}
+/* Homepage */
 
 .homepage-hero {
   background: $color_neutral_dark image-url('hero_small.jpg') center center no-repeat;
@@ -823,19 +749,29 @@ dt {
 }
 
 .intro__cta {
-  font-size: 1.5em;
+  font-size: 1.2em;
+
+  @include respond-min($main_menu-mobile_menu_cutoff) {
+    font-size: 1.5em;
+  }
 }
 
 .intro__cta--request {
   &:link, &:visited {
     @include button-primary;
-    margin-right: 2em;
   }
 }
 
 .intro__cta--help {
   &:link, &:visited {
     color: $color_white;
+    display: block;
+    margin: 1em 0 0 0;
+
+    @include respond-min($main_menu-mobile_menu_cutoff / 2) {
+      display: inline-block;
+      margin: 0 0 0 1em;
+    }
   }
 }
 
@@ -856,13 +792,9 @@ dt {
   color: transparentize($color_white, 0.2);
 }
 
-#general_frontpage {
-  @include clearfix();
-}
-
-.frontpage__primary,
-.frontpage__secondary,
+#general_frontpage,
 .frontpage__tertiary {
+  @include clearfix();
   padding-top: 2em;
   padding-bottom: 2em;
 
@@ -870,7 +802,11 @@ dt {
     padding-top: 4em;
     padding-bottom: 4em;
   }
+}
 
+.frontpage__primary,
+.frontpage__secondary,
+.frontpage__tertiary {
   h2 {
     margin-top: 0;
     margin-bottom: 0.8em;
@@ -878,8 +814,13 @@ dt {
   }
 }
 
+.frontpage__primary {
+  margin-bottom: 2em;
+}
+
 @include respond-min($main_menu-mobile_menu_cutoff) {
   .frontpage__primary {
+    margin-bottom: 0;
     float: left;
     width: 60%;
   }
