@@ -305,17 +305,18 @@ a.link_button_green_large {
   }
 }
 
-.greeting {
-  color: $body-bg;
-}
-
 
 #logged_in_bar {
-  padding-bottom: 0.5em; // better visual padding between this menu and #navigation
+  padding: 0.5em 0; // better vertical padding between this menu and #navigation
 
   a {
     display: block;
     padding: 0.5em 1em;
+  }
+
+  .greeting {
+    border-top: 1px solid darken($banner_inner_bg, 10%);
+    padding-top: 1em; // up from 0.5em, for better vertical padding
   }
 
   @include respond-min( $main_menu-mobile_menu_cutoff ){
@@ -327,10 +328,16 @@ a.link_button_green_large {
 
     #logged_in_links {
       position: static;
+      @include clearfix();
 
-      a {
-        display: block;
+      a, .greeting {
+        float: left;
         padding: 0.25em 0.5em;
+      }
+
+      .greeting {
+        font-weight: normal;
+        border-top: none;
       }
     }
   }
