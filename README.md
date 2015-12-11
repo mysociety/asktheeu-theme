@@ -14,7 +14,7 @@ Typical usage should be limited to that described in the [documentation](http://
 In the Alaveteli `general.yml` configuration file change the default mysociety  theme repository to your theme repository in the [`THEME_URLS`](http://alaveteli.org/docs/customising/config/#theme_urls) setting:
 
     THEME_URLS:
-      - 'git://github.com/YOUR_GITHUB_USERNAME/YOUR_THEME_NAME.git'
+      - 'git://github.com/mysociety/asktheeu-theme.git'
 
 You can then switch the theme the application is using:
 
