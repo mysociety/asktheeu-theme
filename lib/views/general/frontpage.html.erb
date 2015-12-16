@@ -23,7 +23,7 @@
 
   <div class="wrapper">
     <div class="content">
-      <h2><%= _("Latest news and campaigns") %> <a href="#"><%= _("See all") %></a></h2>
+      <h2><%= _("Latest news and campaigns") %> <%= link_to _("See all"), blog_path %></h2>
 
       <div class="frontpage__blog">
         <% @blog_items[0..3].each do |item| %>
