@@ -16,29 +16,29 @@
     <% end %>
   </div>
 
-</div><%# close div#general_frontpage %>
-</div><%# close div#content %>
-</div><%# close div#wrapper %>
+  </div><%# close div#general_frontpage %>
+  </div><%# close div#content %>
+  </div><%# close div#wrapper %>
 
-<div class="frontpage__tertiary">
+  <div class="frontpage__tertiary">
 
-  <div class="wrapper">
-    <div class="content">
-      <h2><%= _("Latest news and campaigns") %> <%= link_to _("See all"), blog_path %></h2>
+    <div class="wrapper">
+      <div class="content">
+        <h2><%= _("Latest news and campaigns") %> <%= link_to _("See all"), blog_path %></h2>
 
-      <div class="frontpage__blog">
-        <% @blog_items.take(4).each do |item| %>
-          <div class="frontpage__blog__item">
-            <% if item['thumbnail'] %>
-              <%= link_to item['link'][0] do %>
-                <img <%= item['thumbnail'][0].to_s.html_safe %> width="250" height="150">
+        <div class="frontpage__blog">
+          <% @blog_items.take(4).each do |item| %>
+            <div class="frontpage__blog__item">
+              <% if item['thumbnail'] %>
+                <%= link_to item['link'][0] do %>
+                  <img <%= item['thumbnail'][0].to_s.html_safe %> width="250" height="150">
+                <% end %>
               <% end %>
-            <% end %>
 
-            <h3><%= link_to item['title'][0], item['link'][0] %></h3>
-            <p><%= h excerpt(item['description'][0].to_s, "", :radius => 198) %></p>
-          </div>
-        <% end %>
-      </div>
+              <h3><%= link_to item['title'][0], item['link'][0] %></h3>
+              <p><%= h excerpt(item['description'][0].to_s, "", :radius => 198) %></p>
+            </div>
+          <% end %>
+        </div>
 
 <% end %>
