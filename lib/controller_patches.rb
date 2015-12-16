@@ -10,12 +10,22 @@ Rails.configuration.to_prepare do
   GeneralController.class_eval do
     # Make sure it doesn't break if blog is not available
     def frontpage
+      medium_cache
+      @locale = I18n.locale.to_s
+      successful_query = InfoRequestEvent.make_query_from_params( :latest_status => ['successful'] )
+      @track_thing = TrackThing.create_track_for_search_query(successful_query)
+      @feed_autodetect = [ { :url => do_track_url(@track_thing, 'feed'),
+                             :title => _('Successful requests'),
+                             :has_json => true } ]
+
       begin
         blog
       rescue
         @blog_items = []
         @twitter_user = MySociety::Config.get('TWITTER_USERNAME', '')
       end
+
+      @top_requests = InfoRequest.top_requests.limit(2)
     end
   end
 
