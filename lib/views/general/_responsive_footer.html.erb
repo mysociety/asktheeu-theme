@@ -2,31 +2,34 @@
   <div class="row">
     <div class="footer__about">
 
-      <a href="http://www.access-info.org" class="footer__access-info">Access Info</a>
+      <a href="http://www.access-info.org" class="footer__access-info"><%= _('Access Info') %></a>
 
       <p class="footer__credit">
-        A project by
-        <a href="http://www.access-info.org">Access Info Europe</a>,
-        powered by
-        <a href="https://alaveteli.org">Alaveteli</a>
+        <%= _('A project by <a href="http://www.access-info.org">Access Info ' \
+              'Europe</a>, powered by <a href="https://alaveteli.org">' \
+              'Alaveteli</a>') %>
       </p>
 
       <ul class="about__contact-links">
         <li>
-          <%= link_to 'About', help_about_path %>
+          <%= link_to _('About'), help_about_path %>
         </li>
         <li>
-          <%= link_to 'Contact', help_contact_path %>
+          <%= link_to _('Contact'), help_contact_path %>
         </li>
         <li>
-          <%= link_to 'Privacy and cookies', help_privacy_path %>
+          <%= link_to _('Privacy and cookies'), help_privacy_path %>
         </li>
         <li>
-          <%= link_to 'API', help_api_path %>
+          <%= link_to _('API'), help_api_path %>
         </li>
       </ul>
 
-      <p class="frontpage-photo-attribution">Homepage header photo © European Union 2014 - European Parliament <a href="https://www.flickr.com/photos/european_parliament/13064833244/">CC-BY-ND</a></p>
+      <p class="frontpage-photo-attribution">
+        <%= _('Homepage header photo © European Union 2014 - European ' \
+              'Parliament') %>
+        <a href="https://www.flickr.com/photos/european_parliament/13064833244/">CC-BY-ND</a>
+      </p>
 
     </div>
   </div>
