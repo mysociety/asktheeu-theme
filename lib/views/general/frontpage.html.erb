@@ -10,13 +10,7 @@
   <div class="frontpage__secondary">
     <h2>Top requests</h2>
 
-    <% info_request = InfoRequest.where(:url_title => 'how_much_public_money_is_wasted_o').first %>
-    <% if info_request %>
-      <%= render :partial => 'general/frontpage_top_request', :locals => { :info_request => info_request } %>
-    <% end %>
-
-    <% info_request = InfoRequest.where(:url_title => 'why_do_you_have_such_a_fancy_dog').first %>
-    <% if info_request %>
+    <% @top_requests.each do |info_request| %>
       <%= render :partial => 'general/frontpage_top_request', :locals => { :info_request => info_request } %>
     <% end %>
   </div>

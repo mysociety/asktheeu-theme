@@ -9,6 +9,17 @@ Rails.configuration.to_prepare do
 
   # Remove UK-specific references to FOI
   InfoRequest.class_eval do
+    def self.top_requests
+      ids = connection.select_values <<-SQL.strip_heredoc.gsub("\n", " ")
+      SELECT info_request_id
+      FROM "track_things"
+      WHERE (info_request_id IS NOT NULL)
+      GROUP BY info_request_id
+      ORDER BY COUNT(*) DESC;
+      SQL
+
+      where(:id => ids).order("position(id::text in '#{ ids }')")
+    end
 
     def law_used_full
       "access to information"
@@ -17,7 +28,6 @@ Rails.configuration.to_prepare do
     def law_used_short
       "information"
     end
-
   end
 
   OutgoingMessage.class_eval do
