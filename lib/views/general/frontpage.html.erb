@@ -26,9 +26,9 @@
       <div class="content">
         <h2><%= _("Latest news and campaigns") %> <%= link_to _("See all"), blog_path %></h2>
 
-        <div class="frontpage__blog">
+        <div class="frontpage__blog blog__container">
           <% @blog_items.take(4).each do |item| %>
-            <div class="frontpage__blog__item">
+            <div class="frontpage__blog blog__item">
               <% if item['thumbnail'] %>
                 <%= link_to item['link'][0] do %>
                   <img <%= item['thumbnail'][0].to_s.html_safe %> width="250" height="150">
