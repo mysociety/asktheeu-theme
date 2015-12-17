@@ -953,14 +953,16 @@ dt {
   padding-top: (100% * (720/1280));
 }
 
-.frontpage__blog {
+// Blog
+
+.blog__container {
   @include respond-min($main_menu-mobile_menu_cutoff / 2) {
     @include clearfix();
     margin: 0 -1em;
   }
 }
 
-.frontpage__blog__item {
+.blog__item {
   margin-bottom: 1em;
 
   @include respond-min($main_menu-mobile_menu_cutoff / 2) {
