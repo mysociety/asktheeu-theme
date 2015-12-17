@@ -434,45 +434,85 @@ a.link_button_green_large {
 }
 
 .footer__about {
+  float: none;
   width: 100% !important; // override the various grid-column() breakpoints in _footer_layout.scss
+  @include clearfix();
+}
+
+.footer__about,
+.footer__links,
+.footer__legal {
+  width: 100%;
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
 
   p {
-    font-size: 1em; // override 0.875em from _footer_layout.scss
-  }
-
-  .footer__credit {
-    font-size: 1.2em;
+    line-height: 1.3em; // to go with the default 0.875em font-size
   }
 }
 
-.footer__access-info {
+.footer__logo {
+  float: left;
   @extend .image-replacement;
   width: 100px;
   height: 66px;
   background: #E12625 image-url('access-info-logo.png') 0 0 no-repeat;
   background-image: image-url('access-info-logo.svg'), none;
   background-size: 100px 66px;
-  float: left;
-  margin: 0 1em 1em 0;
 }
 
-.footer__credit {
+.footer__byline {
+  padding-left: 100px + 20px; // make space for floated logo
+}
+
+// Main "A project by…" text
+p.footer__credit {
+  margin-top: -0.2em; // line up top of text with top of logo
   margin-bottom: 0.5em;
+  font-size: 1.2em;
+}
+
+// Their contact details
+.footer__contact {
+  p {
+    margin-bottom: 0.2em;
+  }
+}
+
+@include respond-min( $main_menu-mobile_menu_cutoff ){
+  .footer__contact {
+    @include clearfix();
+    margin-left: -0.9375rem;
+    margin-right: -0.9375rem;
+    width: 100%;
+  }
+
+  .footer__contact__addresses {
+    @include grid-column(6);
+  }
+
+  .footer__contact__phone {
+    @include grid-column(3);
+  }
 }
 
 .about__contact-links {
-  margin: 0 0 0.8em 0;
+  margin: 1em 0 0.8em 0;
+  font-size: 1em; // rather than 0.875em;
 
   & > li {
     margin: 0 1em 0 0;
   }
 }
 
+.footer__legal {
+  p {
+    max-width: 40em;
+  }
+}
+
 .frontpage-photo-attribution {
   display: none;
-  clear: both;
-  margin: 0;
-  font-size: 0.875em;
 
   .front & {
     display: block;

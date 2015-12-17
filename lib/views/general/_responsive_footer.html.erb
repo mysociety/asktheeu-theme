@@ -2,14 +2,34 @@
   <div class="row">
     <div class="footer__about">
 
-      <a href="http://www.access-info.org" class="footer__access-info"><%= _('Access Info') %></a>
+      <a href="http://www.access-info.org" class="footer__logo"><%= _('Access Info') %></a>
 
-      <p class="footer__credit">
-        <%= _('A project by <a href="http://www.access-info.org">Access Info ' \
-              'Europe</a>, powered by <a href="https://alaveteli.org">' \
-              'Alaveteli</a>') %>
-      </p>
+      <div class="footer__byline">
+        <p class="footer__credit">
+          <%= _('A project by <a href="http://www.access-info.org">Access Info ' \
+                'Europe</a>, powered by <a href="https://alaveteli.org">' \
+                'Alaveteli</a>') %>
+        </p>
 
+        <div class="footer__contact">
+          <div class="footer__contact__addresses">
+            <p>Cava de San Miguel 8, 4º centro. 28005 Madrid (Spain)</p>
+            <p><a href="mailto:info@access-info.org">info@access-info.org</a></p>
+          </div>
+          <div class="footer__contact__phone">
+            <p>Office number (10-19 hrs CET):</p>
+            <p><a href="tel:0034913656558">+34 91 365 65 58</a></p>
+          </div>
+          <div class="footer__contact__phone">
+            <p>Out of hours mobile (any time):</p>
+            <p><a href="tel:0034667685319">+34 667 685 319</a></p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer__links">
       <ul class="about__contact-links">
         <li>
           <%= link_to _('About'), help_about_path %>
@@ -24,13 +44,16 @@
           <%= link_to _('API'), help_api_path %>
         </li>
       </ul>
+    </div>
 
+    <div class="footer__legal">
       <p class="frontpage-photo-attribution">
         <%= _('Homepage header photo © European Union 2014 - European ' \
               'Parliament') %>
         <a href="https://www.flickr.com/photos/european_parliament/13064833244/">CC-BY-ND</a>
       </p>
-
+      <p>This website is powered by <a href="http://www.alaveteli.org/">Alaveteli</a>. Other original content was developed by Access Info Europe and is made public under a <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution, Share Alike licence</a>.</p>
     </div>
+
   </div>
 </div>
