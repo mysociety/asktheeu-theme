@@ -1,4 +1,4 @@
-$body-bg: #e4ece0;
+$body-bg: #DDDE3A;
 $button-bg: #009699;
 $heading-color: #3d3b38;
 $status-success: #aab26e;
@@ -154,9 +154,10 @@ a:active {
 }
 
 .alaveteli-widget__people-count {
+  color: #fff;
   position: absolute;
   top: 22px;
-  left: 197px;
+  left: 176px;
   width: 100px;
   text-align: center;
   line-height: 1.3em;
