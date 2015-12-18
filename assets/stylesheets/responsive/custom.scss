@@ -795,6 +795,27 @@ dt {
   }
 }
 
+.page__header {
+  margin-bottom: 1em;
+
+  &:after {
+    content: "";
+    display: block;
+    border-radius: 0.2em;
+    height: 0.5em;
+    width: 100%;
+    margin-top: 1em;
+    background: darken($banner_inner_bg, 10%);
+    background: -webkit-linear-gradient(left, $color_asktheeu_green 0%, $color_asktheeu_yellow 50%, $color_asktheeu_blue 100%);
+    background: linear-gradient(to right, $color_asktheeu_green 0%, $color_asktheeu_yellow 50%, $color_asktheeu_blue 100%);
+  }
+}
+
+.page__header__subtitle {
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
 
 /* Homepage */
 
