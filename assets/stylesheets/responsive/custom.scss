@@ -268,7 +268,7 @@ a.link_button_green_large {
   padding: 0.5em 1em; // match other navigation links
 
   @include respond-min( $main_menu-mobile_menu_cutoff ){
-    width: 18em;
+    width: 14em;
     float: right !important // override `#navigation li`;
   }
 
