@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: alaveteli\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-01-08 15:06+0000\n"
-"PO-Revision-Date: 2016-01-08 15:07+0000\n"
+"POT-Creation-Date: 2016-01-08 15:38+0000\n"
+"PO-Revision-Date: 2016-01-08 15:38+0000\n"
 "Last-Translator: Gareth Rees <gareth@mysociety.org>\n"
 "Language-Team: English (http://www.transifex.com/mysociety/asktheeu-theme/language/en/)\n"
 "Language: en\n"
@@ -49,6 +49,9 @@ msgstr "Authority has transferred your request to a different public body."
 
 msgid "Browse requests"
 msgstr "Browse requests"
+
+msgid "Cava de San Miguel 8, 4º centro. 28005 Madrid (Spain)"
+msgstr "Cava de San Miguel 8, 4º centro. 28005 Madrid (Spain)"
 
 msgid "Contact"
 msgstr "Contact"
@@ -95,11 +98,23 @@ msgstr "Make a request"
 msgid "More similar requests"
 msgstr "More similar requests"
 
+msgid "NEWS & CAMPAIGNS"
+msgstr "NEWS & CAMPAIGNS"
+
 msgid "News"
 msgstr "News"
 
 msgid "Not Held"
 msgstr "Not Held"
+
+msgid "Office number (10-19 hrs CET):"
+msgstr "Office number (10-19 hrs CET):"
+
+msgid "Other original content was developed by Access Info Europe and is made public under a <a href=\"http://creativecommons.org/licenses/by-sa/3.0/\">Creative Commons Attribution, Share Alike licence</a>."
+msgstr "Other original content was developed by Access Info Europe and is made public under a <a href=\"http://creativecommons.org/licenses/by-sa/3.0/\">Creative Commons Attribution, Share Alike licence</a>."
+
+msgid "Out of hours mobile (any time):"
+msgstr "Out of hours mobile (any time):"
 
 msgid "Partial Success"
 msgstr "Partial Success"
@@ -124,6 +139,9 @@ msgstr "Requests for personal information and vexatious requests are not conside
 
 msgid "Requires Admin"
 msgstr "Requires Admin"
+
+msgid "SUPPORT THE CAMPAIGNS"
+msgstr "SUPPORT THE CAMPAIGNS"
 
 msgid "Search"
 msgstr "Search"
@@ -158,6 +176,9 @@ msgstr "This request has prominence 'hidden'. You can only see it because you ar
 msgid "This request is hidden, so that only you the requester can see it. Please <a href=\"{{url}}\">contact us</a> if you are not sure why."
 msgstr "This request is hidden, so that only you the requester can see it. Please <a href=\"{{url}}\">contact us</a> if you are not sure why."
 
+msgid "This website is powered by <a href=\"http://www.alaveteli.org/\">Alaveteli</a>."
+msgstr "This website is powered by <a href=\"http://www.alaveteli.org/\">Alaveteli</a>."
+
 msgid "Top requests"
 msgstr "Top requests"
 
@@ -191,13 +212,25 @@ msgstr "Waiting Response"
 msgid "Which EU body?"
 msgstr "Which EU body?"
 
+msgid "access to information"
+msgstr "access to information"
+
 msgid "follower"
 msgid_plural "followers"
 msgstr[0] "follower"
 msgstr[1] "followers"
+
+msgid "information"
+msgstr "information"
 
 msgid "type your search term here"
 msgstr "type your search term here"
 
 msgid "unknown status "
 msgstr "unknown status "
+
+msgid "{{public_body_url}} has replied saying <strong>they have transferred your request to another public body</strong>."
+msgstr "{{public_body_url}} has replied saying <strong>they have transferred your request to another public body</strong>."
+
+msgid "{{public_body_url}} has replied saying <strong>you have to contact another public body</strong>."
+msgstr "{{public_body_url}} has replied saying <strong>you have to contact another public body</strong>."
