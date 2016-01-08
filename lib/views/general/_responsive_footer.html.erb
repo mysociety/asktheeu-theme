@@ -13,15 +13,15 @@
 
         <div class="footer__contact">
           <div class="footer__contact__addresses">
-            <p>Cava de San Miguel 8, 4º centro. 28005 Madrid (Spain)</p>
+            <p><%= _("Cava de San Miguel 8, 4º centro. 28005 Madrid (Spain)") %></p>
             <p><a href="mailto:info@access-info.org">info@access-info.org</a></p>
           </div>
           <div class="footer__contact__phone">
-            <p>Office number (10-19 hrs CET):</p>
+            <p><%= _("Office number (10-19 hrs CET):") %></p>
             <p><a href="tel:0034913656558">+34 91 365 65 58</a></p>
           </div>
           <div class="footer__contact__phone">
-            <p>Out of hours mobile (any time):</p>
+            <p><%= _("Out of hours mobile (any time):") %></p>
             <p><a href="tel:0034667685319">+34 667 685 319</a></p>
           </div>
         </div>
@@ -52,7 +52,13 @@
               'Parliament') %>
         <a href="https://www.flickr.com/photos/european_parliament/13064833244/">CC-BY-ND</a>
       </p>
-      <p>This website is powered by <a href="http://www.alaveteli.org/">Alaveteli</a>. Other original content was developed by Access Info Europe and is made public under a <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution, Share Alike licence</a>.</p>
+      <p>
+        <%= _('This website is powered by <a href="http://www.alaveteli.org/">Alaveteli</a>.') %>
+        <%= _('Other original content was developed by Access Info Europe ' \
+              'and is made public under a ' \
+              '<a href="http://creativecommons.org/licenses/by-sa/3.0/">' \
+              'Creative Commons Attribution, Share Alike licence</a>.') %>
+      </p>
     </div>
 
   </div>
