@@ -4,14 +4,15 @@
 #
 # Translators:
 # andreas.pavlou <andreas@access-info.org>, 2016
+# andreas.pavlou <andreas@access-info.org>, 2016
 # Gareth Rees <gareth@mysociety.org>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: alaveteli\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-01-08 15:38+0000\n"
-"PO-Revision-Date: 2016-01-08 17:38+0000\n"
-"Last-Translator: andreas.pavlou <andreas@access-info.org>\n"
+"POT-Creation-Date: 2016-01-08 17:52+0000\n"
+"PO-Revision-Date: 2016-01-08 17:56+0000\n"
+"Last-Translator: Gareth Rees <gareth@mysociety.org>\n"
 "Language-Team: Spanish (http://www.transifex.com/mysociety/asktheeu-theme/language/es/)\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
@@ -31,7 +32,7 @@ msgstr "Sobre nosotros"
 msgid "Access Info"
 msgstr "Access Info"
 
-msgid "AskTheEU is an online platform for citizens to send access to documents requests directly to EU institutions."
+msgid "AskTheEU.org is an online platform for citizens to send access to documents requests directly to EU institutions."
 msgstr "AsktheEU.org es una plataforma online para facilitar que los ciudadanos envíen solicitudes de acceso a documentos directamente a las instituciones europeas."
 
 msgid "Attention Requested"
@@ -79,7 +80,7 @@ msgstr "Foto de portada © Unión Europea 2014 - Parlamento Europeo"
 msgid "How it works"
 msgstr "¿Qué es?"
 
-msgid "How to AskTheEU"
+msgid "How to AskTheEU.org"
 msgstr "Cómo utilizar AsktheEU.org"
 
 msgid "If you believe this request is not suitable, you can report it for attention by the site administrators"
