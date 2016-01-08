@@ -3,22 +3,20 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Translators:
+# Gareth Rees <gareth@mysociety.org>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: alaveteli\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-01-08 14:17+0000\n"
-"PO-Revision-Date: 2016-01-08 14:20+0000\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2016-01-08 15:06+0000\n"
+"PO-Revision-Date: 2016-01-08 15:07+0000\n"
+"Last-Translator: Gareth Rees <gareth@mysociety.org>\n"
 "Language-Team: German (http://www.transifex.com/mysociety/asktheeu-theme/language/de/)\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-
-msgid "\"Dies ist eine Anfrage auf Dokumentenzugangs unter Artikel 15 des Vertrags über die Arbeitsweise der Europäischen Union (AEUV) und, wo zutreffend, Verordnung 1049/2001 welche über die Internetsetite {{site_name}} gesendet wurde."
-msgstr ""
 
 msgid "A project by <a href=\"http://www.access-info.org\">Access Info Europe</a>, powered by <a href=\"https://alaveteli.org\">Alaveteli</a>"
 msgstr ""
@@ -50,16 +48,10 @@ msgstr ""
 msgid "Authority has transferred your request to a different public body."
 msgstr ""
 
-msgid "Bitte verwendet Sie dies Email-Adresse für alle Antworten zu folgender Anfrage: {{email}}"
-msgstr ""
-
 msgid "Browse requests"
 msgstr ""
 
 msgid "Contact"
-msgstr ""
-
-msgid "Diese Nachricht und alle Antworten von {{public_body_name}} werden auf der {{site_name}} Internetseite veröffentlicht. Für weitere Informationen besuchen Sie bitte unsere speziell für EU-Beamte eingerichtete Seite {{help_url}}"
 msgstr ""
 
 msgid "Error message"
@@ -68,16 +60,10 @@ msgstr ""
 msgid "Event history details"
 msgstr ""
 
-msgid "Falls {{email_address}} die falsche Email-Adresse für Anfragen auf Dokumentenzugangs an {{public_body_name}} ist, teilen Sie dies dem {{site_name}} team bitte durch eine Email an team@asktheEU.org mit."
-msgstr ""
-
 msgid "Find out more"
 msgstr ""
 
 msgid "Get answers from EU Institutions"
-msgstr ""
-
-msgid "Go"
 msgstr ""
 
 msgid "Gone Postal"
@@ -96,7 +82,7 @@ msgid "If you believe this request is not suitable, you can report it for attent
 msgstr ""
 
 msgid "If {{email_address}} is the wrong address for information requests to {{public_body_name}}, please tell the {{site_name}} team on email team@asktheEU.org"
-msgstr ""
+msgstr "Falls {{email_address}} die falsche Email-Adresse für Anfragen auf Dokumentenzugangs an {{public_body_name}} ist, teilen Sie dies dem {{site_name}} team bitte durch eine Email an team@asktheEU.org mit."
 
 msgid "Internal Review"
 msgstr ""
@@ -120,7 +106,7 @@ msgid "Partial Success"
 msgstr ""
 
 msgid "Please kindly use this email address for all replies to this request: {{email}}"
-msgstr ""
+msgstr "Bitte verwendet Sie dies Email-Adresse für alle Antworten zu folgender Anfrage: {{email}}"
 
 msgid "Privacy and cookies"
 msgstr ""
@@ -159,10 +145,10 @@ msgid "Successful requests"
 msgstr ""
 
 msgid "This is a request for access to information under Article 15 of the TFEU and, where applicable, Regulation 1049/2001 which has been sent via the {{site_name}} website."
-msgstr ""
+msgstr "Dies ist eine Anfrage auf Dokumentenzugangs unter Artikel 15 des Vertrags über die Arbeitsweise der Europäischen Union (AEUV) und, wo zutreffend, Verordnung 1049/2001 welche über die Internetsetite {{site_name}} gesendet wurde."
 
 msgid "This message and all replies from {{public_body_name}} will be published on the {{site_name}} website. For more information see our dedicated page for EU public officials at {{help_url}}"
-msgstr ""
+msgstr "Diese Nachricht und alle Antworten von {{public_body_name}} werden auf der {{site_name}} Internetseite veröffentlicht. Für weitere Informationen besuchen Sie bitte unsere speziell für EU-Beamte eingerichtete Seite {{help_url}}"
 
 msgid "This request has been marked for review by the site administrators, who have not hidden it at this time. If you believe it should be hidden, please <a href=\"{{url}}\">contact us</a>."
 msgstr ""
@@ -215,7 +201,4 @@ msgid "type your search term here"
 msgstr ""
 
 msgid "unknown status "
-msgstr ""
-
-msgid "{{site_name}} "
 msgstr ""

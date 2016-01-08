@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: alaveteli\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-01-08 14:17+0000\n"
-"PO-Revision-Date: 2016-01-08 14:20+0000\n"
+"POT-Creation-Date: 2016-01-08 15:06+0000\n"
+"PO-Revision-Date: 2016-01-08 15:07+0000\n"
 "Last-Translator: Gareth Rees <gareth@mysociety.org>\n"
 "Language-Team: English (http://www.transifex.com/mysociety/asktheeu-theme/language/en/)\n"
 "Language: en\n"
@@ -16,9 +16,6 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-
-msgid "\"Dies ist eine Anfrage auf Dokumentenzugangs unter Artikel 15 des Vertrags über die Arbeitsweise der Europäischen Union (AEUV) und, wo zutreffend, Verordnung 1049/2001 welche über die Internetsetite {{site_name}} gesendet wurde."
-msgstr "\"Dies ist eine Anfrage auf Dokumentenzugangs unter Artikel 15 des Vertrags über die Arbeitsweise der Europäischen Union (AEUV) und, wo zutreffend, Verordnung 1049/2001 welche über die Internetsetite {{site_name}} gesendet wurde."
 
 msgid "A project by <a href=\"http://www.access-info.org\">Access Info Europe</a>, powered by <a href=\"https://alaveteli.org\">Alaveteli</a>"
 msgstr "A project by <a href=\"http://www.access-info.org\">Access Info Europe</a>, powered by <a href=\"https://alaveteli.org\">Alaveteli</a>"
@@ -50,17 +47,11 @@ msgstr "Authority has closed your request and referred you to a different public
 msgid "Authority has transferred your request to a different public body."
 msgstr "Authority has transferred your request to a different public body."
 
-msgid "Bitte verwendet Sie dies Email-Adresse für alle Antworten zu folgender Anfrage: {{email}}"
-msgstr "Bitte verwendet Sie dies Email-Adresse für alle Antworten zu folgender Anfrage: {{email}}"
-
 msgid "Browse requests"
 msgstr "Browse requests"
 
 msgid "Contact"
 msgstr "Contact"
-
-msgid "Diese Nachricht und alle Antworten von {{public_body_name}} werden auf der {{site_name}} Internetseite veröffentlicht. Für weitere Informationen besuchen Sie bitte unsere speziell für EU-Beamte eingerichtete Seite {{help_url}}"
-msgstr "Diese Nachricht und alle Antworten von {{public_body_name}} werden auf der {{site_name}} Internetseite veröffentlicht. Für weitere Informationen besuchen Sie bitte unsere speziell für EU-Beamte eingerichtete Seite {{help_url}}"
 
 msgid "Error message"
 msgstr "Error message"
@@ -68,17 +59,11 @@ msgstr "Error message"
 msgid "Event history details"
 msgstr "Event history details"
 
-msgid "Falls {{email_address}} die falsche Email-Adresse für Anfragen auf Dokumentenzugangs an {{public_body_name}} ist, teilen Sie dies dem {{site_name}} team bitte durch eine Email an team@asktheEU.org mit."
-msgstr "Falls {{email_address}} die falsche Email-Adresse für Anfragen auf Dokumentenzugangs an {{public_body_name}} ist, teilen Sie dies dem {{site_name}} team bitte durch eine Email an team@asktheEU.org mit."
-
 msgid "Find out more"
 msgstr "Find out more"
 
 msgid "Get answers from EU Institutions"
 msgstr "Get answers from EU Institutions"
-
-msgid "Go"
-msgstr "Go"
 
 msgid "Gone Postal"
 msgstr "Gone Postal"
@@ -216,6 +201,3 @@ msgstr "type your search term here"
 
 msgid "unknown status "
 msgstr "unknown status "
-
-msgid "{{site_name}} "
-msgstr "{{site_name}} "
