@@ -3,12 +3,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Translators:
+# Gareth Rees <gareth@mysociety.org>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: alaveteli\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-01-08 15:06+0000\n"
-"PO-Revision-Date: 2016-01-08 15:07+0000\n"
+"PO-Revision-Date: 2016-01-08 15:25+0000\n"
 "Last-Translator: Gareth Rees <gareth@mysociety.org>\n"
 "Language-Team: French (http://www.transifex.com/mysociety/asktheeu-theme/language/fr/)\n"
 "Language: fr\n"
@@ -18,19 +19,19 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 msgid "A project by <a href=\"http://www.access-info.org\">Access Info Europe</a>, powered by <a href=\"https://alaveteli.org\">Alaveteli</a>"
-msgstr ""
+msgstr "Un project d’<a href=\"http://www.access-info.org\">Access Info Europe</a> rendu possible par <a href=\"https://alaveteli.org\">Alaveteli</a>"
 
 msgid "API"
-msgstr ""
+msgstr "API"
 
 msgid "About"
-msgstr ""
+msgstr "À propros"
 
 msgid "Access Info"
 msgstr ""
 
 msgid "AskTheEU is an online platform for citizens to send access to documents requests directly to EU institutions."
-msgstr ""
+msgstr "AskTheEU est une plateforme digitale qui aide les citoyens à envoyer des demandes d'accès aux documents directement aux institutions de l'Union européenne."
 
 msgid "Attention Requested"
 msgstr ""
@@ -48,10 +49,10 @@ msgid "Authority has transferred your request to a different public body."
 msgstr ""
 
 msgid "Browse requests"
-msgstr ""
+msgstr "Voir les demandes"
 
 msgid "Contact"
-msgstr ""
+msgstr "Contacte"
 
 msgid "Error message"
 msgstr ""
@@ -60,10 +61,10 @@ msgid "Event history details"
 msgstr ""
 
 msgid "Find out more"
-msgstr ""
+msgstr "Plus d’information"
 
 msgid "Get answers from EU Institutions"
-msgstr ""
+msgstr "Obtenez des réponses des institutions de l'Union européenne"
 
 msgid "Gone Postal"
 msgstr ""
@@ -72,10 +73,10 @@ msgid "Homepage header photo © European Union 2014 - European Parliament"
 msgstr ""
 
 msgid "How it works"
-msgstr ""
+msgstr "À propos"
 
 msgid "How to AskTheEU"
-msgstr ""
+msgstr "Comment utiliser AsktheEU"
 
 msgid "If you believe this request is not suitable, you can report it for attention by the site administrators"
 msgstr ""
@@ -87,10 +88,10 @@ msgid "Internal Review"
 msgstr ""
 
 msgid "Latest news and campaigns"
-msgstr ""
+msgstr "Les nouvelles et campagnes"
 
 msgid "Make a request"
-msgstr ""
+msgstr "Faire une demande"
 
 msgid "More similar requests"
 msgstr ""
@@ -108,7 +109,7 @@ msgid "Please kindly use this email address for all replies to this request: {{e
 msgstr ""
 
 msgid "Privacy and cookies"
-msgstr ""
+msgstr "Privacité et cookies"
 
 msgid "Referred."
 msgstr ""
@@ -129,10 +130,10 @@ msgid "Search"
 msgstr ""
 
 msgid "See all"
-msgstr ""
+msgstr "Tout voir"
 
 msgid "Send a request"
-msgstr ""
+msgstr "Faire une demande"
 
 msgid "Similar requests"
 msgstr ""
@@ -159,7 +160,7 @@ msgid "This request is hidden, so that only you the requester can see it. Please
 msgstr ""
 
 msgid "Top requests"
-msgstr ""
+msgstr "Le top des demandes"
 
 msgid "Transferred."
 msgstr ""
@@ -189,7 +190,7 @@ msgid "Waiting Response"
 msgstr ""
 
 msgid "Which EU body?"
-msgstr ""
+msgstr "À quelle institution?"
 
 msgid "follower"
 msgid_plural "followers"
