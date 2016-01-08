@@ -3,14 +3,15 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Translators:
+# andreas.pavlou <andreas@access-info.org>, 2016
 # Gareth Rees <gareth@mysociety.org>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: alaveteli\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-01-08 15:38+0000\n"
-"PO-Revision-Date: 2016-01-08 15:42+0000\n"
-"Last-Translator: Gareth Rees <gareth@mysociety.org>\n"
+"PO-Revision-Date: 2016-01-08 17:38+0000\n"
+"Last-Translator: andreas.pavlou <andreas@access-info.org>\n"
 "Language-Team: Spanish (http://www.transifex.com/mysociety/asktheeu-theme/language/es/)\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
@@ -28,25 +29,25 @@ msgid "About"
 msgstr "Sobre nosotros"
 
 msgid "Access Info"
-msgstr ""
+msgstr "Access Info"
 
 msgid "AskTheEU is an online platform for citizens to send access to documents requests directly to EU institutions."
-msgstr "AsktheEU es una plataforma online para facilitar que los ciudadanos envíen solicitudes de acceso a documentos directamente a las instituciones europeas."
+msgstr "AsktheEU.org es una plataforma online para facilitar que los ciudadanos envíen solicitudes de acceso a documentos directamente a las instituciones europeas."
 
 msgid "Attention Requested"
-msgstr ""
+msgstr "Atención Solicitada"
 
 msgid "Authority has <strong>referred you to another public body</strong> for an answer"
-msgstr ""
+msgstr "La institución <strong>te ha remitido a otro organismo</strong> para que responda"
 
 msgid "Authority has <strong>transferred your request</strong> to another public body."
-msgstr ""
+msgstr "La institución ha <strong>remitido tu solicitud</strong> a otro organismo."
 
 msgid "Authority has closed your request and referred you to a different public body."
-msgstr ""
+msgstr "La institución ha dado por finalizada tu solicitud y te ha remitido a otro organismo."
 
 msgid "Authority has transferred your request to a different public body."
-msgstr ""
+msgstr "La institución ha remitido tu solicitud a otra institución."
 
 msgid "Browse requests"
 msgstr "Ver solicitudes"
@@ -58,10 +59,10 @@ msgid "Contact"
 msgstr "Contacto"
 
 msgid "Error message"
-msgstr ""
+msgstr "Mensaje de error"
 
 msgid "Event history details"
-msgstr ""
+msgstr "Detalles del historial"
 
 msgid "Find out more"
 msgstr "Más informacion"
@@ -70,25 +71,25 @@ msgid "Get answers from EU Institutions"
 msgstr "Consigue respuestas de las instituciones de la Unión Europea"
 
 msgid "Gone Postal"
-msgstr ""
+msgstr "Tramitada por correo postal"
 
 msgid "Homepage header photo © European Union 2014 - European Parliament"
-msgstr ""
+msgstr "Foto de portada © Unión Europea 2014 - Parlamento Europeo"
 
 msgid "How it works"
 msgstr "¿Qué es?"
 
 msgid "How to AskTheEU"
-msgstr "Cómo utilizar AsktheEU"
+msgstr "Cómo utilizar AsktheEU.org"
 
 msgid "If you believe this request is not suitable, you can report it for attention by the site administrators"
-msgstr ""
+msgstr "Si crees que esta solicitud no es apropiada, puedes informar a los administradores web"
 
 msgid "If {{email_address}} is the wrong address for information requests to {{public_body_name}}, please tell the {{site_name}} team on email team@asktheEU.org"
-msgstr ""
+msgstr "Si {{email_address}} no es la dirección correcta para enviar solicitudes a {{public_body_name}}, por favor informa al equipo de {{site_name}} por team@asktheEU.org"
 
 msgid "Internal Review"
-msgstr ""
+msgstr "Reclamación Interna"
 
 msgid "Latest news and campaigns"
 msgstr "Últimas noticias y campañas"
@@ -97,16 +98,16 @@ msgid "Make a request"
 msgstr "Enviar una solicitud"
 
 msgid "More similar requests"
-msgstr ""
+msgstr "Más solicitudes relacionadas"
 
 msgid "NEWS & CAMPAIGNS"
-msgstr ""
+msgstr "Novedades y Campañas"
 
 msgid "News"
-msgstr ""
+msgstr "Novedades"
 
 msgid "Not Held"
-msgstr ""
+msgstr "La institución no tiene la información"
 
 msgid "Office number (10-19 hrs CET):"
 msgstr "Número de oficina (10-19 hrs CET):"
@@ -118,34 +119,34 @@ msgid "Out of hours mobile (any time):"
 msgstr "Fuera del horario de oficina:"
 
 msgid "Partial Success"
-msgstr ""
+msgstr "Éxito parcial"
 
 msgid "Please kindly use this email address for all replies to this request: {{email}}"
-msgstr ""
+msgstr "Por favor, utiliza este correo electrónico para contestar a esta solicitud: {{email}}"
 
 msgid "Privacy and cookies"
 msgstr "Privacidad y cookies"
 
 msgid "Referred."
-msgstr ""
+msgstr "Usuario remitido a otra institución"
 
 msgid "Rejected"
-msgstr ""
+msgstr "Rechazada"
 
 msgid "Report this request"
-msgstr ""
+msgstr "Alerta acerca de esta solicitud"
 
 msgid "Requests for personal information and vexatious requests are not considered valid for FOI purposes (<a href=\"/help/about\">read more</a>)."
-msgstr ""
+msgstr "No se consideran válidas las solicitudes de información de carácter personal o aquellas que son abusivas (<a href=\"/help/about\">leer más</a>)."
 
 msgid "Requires Admin"
-msgstr ""
+msgstr "Requiere Administrador"
 
 msgid "SUPPORT THE CAMPAIGNS"
-msgstr ""
+msgstr "APOYA LAS CAMPAÑAS"
 
 msgid "Search"
-msgstr ""
+msgstr "Buscar"
 
 msgid "See all"
 msgstr "Ver todas"
@@ -154,28 +155,28 @@ msgid "Send a request"
 msgstr "Enviar una solicitud"
 
 msgid "Similar requests"
-msgstr ""
+msgstr "Solicitudes relacionadas"
 
 msgid "Successful"
-msgstr ""
+msgstr "Exitosa"
 
 msgid "Successful requests"
-msgstr ""
+msgstr "Solicitudes exitosas"
 
 msgid "This is a request for access to information under Article 15 of the TFEU and, where applicable, Regulation 1049/2001 which has been sent via the {{site_name}} website."
-msgstr ""
+msgstr "Esta es una solicitud de acceso a documentos al amparo del Artículo 15 de los tratados de la UE y, donde aplicable, el Reglamento 1049/2001, la cual se ha enviado a través de {{site_name}}."
 
 msgid "This message and all replies from {{public_body_name}} will be published on the {{site_name}} website. For more information see our dedicated page for EU public officials at {{help_url}}"
-msgstr ""
+msgstr "Este mensaje y todas las respuestas desde {{public_body_name}} serán publicados en el sitio web {{site_name}}. Para más información, ver nuestra página para funcionarios de la UE {{help_url}}"
 
 msgid "This request has been marked for review by the site administrators, who have not hidden it at this time. If you believe it should be hidden, please <a href=\"{{url}}\">contact us</a>."
-msgstr ""
+msgstr "Aunque no está oculta en este momento, los administradores de este sitio web van a revisar esta solicitud. Si crees que debería estar oculta, por favor  <a href=\"{{url}}\">contacta con nosotros</a>."
 
 msgid "This request has prominence 'hidden'. You can only see it because you are logged in as a super user."
-msgstr ""
+msgstr "Esta solicitud está 'oculta'. La puedes ver porque estás conectado como super-usuario."
 
 msgid "This request is hidden, so that only you the requester can see it. Please <a href=\"{{url}}\">contact us</a> if you are not sure why."
-msgstr ""
+msgstr "La solicitud está oculta para que solo tú como solicitante la puedas ver. <a href=\"{{url}}\">Contacta con nosotros</a> si no entiendes por qué."
 
 msgid "This website is powered by <a href=\"http://www.alaveteli.org/\">Alaveteli</a>."
 msgstr "Este sitio web usa software <a href=\"http://www.alaveteli.org/\">Alaveteli</a>."
@@ -184,54 +185,54 @@ msgid "Top requests"
 msgstr "Solicitudes destacadas"
 
 msgid "Transferred."
-msgstr ""
+msgstr "Remitida."
 
 msgid "Under the right of access to documents in the EU treaties, as developed in Regulation 1049/2001, I am requesting documents which contain the following information:\\n\\n"
-msgstr ""
+msgstr "Al amparo del derecho de acceso a documentos contemplado en los tratados de la UE, y desarrollado en el Reglamento 1049/2001, solicito los documentos que contienen la siguiente información:\\n\\n"
 
 msgid "Unknown"
-msgstr ""
+msgstr "Deconocido"
 
 msgid "Unknown Status"
-msgstr ""
+msgstr "Estado Desconocido"
 
 msgid "Unsuitable?"
-msgstr ""
+msgstr "¿Insatisfactoria?"
 
 msgid "User Withdrawn"
-msgstr ""
+msgstr "Retirada por Usuario"
 
 msgid "Vexatious"
-msgstr ""
+msgstr "Abusiva"
 
 msgid "Waiting Clarification"
-msgstr ""
+msgstr "Esperando Aclaración"
 
 msgid "Waiting Response"
-msgstr ""
+msgstr "Esperando Respuesta"
 
 msgid "Which EU body?"
 msgstr "¿A quién preguntar?"
 
 msgid "access to information"
-msgstr ""
+msgstr "acceso a información"
 
 msgid "follower"
 msgid_plural "followers"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "seguidor"
+msgstr[1] "seguidores"
 
 msgid "information"
-msgstr ""
+msgstr "información"
 
 msgid "type your search term here"
-msgstr ""
+msgstr "introduce los términos de búsqueda"
 
 msgid "unknown status "
-msgstr ""
+msgstr "estado desconocido"
 
 msgid "{{public_body_url}} has replied saying <strong>they have transferred your request to another public body</strong>."
-msgstr ""
+msgstr "{{public_body_url}} ha contestado y dice que <strong>ha remitido tu solicitud a otro organismo</strong>."
 
 msgid "{{public_body_url}} has replied saying <strong>you have to contact another public body</strong>."
-msgstr ""
+msgstr "{{public_body_url}} ha contestado y dice que <strong>tienes que remitir tu solicitud a otra institución</strong>."
