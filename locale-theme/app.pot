@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: version 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-01-08 15:06+0000\n"
+"POT-Creation-Date: 2016-01-08 15:38+0000\n"
 "PO-Revision-Date: 2016-01-08 14:17+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -49,6 +49,9 @@ msgid "Authority has transferred your request to a different public body."
 msgstr ""
 
 msgid "Browse requests"
+msgstr ""
+
+msgid "Cava de San Miguel 8, 4º centro. 28005 Madrid (Spain)"
 msgstr ""
 
 msgid "Contact"
@@ -96,10 +99,22 @@ msgstr ""
 msgid "More similar requests"
 msgstr ""
 
+msgid "NEWS & CAMPAIGNS"
+msgstr ""
+
 msgid "News"
 msgstr ""
 
 msgid "Not Held"
+msgstr ""
+
+msgid "Office number (10-19 hrs CET):"
+msgstr ""
+
+msgid "Other original content was developed by Access Info Europe and is made public under a <a href=\"http://creativecommons.org/licenses/by-sa/3.0/\">Creative Commons Attribution, Share Alike licence</a>."
+msgstr ""
+
+msgid "Out of hours mobile (any time):"
 msgstr ""
 
 msgid "Partial Success"
@@ -124,6 +139,9 @@ msgid "Requests for personal information and vexatious requests are not consider
 msgstr ""
 
 msgid "Requires Admin"
+msgstr ""
+
+msgid "SUPPORT THE CAMPAIGNS"
 msgstr ""
 
 msgid "Search"
@@ -159,6 +177,9 @@ msgstr ""
 msgid "This request is hidden, so that only you the requester can see it. Please <a href=\"{{url}}\">contact us</a> if you are not sure why."
 msgstr ""
 
+msgid "This website is powered by <a href=\"http://www.alaveteli.org/\">Alaveteli</a>."
+msgstr ""
+
 msgid "Top requests"
 msgstr ""
 
@@ -192,13 +213,25 @@ msgstr ""
 msgid "Which EU body?"
 msgstr ""
 
+msgid "access to information"
+msgstr ""
+
 msgid "follower"
 msgid_plural "followers"
 msgstr[0] ""
 msgstr[1] ""
 
+msgid "information"
+msgstr ""
+
 msgid "type your search term here"
 msgstr ""
 
 msgid "unknown status "
+msgstr ""
+
+msgid "{{public_body_url}} has replied saying <strong>they have transferred your request to another public body</strong>."
+msgstr ""
+
+msgid "{{public_body_url}} has replied saying <strong>you have to contact another public body</strong>."
 msgstr ""
