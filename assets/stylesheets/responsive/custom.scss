@@ -280,24 +280,32 @@ a.link_button_green_large {
     display: block;
     margin: 0;
     float: left;
-    height: 2em;
-    line-height: 1em;
     font-size: 1em;
-    padding: 0 0.5em;
+    line-height: 1em;
   }
 
   input {
     width: 75%;
+    height: 2em;
+    padding: 0 0.5em;
     border-radius: 0.2em 0 0 0.2em !important; // override `form input[type="search"]`
     border: none;
   }
 
   button {
     width: 25%;
+
+    height: 0;
+    overflow: hidden;
+    padding: 2em 0 0 0;
     border-radius: 0 0.2em 0.2em 0;
-    text-transform: uppercase;
-    font-weight: bold;
-    background-color: darken($color_asktheeu_green, 20%);
+
+    background: darken($color_asktheeu_green, 20%) image-url('search.png') no-repeat 50% 50%;
+    background-size: 20px 20px;
+    @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+      background-image: image-url('search@2.png');
+    }
+    background-image: image-url('search.svg'), none;
 
     &:hover, &:focus {
       background-color: darken($color_asktheeu_green, 30%);
