@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: alaveteli\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-01-08 15:06+0000\n"
-"PO-Revision-Date: 2016-01-08 15:07+0000\n"
+"PO-Revision-Date: 2016-01-08 15:23+0000\n"
 "Last-Translator: Gareth Rees <gareth@mysociety.org>\n"
 "Language-Team: German (http://www.transifex.com/mysociety/asktheeu-theme/language/de/)\n"
 "Language: de\n"
@@ -19,19 +19,19 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 msgid "A project by <a href=\"http://www.access-info.org\">Access Info Europe</a>, powered by <a href=\"https://alaveteli.org\">Alaveteli</a>"
-msgstr ""
+msgstr "Ein Projekt von <a href=\"http://www.access-info.org\">Access Info Europe</a>, ermöglicht durch <a href=\"https://alaveteli.org\">Alaveteli</a>"
 
 msgid "API"
-msgstr ""
+msgstr "API"
 
 msgid "About"
-msgstr ""
+msgstr "Über"
 
 msgid "Access Info"
 msgstr ""
 
 msgid "AskTheEU is an online platform for citizens to send access to documents requests directly to EU institutions."
-msgstr ""
+msgstr "AskTheEU ist eine Online-Plattform, mit der jede Person direkt Dokumente von EU-Institutionen anfragen kann."
 
 msgid "Attention Requested"
 msgstr ""
@@ -49,10 +49,10 @@ msgid "Authority has transferred your request to a different public body."
 msgstr ""
 
 msgid "Browse requests"
-msgstr ""
+msgstr "Anfragen ansehen"
 
 msgid "Contact"
-msgstr ""
+msgstr "Kontakt"
 
 msgid "Error message"
 msgstr ""
@@ -61,10 +61,10 @@ msgid "Event history details"
 msgstr ""
 
 msgid "Find out more"
-msgstr ""
+msgstr "Mehr Informationen"
 
 msgid "Get answers from EU Institutions"
-msgstr ""
+msgstr "Erhalte Antworten von EU-Institutionen"
 
 msgid "Gone Postal"
 msgstr ""
@@ -73,10 +73,10 @@ msgid "Homepage header photo © European Union 2014 - European Parliament"
 msgstr ""
 
 msgid "How it works"
-msgstr ""
+msgstr "So funktioniert's"
 
 msgid "How to AskTheEU"
-msgstr ""
+msgstr "Wie AskTheEU benutzen"
 
 msgid "If you believe this request is not suitable, you can report it for attention by the site administrators"
 msgstr ""
@@ -88,10 +88,10 @@ msgid "Internal Review"
 msgstr ""
 
 msgid "Latest news and campaigns"
-msgstr ""
+msgstr "Neuigkeiten und Kampagnen"
 
 msgid "Make a request"
-msgstr ""
+msgstr "Anfrage stellen"
 
 msgid "More similar requests"
 msgstr ""
@@ -109,7 +109,7 @@ msgid "Please kindly use this email address for all replies to this request: {{e
 msgstr "Bitte verwendet Sie dies Email-Adresse für alle Antworten zu folgender Anfrage: {{email}}"
 
 msgid "Privacy and cookies"
-msgstr ""
+msgstr "Datenschutz und cookies"
 
 msgid "Referred."
 msgstr ""
@@ -130,10 +130,10 @@ msgid "Search"
 msgstr ""
 
 msgid "See all"
-msgstr ""
+msgstr "Alle ansehen"
 
 msgid "Send a request"
-msgstr ""
+msgstr "Anfrage stellen"
 
 msgid "Similar requests"
 msgstr ""
@@ -160,7 +160,7 @@ msgid "This request is hidden, so that only you the requester can see it. Please
 msgstr ""
 
 msgid "Top requests"
-msgstr ""
+msgstr "Top-Anfragen"
 
 msgid "Transferred."
 msgstr ""
@@ -190,7 +190,7 @@ msgid "Waiting Response"
 msgstr ""
 
 msgid "Which EU body?"
-msgstr ""
+msgstr "Wen anfragen?"
 
 msgid "follower"
 msgid_plural "followers"
