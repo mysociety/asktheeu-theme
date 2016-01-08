@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: version 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-01-08 14:17+0000\n"
+"POT-Creation-Date: 2016-01-08 15:06+0000\n"
 "PO-Revision-Date: 2016-01-08 14:17+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,307 +18,187 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
-#: lib/themes/asktheeu-theme/lib/controller_patches.rb:18
-msgid "Successful requests"
+msgid "A project by <a href=\"http://www.access-info.org\">Access Info Europe</a>, powered by <a href=\"https://alaveteli.org\">Alaveteli</a>"
 msgstr ""
 
-#: lib/themes/asktheeu-theme/lib/customstates.rb:23
-msgid "Referred."
+msgid "API"
 msgstr ""
 
-#: lib/themes/asktheeu-theme/lib/customstates.rb:25
-msgid "Transferred."
+msgid "About"
 msgstr ""
 
-#: lib/themes/asktheeu-theme/lib/customstates.rb:27
-msgid "unknown status "
+msgid "Access Info"
 msgstr ""
 
-#: lib/themes/asktheeu-theme/lib/customstates.rb:44
-msgid "Authority has closed your request and referred you to a different public body."
-msgstr ""
-
-#: lib/themes/asktheeu-theme/lib/customstates.rb:47
-msgid "Authority has transferred your request to a different public body."
-msgstr ""
-
-#: lib/themes/asktheeu-theme/lib/helper_patches.rb:10
-msgid "Unknown Status"
-msgstr ""
-
-#: lib/themes/asktheeu-theme/lib/helper_patches.rb:12
-msgid "Waiting Response"
-msgstr ""
-
-#: lib/themes/asktheeu-theme/lib/helper_patches.rb:14
-msgid "Not Held"
-msgstr ""
-
-#: lib/themes/asktheeu-theme/lib/helper_patches.rb:16
-msgid "Rejected"
-msgstr ""
-
-#: lib/themes/asktheeu-theme/lib/helper_patches.rb:18
-msgid "Successful"
-msgstr ""
-
-#: lib/themes/asktheeu-theme/lib/helper_patches.rb:20
-msgid "Partial Success"
-msgstr ""
-
-#: lib/themes/asktheeu-theme/lib/helper_patches.rb:22
-msgid "Waiting Clarification"
-msgstr ""
-
-#: lib/themes/asktheeu-theme/lib/helper_patches.rb:24
-msgid "Gone Postal"
-msgstr ""
-
-#: lib/themes/asktheeu-theme/lib/helper_patches.rb:26
-msgid "Internal Review"
-msgstr ""
-
-#: lib/themes/asktheeu-theme/lib/helper_patches.rb:28
-msgid "Error message"
-msgstr ""
-
-#: lib/themes/asktheeu-theme/lib/helper_patches.rb:30
-msgid "Requires Admin"
-msgstr ""
-
-#: lib/themes/asktheeu-theme/lib/helper_patches.rb:32
-msgid "User Withdrawn"
-msgstr ""
-
-#: lib/themes/asktheeu-theme/lib/helper_patches.rb:34
-msgid "Attention Requested"
-msgstr ""
-
-#: lib/themes/asktheeu-theme/lib/helper_patches.rb:36
-msgid "Vexatious"
-msgstr ""
-
-#: lib/themes/asktheeu-theme/lib/helper_patches.rb:41
-msgid "Unknown"
-msgstr ""
-
-#: lib/themes/asktheeu-theme/lib/model_patches.rb:39
-msgid "Under the right of access to documents in the EU treaties, as developed in Regulation 1049/2001, I am requesting documents which contain the following information:\\n\\n"
-msgstr ""
-
-#:
-#: lib/themes/asktheeu-theme/lib/views/general/_custom_state_transitions_complete.html.erb:3
-msgid "Authority has <strong>referred you to another public body</strong> for an answer"
-msgstr ""
-
-#:
-#: lib/themes/asktheeu-theme/lib/views/general/_custom_state_transitions_pending.html.erb:3
-msgid "Authority has <strong>transferred your request</strong> to another public body."
-msgstr ""
-
-#:
-#: lib/themes/asktheeu-theme/lib/views/general/_frontpage_hero.html.erb:7
-msgid "Send a request"
-msgstr ""
-
-#:
-#: lib/themes/asktheeu-theme/lib/views/general/_frontpage_hero.html.erb:10
-msgid "Find out more"
-msgstr ""
-
-#:
-#: lib/themes/asktheeu-theme/lib/views/general/_frontpage_intro_sentence.html.erb:1
-msgid "Get answers from EU Institutions"
-msgstr ""
-
-#:
-#: lib/themes/asktheeu-theme/lib/views/general/_frontpage_intro_sentence.html.erb:3
 msgid "AskTheEU is an online platform for citizens to send access to documents requests directly to EU institutions."
 msgstr ""
 
-#:
-#: lib/themes/asktheeu-theme/lib/views/general/_frontpage_top_request.html.erb:6
-#: lib/themes/asktheeu-theme/lib/views/request/_sidebar.html.erb:6
+msgid "Attention Requested"
+msgstr ""
+
+msgid "Authority has <strong>referred you to another public body</strong> for an answer"
+msgstr ""
+
+msgid "Authority has <strong>transferred your request</strong> to another public body."
+msgstr ""
+
+msgid "Authority has closed your request and referred you to a different public body."
+msgstr ""
+
+msgid "Authority has transferred your request to a different public body."
+msgstr ""
+
+msgid "Browse requests"
+msgstr ""
+
+msgid "Contact"
+msgstr ""
+
+msgid "Error message"
+msgstr ""
+
+msgid "Event history details"
+msgstr ""
+
+msgid "Find out more"
+msgstr ""
+
+msgid "Get answers from EU Institutions"
+msgstr ""
+
+msgid "Gone Postal"
+msgstr ""
+
+msgid "Homepage header photo © European Union 2014 - European Parliament"
+msgstr ""
+
+msgid "How it works"
+msgstr ""
+
+msgid "How to AskTheEU"
+msgstr ""
+
+msgid "If you believe this request is not suitable, you can report it for attention by the site administrators"
+msgstr ""
+
+msgid "If {{email_address}} is the wrong address for information requests to {{public_body_name}}, please tell the {{site_name}} team on email team@asktheEU.org"
+msgstr ""
+
+msgid "Internal Review"
+msgstr ""
+
+msgid "Latest news and campaigns"
+msgstr ""
+
+msgid "Make a request"
+msgstr ""
+
+msgid "More similar requests"
+msgstr ""
+
+msgid "News"
+msgstr ""
+
+msgid "Not Held"
+msgstr ""
+
+msgid "Partial Success"
+msgstr ""
+
+msgid "Please kindly use this email address for all replies to this request: {{email}}"
+msgstr ""
+
+msgid "Privacy and cookies"
+msgstr ""
+
+msgid "Referred."
+msgstr ""
+
+msgid "Rejected"
+msgstr ""
+
+msgid "Report this request"
+msgstr ""
+
+msgid "Requests for personal information and vexatious requests are not considered valid for FOI purposes (<a href=\"/help/about\">read more</a>)."
+msgstr ""
+
+msgid "Requires Admin"
+msgstr ""
+
+msgid "Search"
+msgstr ""
+
+msgid "See all"
+msgstr ""
+
+msgid "Send a request"
+msgstr ""
+
+msgid "Similar requests"
+msgstr ""
+
+msgid "Successful"
+msgstr ""
+
+msgid "Successful requests"
+msgstr ""
+
+msgid "This is a request for access to information under Article 15 of the TFEU and, where applicable, Regulation 1049/2001 which has been sent via the {{site_name}} website."
+msgstr ""
+
+msgid "This message and all replies from {{public_body_name}} will be published on the {{site_name}} website. For more information see our dedicated page for EU public officials at {{help_url}}"
+msgstr ""
+
+msgid "This request has been marked for review by the site administrators, who have not hidden it at this time. If you believe it should be hidden, please <a href=\"{{url}}\">contact us</a>."
+msgstr ""
+
+msgid "This request has prominence 'hidden'. You can only see it because you are logged in as a super user."
+msgstr ""
+
+msgid "This request is hidden, so that only you the requester can see it. Please <a href=\"{{url}}\">contact us</a> if you are not sure why."
+msgstr ""
+
+msgid "Top requests"
+msgstr ""
+
+msgid "Transferred."
+msgstr ""
+
+msgid "Under the right of access to documents in the EU treaties, as developed in Regulation 1049/2001, I am requesting documents which contain the following information:\\n\\n"
+msgstr ""
+
+msgid "Unknown"
+msgstr ""
+
+msgid "Unknown Status"
+msgstr ""
+
+msgid "Unsuitable?"
+msgstr ""
+
+msgid "User Withdrawn"
+msgstr ""
+
+msgid "Vexatious"
+msgstr ""
+
+msgid "Waiting Clarification"
+msgstr ""
+
+msgid "Waiting Response"
+msgstr ""
+
+msgid "Which EU body?"
+msgstr ""
+
 msgid "follower"
 msgid_plural "followers"
 msgstr[0] ""
 msgstr[1] ""
 
-#:
-#: lib/themes/asktheeu-theme/lib/views/general/_responsive_footer.html.erb:5
-msgid "Access Info"
-msgstr ""
-
-#:
-#: lib/themes/asktheeu-theme/lib/views/general/_responsive_footer.html.erb:9
-msgid "A project by <a href=\"http://www.access-info.org\">Access Info Europe</a>, powered by <a href=\"https://alaveteli.org\">Alaveteli</a>"
-msgstr ""
-
-#:
-#: lib/themes/asktheeu-theme/lib/views/general/_responsive_footer.html.erb:35
-msgid "About"
-msgstr ""
-
-#:
-#: lib/themes/asktheeu-theme/lib/views/general/_responsive_footer.html.erb:38
-msgid "Contact"
-msgstr ""
-
-#:
-#: lib/themes/asktheeu-theme/lib/views/general/_responsive_footer.html.erb:41
-msgid "Privacy and cookies"
-msgstr ""
-
-#:
-#: lib/themes/asktheeu-theme/lib/views/general/_responsive_footer.html.erb:44
-msgid "API"
-msgstr ""
-
-#:
-#: lib/themes/asktheeu-theme/lib/views/general/_responsive_footer.html.erb:51
-msgid "Homepage header photo © European Union 2014 - European Parliament"
-msgstr ""
-
-#:
-#: lib/themes/asktheeu-theme/lib/views/general/_responsive_topnav.html.erb:5
-msgid "How it works"
-msgstr ""
-
-#:
-#: lib/themes/asktheeu-theme/lib/views/general/_responsive_topnav.html.erb:9
-msgid "Which EU body?"
-msgstr ""
-
-#:
-#: lib/themes/asktheeu-theme/lib/views/general/_responsive_topnav.html.erb:13
-msgid "Make a request"
-msgstr ""
-
-#:
-#: lib/themes/asktheeu-theme/lib/views/general/_responsive_topnav.html.erb:17
-msgid "Browse requests"
-msgstr ""
-
-#:
-#: lib/themes/asktheeu-theme/lib/views/general/_responsive_topnav.html.erb:22
-msgid "News"
-msgstr ""
-
-#:
-#: lib/themes/asktheeu-theme/lib/views/general/_responsive_topnav.html.erb:29
-#: lib/themes/asktheeu-theme/lib/views/general/_responsive_topnav.html.erb:31
-msgid "Search"
-msgstr ""
-
-#:
-#: lib/themes/asktheeu-theme/lib/views/general/_responsive_topnav.html.erb:31
 msgid "type your search term here"
 msgstr ""
 
-#:
-#: lib/themes/asktheeu-theme/lib/views/general/_responsive_topnav.html.erb:32
-msgid "Go"
-msgstr ""
-
-#: lib/themes/asktheeu-theme/lib/views/general/blog.html.erb:1
-msgid "{{site_name}} "
-msgstr ""
-
-#: lib/themes/asktheeu-theme/lib/views/general/frontpage.html.erb:4
-msgid "How to AskTheEU"
-msgstr ""
-
-#: lib/themes/asktheeu-theme/lib/views/general/frontpage.html.erb:12
-msgid "Top requests"
-msgstr ""
-
-#: lib/themes/asktheeu-theme/lib/views/general/frontpage.html.erb:27
-msgid "Latest news and campaigns"
-msgstr ""
-
-#: lib/themes/asktheeu-theme/lib/views/general/frontpage.html.erb:27
-msgid "See all"
-msgstr ""
-
-#:
-#: lib/themes/asktheeu-theme/lib/views/outgoing_mailer/_followup_footer.de.text.erb:1
-msgid "Diese Nachricht und alle Antworten von {{public_body_name}} werden auf der {{site_name}} Internetseite veröffentlicht. Für weitere Informationen besuchen Sie bitte unsere speziell für EU-Beamte eingerichtete Seite {{help_url}}"
-msgstr ""
-
-#:
-#: lib/themes/asktheeu-theme/lib/views/outgoing_mailer/_followup_footer.text.erb:1
-msgid "This message and all replies from {{public_body_name}} will be published on the {{site_name}} website. For more information see our dedicated page for EU public officials at {{help_url}}"
-msgstr ""
-
-#:
-#: lib/themes/asktheeu-theme/lib/views/outgoing_mailer/initial_request.de.text.erb:5
-msgid "\"Dies ist eine Anfrage auf Dokumentenzugangs unter Artikel 15 des Vertrags über die Arbeitsweise der Europäischen Union (AEUV) und, wo zutreffend, Verordnung 1049/2001 welche über die Internetsetite {{site_name}} gesendet wurde."
-msgstr ""
-
-#:
-#: lib/themes/asktheeu-theme/lib/views/outgoing_mailer/initial_request.de.text.erb:7
-msgid "Bitte verwendet Sie dies Email-Adresse für alle Antworten zu folgender Anfrage: {{email}}"
-msgstr ""
-
-#:
-#: lib/themes/asktheeu-theme/lib/views/outgoing_mailer/initial_request.de.text.erb:9
-msgid "Falls {{email_address}} die falsche Email-Adresse für Anfragen auf Dokumentenzugangs an {{public_body_name}} ist, teilen Sie dies dem {{site_name}} team bitte durch eine Email an team@asktheEU.org mit."
-msgstr ""
-
-#:
-#: lib/themes/asktheeu-theme/lib/views/outgoing_mailer/initial_request.text.erb:5
-msgid "This is a request for access to information under Article 15 of the TFEU and, where applicable, Regulation 1049/2001 which has been sent via the {{site_name}} website."
-msgstr ""
-
-#:
-#: lib/themes/asktheeu-theme/lib/views/outgoing_mailer/initial_request.text.erb:7
-msgid "Please kindly use this email address for all replies to this request: {{email}}"
-msgstr ""
-
-#:
-#: lib/themes/asktheeu-theme/lib/views/outgoing_mailer/initial_request.text.erb:9
-msgid "If {{email_address}} is the wrong address for information requests to {{public_body_name}}, please tell the {{site_name}} team on email team@asktheEU.org"
-msgstr ""
-
-#: lib/themes/asktheeu-theme/lib/views/request/_sidebar.html.erb:16
-msgid "Unsuitable?"
-msgstr ""
-
-#: lib/themes/asktheeu-theme/lib/views/request/_sidebar.html.erb:20
-msgid "This request has prominence 'hidden'. You can only see it because you are logged in as a super user."
-msgstr ""
-
-#: lib/themes/asktheeu-theme/lib/views/request/_sidebar.html.erb:25
-msgid "This request is hidden, so that only you the requester can see it. Please <a href=\"{{url}}\">contact us</a> if you are not sure why."
-msgstr ""
-
-#: lib/themes/asktheeu-theme/lib/views/request/_sidebar.html.erb:27
-msgid "This request has been marked for review by the site administrators, who have not hidden it at this time. If you believe it should be hidden, please <a href=\"{{url}}\">contact us</a>."
-msgstr ""
-
-#: lib/themes/asktheeu-theme/lib/views/request/_sidebar.html.erb:30
-#: lib/themes/asktheeu-theme/lib/views/request/_sidebar.html.erb:35
-msgid "Requests for personal information and vexatious requests are not considered valid for FOI purposes (<a href=\"/help/about\">read more</a>)."
-msgstr ""
-
-#: lib/themes/asktheeu-theme/lib/views/request/_sidebar.html.erb:31
-#: lib/themes/asktheeu-theme/lib/views/request/_sidebar.html.erb:36
-msgid "If you believe this request is not suitable, you can report it for attention by the site administrators"
-msgstr ""
-
-#: lib/themes/asktheeu-theme/lib/views/request/_sidebar.html.erb:32
-#: lib/themes/asktheeu-theme/lib/views/request/_sidebar.html.erb:37
-msgid "Report this request"
-msgstr ""
-
-#: lib/themes/asktheeu-theme/lib/views/request/_sidebar.html.erb:43
-msgid "Similar requests"
-msgstr ""
-
-#: lib/themes/asktheeu-theme/lib/views/request/_sidebar.html.erb:48
-msgid "More similar requests"
-msgstr ""
-
-#: lib/themes/asktheeu-theme/lib/views/request/_sidebar.html.erb:53
-msgid "Event history details"
+msgid "unknown status "
 msgstr ""
