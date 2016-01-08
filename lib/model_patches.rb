@@ -22,11 +22,11 @@ Rails.configuration.to_prepare do
     end
 
     def law_used_full
-      "access to information"
+      _("access to information")
     end
 
     def law_used_short
-      "information"
+      _("information")
     end
   end
 
@@ -36,9 +36,9 @@ Rails.configuration.to_prepare do
     def default_letter
       return nil if self.message_type == 'followup'
 
-      _("Under the right of access to documents in the EU treaties, as developed in "+
-      "Regulation 1049/2001, I am requesting documents which contain the following "+
-      "information:\n\n")
+      _("Under the right of access to documents in the EU treaties, as developed in " \
+        "Regulation 1049/2001, I am requesting documents which contain the following " \
+        "information:\n\n")
     end
 
     # Modify the search snippet to hide the intro paragraph.
