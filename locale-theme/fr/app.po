@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: alaveteli\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-01-08 15:38+0000\n"
-"PO-Revision-Date: 2016-01-08 15:38+0000\n"
+"PO-Revision-Date: 2016-01-08 15:47+0000\n"
 "Last-Translator: Gareth Rees <gareth@mysociety.org>\n"
 "Language-Team: French (http://www.transifex.com/mysociety/asktheeu-theme/language/fr/)\n"
 "Language: fr\n"
@@ -52,7 +52,7 @@ msgid "Browse requests"
 msgstr "Voir les demandes"
 
 msgid "Cava de San Miguel 8, 4º centro. 28005 Madrid (Spain)"
-msgstr ""
+msgstr "Cava de San Miguel 8, 4º centro. 28005 Madrid (Espagne)"
 
 msgid "Contact"
 msgstr "Contacte"
@@ -109,13 +109,13 @@ msgid "Not Held"
 msgstr ""
 
 msgid "Office number (10-19 hrs CET):"
-msgstr ""
+msgstr "Numéro de bureau (10-19 hrs CET):"
 
 msgid "Other original content was developed by Access Info Europe and is made public under a <a href=\"http://creativecommons.org/licenses/by-sa/3.0/\">Creative Commons Attribution, Share Alike licence</a>."
-msgstr ""
+msgstr "D'autre contenu a été développé par Access Info Europe et est sous <a href=\"http://creativecommons.org/licenses/by-sa/3.0/\">licence Creative Commons Attribution, Share Alike</a>."
 
 msgid "Out of hours mobile (any time):"
-msgstr ""
+msgstr "Hors des heures de bureau (mobile):"
 
 msgid "Partial Success"
 msgstr ""
@@ -178,7 +178,7 @@ msgid "This request is hidden, so that only you the requester can see it. Please
 msgstr ""
 
 msgid "This website is powered by <a href=\"http://www.alaveteli.org/\">Alaveteli</a>."
-msgstr ""
+msgstr "Ce site web utilise le software <a href=\"http://www.alaveteli.org/\">Alaveteli</a>."
 
 msgid "Top requests"
 msgstr "Le top des demandes"
