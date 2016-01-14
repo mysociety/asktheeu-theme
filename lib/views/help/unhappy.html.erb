@@ -1,4 +1,4 @@
-﻿<% @title = "Unhappy about the response you got?" %>
+<% @title = "Unhappy about the response you got?" %>
 
 <h1>Unhappy about the response you got?</h1>
 
@@ -11,8 +11,8 @@
 
 <p>... you can</p>
 <ol>
-  <li>Make an <strong>appeal</strong> (confirmatory application) by replying back to the same EU body, telling them why you are unsatisfied with their reply.</li>
-  <li>After that, you can complain to the <a href="http://www.ombudsman.europa.eu/start.faces"><strong>European Ombudsman</strong></a>.</li>
+  <li>Make an <strong>appeal</strong> (confirmatory application) by replying back to the same EU authority, telling them why you are unsatisfied with their reply.</li>
+  <li>If that doesn't help, complain to the <a href="http://www.ombudsman.europa.eu/start.faces"><strong>European Ombudsman</strong></a>.</li>
   <li>If you can find a lawyer who has done the bar in an EU country, go to the European Court of Justice, to the General Court.</li>
 </ol>
 
@@ -20,7 +20,7 @@
 
 <p>
 <% if !@info_request.nil? %>
-  <%= link_to "Request an internal review", show_response_no_followup_url(:id => @info_request.id, :incoming_message_id => nil) + "?internal_review=1#followup" %> and then write a message asking the EU body to review your request.
+  <%= link_to "Request an internal review", show_response_no_followup_url(:id => @info_request.id, :incoming_message_id => nil) + "?internal_review=1#followup" %> and then write a message asking the authority to review your request.
 <% else %>
   At the bottom of the relevant request page on <%= site_name %> choose "make an appeal” . Then write a message asking for a review of the decision by the EU body not to grant you the information requested.
 <% end %>
@@ -53,7 +53,7 @@ in your complaint or print out the whole page of your request and all attachment
 <h1 id="other_means">4. Think laterally!</h1>
 
 <ul>
-  <li>Make a <strong>new access to EU documents request</strong> for summary information, or for documentation relating indirectly to matters in your refused request. <%= link_to 'Ask us', help_contact_path %> for ideas if you're stuck.</li>
+  <li>Make a <strong>new access to information request</strong> for summary information, or for documentation relating indirectly to matters in your refused request. <%= link_to 'Ask us', help_contact_path %> for ideas if you're stuck.</li>
 
   <li>If any <strong>other public authorities</strong> or publicly owned companies are involved,
   then make requests to them.</li>
