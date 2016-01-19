@@ -527,6 +527,21 @@ p.footer__credit {
   }
 }
 
+.footer__final {
+  .row {
+    border-top: none;
+  }
+}
+
+.final__social-links {
+  ul {
+    li {
+      @media (min-width: 32em) {
+        float: left;
+      }
+    }
+  }
+}
 
 /* Add more breathing room between sidebars and main ("left") columns */
 
