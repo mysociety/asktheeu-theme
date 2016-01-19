@@ -62,4 +62,22 @@
     </div>
 
   </div>
+
+  <div class="footer__final">
+    <div class="row">
+      <div class="final__social-links">
+        <ul>
+          <% unless AlaveteliConfiguration::twitter_username.blank? %>
+          <li>
+            <a href="https://twitter.com/<%= AlaveteliConfiguration::twitter_username %>" class="social-link social-link--twitter">@<%= AlaveteliConfiguration::twitter_username %></a>
+          </li>
+          <% end %>
+          <% unless AlaveteliConfiguration::facebook_username.blank? %>
+          <li>
+            <a href="https://facebook.com/<%= AlaveteliConfiguration::facebook_username %>" class="social-link social-link--facebook">/<%= AlaveteliConfiguration::facebook_username %></a>
+          </li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
 </div>
