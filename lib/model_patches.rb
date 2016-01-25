@@ -9,15 +9,25 @@ Rails.configuration.to_prepare do
 
   # Remove UK-specific references to FOI
   InfoRequest.class_eval do
+    def self.top_requests
+      ids = connection.select_values <<-SQL.strip_heredoc.gsub("\n", " ")
+      SELECT info_request_id
+      FROM "track_things"
+      WHERE (info_request_id IS NOT NULL)
+      GROUP BY info_request_id
+      ORDER BY COUNT(*) DESC;
+      SQL
+
+      where(:id => ids).order("position(id::text in '#{ ids }')")
+    end
 
     def law_used_full
-      "access to information"
+      _("access to information")
     end
 
     def law_used_short
-      "information"
+      _("information")
     end
-
   end
 
   OutgoingMessage.class_eval do
@@ -26,9 +36,9 @@ Rails.configuration.to_prepare do
     def default_letter
       return nil if self.message_type == 'followup'
 
-      _("Under the right of access to documents in the EU treaties, as developed in "+
-      "Regulation 1049/2001, I am requesting documents which contain the following "+
-      "information:\n\n")
+      _("Under the right of access to documents in the EU treaties, as developed in " \
+        "Regulation 1049/2001, I am requesting documents which contain the following " \
+        "information:\n\n")
     end
 
     # Modify the search snippet to hide the intro paragraph.

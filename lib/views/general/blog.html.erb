@@ -1,139 +1,28 @@
-<% @title = _("{{site_name}} ", :site_name => site_name) %>
+<% @title = site_name %>
+
 <div class="page__header">
-  <h1 class="page__header__title">NEWS & CAMPAIGNS</h1>
-  <h2 class="page__header__subtitle">SUPPORT THE CAMPAIGNS</h2>
+  <h1 class="page__header__title"><%= _('NEWS & CAMPAIGNS') %></h1>
+  <h2 class="page__header__subtitle"><%= _('SUPPORT THE CAMPAIGNS') %></h2>
 </div>
 
 <div id="main_content">
 
   <div id="blog">
-  <div id="sq1">
+    <% @blog_items.in_groups_of(4, false) do |group| %>
+      <div class="blog__container">
+        <% group.each do |item| %>
+          <div class="blog__item">
+            <% if item['thumbnail'] %>
+              <%= link_to item['link'][0] do %>
+                <img <%= item['thumbnail'][0].to_s.html_safe %> width="224" height="134">
+              <% end %>
+            <% end %>
 
-    <div class="part1">
-    <% item = @blog_items[0]; %>
-    <p>
-    <% if item %>
-      <% if item['thumbnail'] %>
-      <img <%= item['thumbnail'][0].to_s.html_safe %> width="250" height="150"/>
-      <% else %>
-       <p>NO THUMBNAIL</p>
-      <% end %>
-      <br>
-      <a href='<%= item['link'][0] %>'><%= item['title'][0] %></a>
-      <br/>
-      <p><%= h excerpt(item['description'][0].to_s, "", :radius => 200) %></p>
-    <% else %>
-     <p>No post content</p>
-     <br/><br/><br/>
+            <h3><%= link_to item['title'][0], item['link'][0] %></h3>
+            <p><%= h excerpt(item['description'][0].to_s, "", :radius => 198) %></p>
+          </div>
+        <% end %>
+      </div>
     <% end %>
-    </div>
-
-    <br/><br/><br/>
-
-    <div class="part2">
-    <% item = @blog_items[1]; %>
-    <p>
-    <% if item %>
-      <% if item['thumbnail'] %>
-      <img <%= item['thumbnail'][0].to_s.html_safe %> width="250" height="150"/>
-      <% else %>
-      <p>NO THUMBNAIL</p>
-      <% end %>
-      <br>
-      <a href='<%= item['link'][0] %>'><%= item['title'][0] %></a>
-      <br/>
-      <p><%= h excerpt(item['description'][0].to_s, "", :radius => 200) %></p>
-    <% else %>
-      <p>No post content</p>
-      <br/><br/><br/>
-    <% end %>
-    </div>
-
-    <div class="part3">
-    <% item = @blog_items[2]; %>
-    <p>
-    <% if item %>
-      <% if item['thumbnail'] %>
-      <img <%= item['thumbnail'][0].to_s.html_safe %> width="250" height="150"/>
-      <% else %>
-      <p>NO THUMBNAIL</p>
-      <% end %>
-      <br>
-      <a href='<%= item['link'][0] %>'><%= item['title'][0] %></a>
-      <br/>
-      <p><%= h excerpt(item['description'][0].to_s, "", :radius => 200) %></p>
-
-    <% else %>
-      <p>No post content</p>
-      <br/><br/><br/>
-    <% end %>
-    </div>
-
-    <div class="page__subtitle">TAKE A LOOK AT THE NEWS</div>
-  </div>
-
-  <div id="sq1">
-
-    <div class="part1">
-    <% item = @blog_items[3]; %>
-    <p>
-    <% if item %>
-      <% if item['thumbnail'] %>
-      <img <%= item['thumbnail'][0].to_s.html_safe %> width="250" height="150"/>
-      <% else %>
-       <p>NO THUMBNAIL</p>
-      <% end %>
-      <br>
-      <a href='<%= item['link'][0] %>'><%= item['title'][0] %></a>
-      <br/>
-      <p><%= h excerpt(item['description'][0].to_s, "", :radius => 200) %></p>
-    <% else %>
-      <p>No post content</p>
-      <br/><br/><br/>
-    <% end %>
-    </div>
-
-
-    <br/><br/><br/>
-
-    <div class="part2">
-    <% item = @blog_items[4]; %>
-    <p>
-    <% if item %>
-      <% if item['thumbnail'] %>
-      <img <%= item['thumbnail'][0].to_s.html_safe %> width="250" height="150"/>
-      <% else %>
-       <p>NO THUMBNAIL</p>
-      <% end %>
-      <br>
-      <a href='<%= item['link'][0] %>'><%= item['title'][0] %></a>
-      <br/>
-      <p><%= h excerpt(item['description'][0].to_s, "", :radius => 200) %></p>
-    <% else %>
-      <p>No post content</p>
-      <br/><br/><br/>
-    <% end %>
-    </div>
-
-    <div class="part3">
-    <% item = @blog_items[5]; %>
-    <p>
-    <% if item %>
-      <% if item['thumbnail'] %>
-      <img <%= item['thumbnail'][0].to_s.html_safe %> width="250" height="150"/>
-      <% else %>
-      <p>NO THUMBNAIL</p>
-      <% end %>
-      <br>
-      <a href='<%= item['link'][0] %>'><%= item['title'][0] %></a>
-      <br/>
-      <p><%= h excerpt(item['description'][0].to_s, "", :radius => 200) %></p>
-    <% else %>
-      <p>No post content</p>
-      <br/><br/><br/>
-    <% end %>
-    </div>
-
-  </div>
   </div>
 </div>

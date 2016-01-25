@@ -1,96 +1,236 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Translators:
 msgid ""
-"First, type in the <strong>name of the UK public authority</strong> you'd \n"
-"           <br>like information from. <strong>By law, they have to respond</strong>\n"
-"           (<a href=\"%s\">why?</a>)."
 msgstr ""
-"First, type in the <strong>name of the public authority</strong> you'd \n"
-"           <br>like information from. <strong>By law, they have to respond</strong>\n"
-"           (<a href=\"%s\">why?</a>)."
+"Project-Id-Version: alaveteli\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-01-08 17:52+0000\n"
+"PO-Revision-Date: 2016-01-08 17:53+0000\n"
+"Last-Translator: Gareth Rees <gareth@mysociety.org>\n"
+"Language-Team: English (http://www.transifex.com/mysociety/asktheeu-theme/language/en/)\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-msgid "Summary:"
-msgstr "Subject:"
+msgid "A project by <a href=\"http://www.access-info.org\">Access Info Europe</a>, powered by <a href=\"https://alaveteli.org\">Alaveteli</a>"
+msgstr "A project by <a href=\"http://www.access-info.org\">Access Info Europe</a>, powered by <a href=\"https://alaveteli.org\">Alaveteli</a>"
 
-msgid "a one line summary of the information you are requesting, \n\t\t\te.g."
-msgstr "Try to be brief and specific, e.g."
+msgid "API"
+msgstr "API"
 
-msgid "'Crime statistics by ward level for Wales'"
-msgstr "\"Spending on agricultural subsidies by country\""
+msgid "About"
+msgstr "About"
 
-#: app/views/layouts/default.rhtml:15
-msgid "Make and browse Freedom of Information (FOI) requests"
-msgstr "Make and browse access to information requests"
+msgid "Access Info"
+msgstr "Access Info"
 
-msgid " - view and make Freedom of Information requests"
-msgstr " - view and make access to information requests"
+msgid "AskTheEU.org is an online platform for citizens to send access to documents requests directly to EU institutions."
+msgstr "AskTheEU.org is an online platform for citizens to send access to documents requests directly to EU institutions."
 
-#: app/views/public_body/show.rhtml:26
-msgid "View FOI email address"
-msgstr "View contact email address"
+msgid "Attention Requested"
+msgstr "Attention Requested"
 
-#: app/views/public_body/show.rhtml:30
-msgid "Freedom of information requests to"
-msgstr "Access to information requests to"
+msgid "Authority has <strong>referred you to another public body</strong> for an answer"
+msgstr "Authority has <strong>referred you to another public body</strong> for an answer"
 
-#: app/views/public_body/show.rhtml:54
-msgid "Make a new <strong>Freedom of Information</strong> request to {{public_body}}"
-msgstr "Make a new <strong>access to information</strong> request to {{public_body}}"
+msgid "Authority has <strong>transferred your request</strong> to another public body."
+msgstr "Authority has <strong>transferred your request</strong> to another public body."
 
-#: app/views/public_body/show.rhtml:76
-msgid "Freedom of Information requests made using this site"
-msgstr "Access to information requests made using this site"
+msgid "Authority has closed your request and referred you to a different public body."
+msgstr "Authority has closed your request and referred you to a different public body."
 
-#: app/views/public_body/show.rhtml:77
-msgid "Nobody has made any Freedom of Information requests to {{public_body_name}} using this site yet."
-msgstr "Nobody has made any access to information requests to {{public_body_name}} using this site yet."
+msgid "Authority has transferred your request to a different public body."
+msgstr "Authority has transferred your request to a different public body."
 
-#: app/views/public_body/show.rhtml:85
-msgid "Search within the %d Freedom of Information requests to %s"
-msgid_plural "Search within the %d Freedom of Information requests made to %s"
-msgstr[0] "Search within the %d access to information requests to %s"
-msgstr[1] "Search within the %d access to information requests made to %s"
+msgid "Browse requests"
+msgstr "Browse requests"
 
-#: app/views/public_body/show.rhtml:87
-msgid "%d Freedom of Information request to %s"
-msgid_plural "%d Freedom of Information requests to %s"
-msgstr[0] "%d access to information request to %s"
-msgstr[1] "%d access to information requests to %s"
+msgid "Cava de San Miguel 8, 4º centro. 28005 Madrid (Spain)"
+msgstr "Cava de San Miguel 8, 4º centro. 28005 Madrid (Spain)"
 
-#: app/views/public_body/show.rhtml:118
-msgid "Freedom of Information requests made"
-msgstr "Access to information requests made"
+msgid "Contact"
+msgstr "Contact"
 
-#: app/views/public_body/show.rhtml:120
-msgid "The search index is currently offline, so we can't show the Freedom of Information requests that have been made to this authority."
-msgstr "The search index is currently offline, so we can't show the access to information requests that have been made to this authority."
+msgid "Error message"
+msgstr "Error message"
 
-#: app/views/public_body/view_email.rhtml:3
-msgid "FOI email address for {{public_body}}"
-msgstr "Contact email address for {{public_body}}"
+msgid "Event history details"
+msgstr "Event history details"
 
-#: app/views/public_body/view_email_captcha.rhtml:1
-msgid "View FOI email address for '{{public_body_name}}'"
-msgstr "View contact email address for '{{public_body_name}}'"
+msgid "Find out more"
+msgstr "Find out more"
 
-#: app/views/public_body/view_email_captcha.rhtml:3
-msgid "View FOI email address for {{public_body_name}}"
-msgstr "View contact email address for {{public_body_name}}"
+msgid "Get answers from EU Institutions"
+msgstr "Get answers from EU Institutions"
 
-#: app/views/public_body/view_email_captcha.rhtml:5
-msgid "To view the email address that we use to send FOI requests to {{public_body_name}}, please enter these words."
-msgstr "To view the email address that we use to send requests to {{public_body_name}}, please enter these words."
+msgid "Gone Postal"
+msgstr "Gone Postal"
 
-#: app/views/public_body/list.rhtml:28
-msgid "<a href=\"%s\">Are we missing a public authority?</a>."
-msgstr "<a href=\"%s\">Are we missing an EU body?</a>."
+msgid "Homepage header photo © European Union 2014 - European Parliament"
+msgstr "Homepage header photo © European Union 2014 - European Parliament"
 
-#: app/views/public_body/list.rhtml:31
-msgid "List of all authorities (CSV)"
-msgstr "List of all EU bodies (CSV)"
+msgid "How it works"
+msgstr "How it works"
 
-#: app/views/public_body/list.rhtml:35
-msgid "Public authorities - {{description}}"
-msgstr "European Union bodies - {{description}}"
+msgid "How to AskTheEU.org"
+msgstr "How to AskTheEU.org"
 
-#: app/views/public_body/list.rhtml:37
-msgid "Public authorities"
-msgstr "European Union bodies"
+msgid "If you believe this request is not suitable, you can report it for attention by the site administrators"
+msgstr "If you believe this request is not suitable, you can report it for attention by the site administrators"
+
+msgid "If {{email_address}} is the wrong address for information requests to {{public_body_name}}, please tell the {{site_name}} team on email team@asktheEU.org"
+msgstr "If {{email_address}} is the wrong address for information requests to {{public_body_name}}, please tell the {{site_name}} team on email team@asktheEU.org"
+
+msgid "Internal Review"
+msgstr "Internal Review"
+
+msgid "Latest news and campaigns"
+msgstr "Latest news and campaigns"
+
+msgid "Make a request"
+msgstr "Make a request"
+
+msgid "More similar requests"
+msgstr "More similar requests"
+
+msgid "NEWS & CAMPAIGNS"
+msgstr "NEWS & CAMPAIGNS"
+
+msgid "News"
+msgstr "News"
+
+msgid "Not Held"
+msgstr "Not Held"
+
+msgid "Office number (10-19 hrs CET):"
+msgstr "Office number (10-19 hrs CET):"
+
+msgid "Other original content was developed by Access Info Europe and is made public under a <a href=\"http://creativecommons.org/licenses/by-sa/3.0/\">Creative Commons Attribution, Share Alike licence</a>."
+msgstr "Other original content was developed by Access Info Europe and is made public under a <a href=\"http://creativecommons.org/licenses/by-sa/3.0/\">Creative Commons Attribution, Share Alike licence</a>."
+
+msgid "Out of hours mobile (any time):"
+msgstr "Out of hours mobile (any time):"
+
+msgid "Partial Success"
+msgstr "Partial Success"
+
+msgid "Please kindly use this email address for all replies to this request: {{email}}"
+msgstr "Please kindly use this email address for all replies to this request: {{email}}"
+
+msgid "Privacy and cookies"
+msgstr "Privacy and cookies"
+
+msgid "Referred."
+msgstr "Referred."
+
+msgid "Rejected"
+msgstr "Rejected"
+
+msgid "Report this request"
+msgstr "Report this request"
+
+msgid "Requests for personal information and vexatious requests are not considered valid for FOI purposes (<a href=\"/help/about\">read more</a>)."
+msgstr "Requests for personal information and vexatious requests are not considered valid for FOI purposes (<a href=\"/help/about\">read more</a>)."
+
+msgid "Requires Admin"
+msgstr "Requires Admin"
+
+msgid "SUPPORT THE CAMPAIGNS"
+msgstr "SUPPORT THE CAMPAIGNS"
+
+msgid "Search"
+msgstr "Search"
+
+msgid "See all"
+msgstr "See all"
+
+msgid "Send a request"
+msgstr "Send a request"
+
+msgid "Similar requests"
+msgstr "Similar requests"
+
+msgid "Successful"
+msgstr "Successful"
+
+msgid "Successful requests"
+msgstr "Successful requests"
+
+msgid "This is a request for access to information under Article 15 of the TFEU and, where applicable, Regulation 1049/2001 which has been sent via the {{site_name}} website."
+msgstr "This is a request for access to information under Article 15 of the TFEU and, where applicable, Regulation 1049/2001 which has been sent via the {{site_name}} website."
+
+msgid "This message and all replies from {{public_body_name}} will be published on the {{site_name}} website. For more information see our dedicated page for EU public officials at {{help_url}}"
+msgstr "This message and all replies from {{public_body_name}} will be published on the {{site_name}} website. For more information see our dedicated page for EU public officials at {{help_url}}"
+
+msgid "This request has been marked for review by the site administrators, who have not hidden it at this time. If you believe it should be hidden, please <a href=\"{{url}}\">contact us</a>."
+msgstr "This request has been marked for review by the site administrators, who have not hidden it at this time. If you believe it should be hidden, please <a href=\"{{url}}\">contact us</a>."
+
+msgid "This request has prominence 'hidden'. You can only see it because you are logged in as a super user."
+msgstr "This request has prominence 'hidden'. You can only see it because you are logged in as a super user."
+
+msgid "This request is hidden, so that only you the requester can see it. Please <a href=\"{{url}}\">contact us</a> if you are not sure why."
+msgstr "This request is hidden, so that only you the requester can see it. Please <a href=\"{{url}}\">contact us</a> if you are not sure why."
+
+msgid "This website is powered by <a href=\"http://www.alaveteli.org/\">Alaveteli</a>."
+msgstr "This website is powered by <a href=\"http://www.alaveteli.org/\">Alaveteli</a>."
+
+msgid "Top requests"
+msgstr "Top requests"
+
+msgid "Transferred."
+msgstr "Transferred."
+
+msgid "Under the right of access to documents in the EU treaties, as developed in Regulation 1049/2001, I am requesting documents which contain the following information:\\n\\n"
+msgstr "Under the right of access to documents in the EU treaties, as developed in Regulation 1049/2001, I am requesting documents which contain the following information:\\n\\n"
+
+msgid "Unknown"
+msgstr "Unknown"
+
+msgid "Unknown Status"
+msgstr "Unknown Status"
+
+msgid "Unsuitable?"
+msgstr "Unsuitable?"
+
+msgid "User Withdrawn"
+msgstr "User Withdrawn"
+
+msgid "Vexatious"
+msgstr "Vexatious"
+
+msgid "Waiting Clarification"
+msgstr "Waiting Clarification"
+
+msgid "Waiting Response"
+msgstr "Waiting Response"
+
+msgid "Which EU body?"
+msgstr "Which EU body?"
+
+msgid "access to information"
+msgstr "access to information"
+
+msgid "follower"
+msgid_plural "followers"
+msgstr[0] "follower"
+msgstr[1] "followers"
+
+msgid "information"
+msgstr "information"
+
+msgid "type your search term here"
+msgstr "type your search term here"
+
+msgid "unknown status "
+msgstr "unknown status "
+
+msgid "{{public_body_url}} has replied saying <strong>they have transferred your request to another public body</strong>."
+msgstr "{{public_body_url}} has replied saying <strong>they have transferred your request to another public body</strong>."
+
+msgid "{{public_body_url}} has replied saying <strong>you have to contact another public body</strong>."
+msgstr "{{public_body_url}} has replied saying <strong>you have to contact another public body</strong>."

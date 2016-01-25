@@ -1,0 +1,12 @@
+<% if @locales[:available].any? %>
+  <ul id="user_locale_switcher">
+    <li class="current-locale">
+      <%= link_to locale_name(@locales[:current]).titlecase, url_for(params.merge(:locale => @locales[:current])) %>
+    </li>
+  <% @locales[:available].each do |locale| %>
+    <li>
+      <%= link_to locale_name(locale).titlecase, url_for(params.merge(:locale => locale)) %>
+    </li>
+  <% end %>
+  </ul>
+<% end %>

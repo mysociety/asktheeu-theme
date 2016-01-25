@@ -1,0 +1,16 @@
+<div class="track-request__badge">
+
+  <div class="track-request__badge__number-wrapper">
+    <% follower_count = TrackThing.count(:all, :conditions => ["info_request_id = ?", info_request.id]) + 1 %>
+    <span class="track-request__badge__number"><%= follower_count %></span>
+    <span class="track-request__badge__followers"><%= n_('follower', 'followers', follower_count) %></span>
+  </div>
+
+  <h3><%= link_to excerpt(info_request.title, "", :radius => 70), request_url(info_request) %></h3>
+  <%= render :partial => 'track/tracking_links', :locals => {
+    :track_thing => TrackThing.create_track_for_request(info_request),
+    :own_request => info_request.user && info_request.user == @user,
+    :location => 'frontpage'
+  } %>
+
+</div>

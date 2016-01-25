@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 # If defined, ALAVETELI_TEST_THEME will be loaded in config/initializers/theme_loader
 ALAVETELI_TEST_THEME = 'asktheeu-theme'
 require File.expand_path(File.join(File.dirname(__FILE__),'..','..','..','..','spec','spec_helper'))
@@ -29,7 +30,7 @@ describe PublicBody, 'when patched by the asktheeu-theme' do
     it 'always returns false' do
       body = PublicBody.new(:request_email => 'blah@example.com')
       user = User.new(:email => 'user@example.com')
-      expect(body.is_foi_officer?(user)).to be_false
+      expect(body.is_foi_officer?(user)).to eq(false)
     end
 
   end

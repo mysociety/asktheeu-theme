@@ -1,52 +1,239 @@
-# Frontpage
-msgid "You have the right to ask European Union bodies for information,<br/>they are legally obliged to respond"
-msgstr "Sie haben das Recht Informationen von sämtlichen EU-Behörden anzufragen.<br/>Diese sind verpflichtet Ihnen zu antworten.  "
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Translators:
+# andreas.pavlou <andreas@access-info.org>, 2016
+# andreas.pavlou <andreas@access-info.org>, 2016
+# Gareth Rees <gareth@mysociety.org>, 2016
+msgid ""
+msgstr ""
+"Project-Id-Version: alaveteli\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-01-08 17:52+0000\n"
+"PO-Revision-Date: 2016-01-08 17:56+0000\n"
+"Last-Translator: Gareth Rees <gareth@mysociety.org>\n"
+"Language-Team: German (http://www.transifex.com/mysociety/asktheeu-theme/language/de/)\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-msgid "About<br/>AsktheEU.org"
-msgstr "Über<br/>AsktheEU.org"
+msgid "A project by <a href=\"http://www.access-info.org\">Access Info Europe</a>, powered by <a href=\"https://alaveteli.org\">Alaveteli</a>"
+msgstr "Ein Projekt von <a href=\"http://www.access-info.org\">Access Info Europe</a>, ermöglicht durch <a href=\"https://alaveteli.org\">Alaveteli</a>"
 
-msgid "Find out who we are<br/>and how this website works"
-msgstr "Finden Sie heraus wer wir sind und wie diese Internetseite funktioniert"
+msgid "API"
+msgstr "API"
 
-msgid "More"
-msgstr "Mehr"
+msgid "About"
+msgstr "Über"
 
-msgid "Make<br/>Your Request"
-msgstr "Stellen Sie Ihre Anfrage"
+msgid "Access Info"
+msgstr ""
 
-msgid "Ask a European Union body for information. (You will be asked to sign up/sign in first.)"
-msgstr "Fragen Sie eine EU-Behörde nach Informationen. (Zu Beginn werden Sie gebeten sich anzumelden oder zu registrieren)"
+msgid "AskTheEU.org is an online platform for citizens to send access to documents requests directly to EU institutions."
+msgstr "AsktheEU.org ist eine Online-Plattform, mit der jede Person direkt Dokumente von EU-Institutionen anfragen kann."
 
-msgid "Request"
-msgstr "Frag nach"
+msgid "Attention Requested"
+msgstr ""
 
-msgid "Search<br/>Requests"
-msgstr "Suchanfrage"
+msgid "Authority has <strong>referred you to another public body</strong> for an answer"
+msgstr ""
 
-msgid "See what others are<br/> asking and the answers they are getting."
-msgstr "Sehen Sie sich an was andere Nutzer fragen und was wir Antworten sie erhalten."
+msgid "Authority has <strong>transferred your request</strong> to another public body."
+msgstr ""
 
-msgid "Search"
-msgstr "Suche"
+msgid "Authority has closed your request and referred you to a different public body."
+msgstr ""
 
-msgid "EU institutions"
-msgstr "EU-Institutionen"
+msgid "Authority has transferred your request to a different public body."
+msgstr ""
 
-msgid "Video"
-msgstr "Video"
+msgid "Browse requests"
+msgstr "Anfragen ansehen"
+
+msgid "Cava de San Miguel 8, 4º centro. 28005 Madrid (Spain)"
+msgstr "Cava de San Miguel 8, 4º centro. 28005 Madrid (Spanien)"
+
+msgid "Contact"
+msgstr "Kontakt"
+
+msgid "Error message"
+msgstr ""
+
+msgid "Event history details"
+msgstr ""
+
+msgid "Find out more"
+msgstr "Mehr Informationen"
+
+msgid "Get answers from EU Institutions"
+msgstr "Erhalte Antworten von EU-Institutionen"
+
+msgid "Gone Postal"
+msgstr ""
+
+msgid "Homepage header photo © European Union 2014 - European Parliament"
+msgstr ""
+
+msgid "How it works"
+msgstr "So funktioniert's"
+
+msgid "How to AskTheEU.org"
+msgstr "Wie AsktheEU.org benutzen"
+
+msgid "If you believe this request is not suitable, you can report it for attention by the site administrators"
+msgstr ""
+
+msgid "If {{email_address}} is the wrong address for information requests to {{public_body_name}}, please tell the {{site_name}} team on email team@asktheEU.org"
+msgstr "Falls {{email_address}} die falsche Email-Adresse für Anfragen auf Dokumentenzugangs an {{public_body_name}} ist, teilen Sie dies dem {{site_name}} team bitte durch eine Email an team@asktheEU.org mit."
+
+msgid "Internal Review"
+msgstr ""
+
+msgid "Latest news and campaigns"
+msgstr "Neuigkeiten und Kampagnen"
+
+msgid "Make a request"
+msgstr "Anfrage stellen"
+
+msgid "More similar requests"
+msgstr ""
+
+msgid "NEWS & CAMPAIGNS"
+msgstr ""
 
 msgid "News"
-msgstr "Neuigkeiten"
+msgstr ""
 
-msgid "View all news"
-msgstr "Alle Neuigkeiten ansehen"
+msgid "Not Held"
+msgstr ""
 
-msgid "Follow us"
-msgstr "Folgen Sie uns"
+msgid "Office number (10-19 hrs CET):"
+msgstr "Büronummer (10-19 Uhr CET):"
 
-# Footer
-msgid "Help Desk"
-msgstr "Helpdesk"
+msgid "Other original content was developed by Access Info Europe and is made public under a <a href=\"http://creativecommons.org/licenses/by-sa/3.0/\">Creative Commons Attribution, Share Alike licence</a>."
+msgstr "Andere Originalinhalte wurden durch Access Info entwickelt und sind unter einer <a href=\"http://creativecommons.org/licenses/by-sa/3.0/\">Creative Commons Share Alike-Lizenz veröffentlicht</a>."
 
-msgid "This website is powered by <a href='http://www.alaveteli.org/'>Alaveteli</a>. Other original content was developed by Access Info Europe and is made public under a <a  href='http://creativecommons.org/licenses/by-sa/3.0/'>Creative Commons Attribution, Share Alike licence</a>."
-msgstr "Diese Seite wurde durch <a href='http://www.alaveteli.org/'>Alaveteli</a> ermöglicht. Weitere Inhalte wurden von Access Info Europe entwickelt und unter der <a  href='http://creativecommons.org/licenses/by-sa/3.0/'>Creative Commons Attribution, Share Alike lizenziert</a>."
+msgid "Out of hours mobile (any time):"
+msgstr "Außerhalb der Bürozeiten (jederzeit):"
+
+msgid "Partial Success"
+msgstr ""
+
+msgid "Please kindly use this email address for all replies to this request: {{email}}"
+msgstr "Bitte verwendet Sie dies Email-Adresse für alle Antworten zu folgender Anfrage: {{email}}"
+
+msgid "Privacy and cookies"
+msgstr "Datenschutz und cookies"
+
+msgid "Referred."
+msgstr ""
+
+msgid "Rejected"
+msgstr ""
+
+msgid "Report this request"
+msgstr ""
+
+msgid "Requests for personal information and vexatious requests are not considered valid for FOI purposes (<a href=\"/help/about\">read more</a>)."
+msgstr ""
+
+msgid "Requires Admin"
+msgstr ""
+
+msgid "SUPPORT THE CAMPAIGNS"
+msgstr ""
+
+msgid "Search"
+msgstr ""
+
+msgid "See all"
+msgstr "Alle ansehen"
+
+msgid "Send a request"
+msgstr "Anfrage stellen"
+
+msgid "Similar requests"
+msgstr ""
+
+msgid "Successful"
+msgstr ""
+
+msgid "Successful requests"
+msgstr ""
+
+msgid "This is a request for access to information under Article 15 of the TFEU and, where applicable, Regulation 1049/2001 which has been sent via the {{site_name}} website."
+msgstr "Dies ist eine Anfrage auf Dokumentenzugangs unter Artikel 15 des Vertrags über die Arbeitsweise der Europäischen Union (AEUV) und, wo zutreffend, Verordnung 1049/2001 welche über die Internetsetite {{site_name}} gesendet wurde."
+
+msgid "This message and all replies from {{public_body_name}} will be published on the {{site_name}} website. For more information see our dedicated page for EU public officials at {{help_url}}"
+msgstr "Diese Nachricht und alle Antworten von {{public_body_name}} werden auf der {{site_name}} Internetseite veröffentlicht. Für weitere Informationen besuchen Sie bitte unsere speziell für EU-Beamte eingerichtete Seite {{help_url}}"
+
+msgid "This request has been marked for review by the site administrators, who have not hidden it at this time. If you believe it should be hidden, please <a href=\"{{url}}\">contact us</a>."
+msgstr ""
+
+msgid "This request has prominence 'hidden'. You can only see it because you are logged in as a super user."
+msgstr ""
+
+msgid "This request is hidden, so that only you the requester can see it. Please <a href=\"{{url}}\">contact us</a> if you are not sure why."
+msgstr ""
+
+msgid "This website is powered by <a href=\"http://www.alaveteli.org/\">Alaveteli</a>."
+msgstr "Diese Webseite wurde ermöglicht durch <a href=\"http://www.alaveteli.org/\">Alaveteli</a>."
+
+msgid "Top requests"
+msgstr "Top-Anfragen"
+
+msgid "Transferred."
+msgstr ""
+
+msgid "Under the right of access to documents in the EU treaties, as developed in Regulation 1049/2001, I am requesting documents which contain the following information:\\n\\n"
+msgstr ""
+
+msgid "Unknown"
+msgstr ""
+
+msgid "Unknown Status"
+msgstr ""
+
+msgid "Unsuitable?"
+msgstr ""
+
+msgid "User Withdrawn"
+msgstr ""
+
+msgid "Vexatious"
+msgstr ""
+
+msgid "Waiting Clarification"
+msgstr ""
+
+msgid "Waiting Response"
+msgstr ""
+
+msgid "Which EU body?"
+msgstr "Wen anfragen?"
+
+msgid "access to information"
+msgstr ""
+
+msgid "follower"
+msgid_plural "followers"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "information"
+msgstr ""
+
+msgid "type your search term here"
+msgstr ""
+
+msgid "unknown status "
+msgstr ""
+
+msgid "{{public_body_url}} has replied saying <strong>they have transferred your request to another public body</strong>."
+msgstr ""
+
+msgid "{{public_body_url}} has replied saying <strong>you have to contact another public body</strong>."
+msgstr ""
