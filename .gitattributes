@@ -1,0 +1,10 @@
+* text=auto
+*.rb text
+*.erb text
+*.scss text
+*.css text
+*.js text
+*.md text
+*.yml text
+*.yaml text
+*.rake text
