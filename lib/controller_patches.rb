@@ -25,7 +25,16 @@ Rails.configuration.to_prepare do
         @twitter_user = MySociety::Config.get('TWITTER_USERNAME', '')
       end
 
-      @top_requests = InfoRequest.top_requests.limit(2)
+      @top_requests = [
+        InfoRequest.
+          where(:url_title => 'dg_trade_contacts_with_industry').first,
+        InfoRequest.
+          where(:url_title => 'commissioners_expenses_2012_and_2').first
+      ].compact
+
+      if @top_requests.empty?
+        @top_requests = InfoRequest.top_requests.limit(2)
+      end
     end
   end
 
