@@ -27,4 +27,4 @@ To run tests, in the Alaveteli Rails.root (with this theme installed):
         bundle exec rspec lib/themes/alavetelitheme/spec
 
 
-Copyright (c) 2011 mySociety, released under the MIT license
+Copyright (c) 2015 mySociety, released under the MIT license
