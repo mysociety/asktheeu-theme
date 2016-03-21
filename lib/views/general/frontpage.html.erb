@@ -1,7 +1,7 @@
 <% cache_if_caching_fragments("frontpage-#{@locale}", :expires_in => 5.minutes) do %>
 
   <div class="frontpage__primary">
-    <h2><%= _("How to AskTheEU.org") %></h2>
+    <h2><%= _("How to AskTheEU.org") %><% if params[:e] == "52" %><br /><br /><% end %></h2>
 
     <div class="responsive-iframe responsive-iframe--16-9">
       <iframe width="1280" height="720" src="https://www.youtube-nocookie.com/embed/0NBuYOPZn_4?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
@@ -9,7 +9,25 @@
   </div>
 
   <div class="frontpage__secondary">
-    <h2><%= _("Top requests") %></h2>
+    <!-- Google Analytics Content Experiment code -->
+<script>function utmx_section(){}function utmx(){}(function(){var
+k='50935381-0',d=document,l=d.location,c=d.cookie;
+if(l.search.indexOf('utm_expid='+k)>0)return;
+function f(n){if(c){var i=c.indexOf(n+'=');if(i>-1){var j=c.
+indexOf(';',i);return escape(c.substring(i+n.length+1,j<0?c.
+length:j))}}}var x=f('__utmx'),xx=f('__utmxx'),h=l.hash;d.write(
+'<sc'+'ript src="'+'http'+(l.protocol=='https:'?'s://ssl':
+'://www')+'.google-analytics.com/ga_exp.js?'+'utmxkey='+k+
+'&utmx='+(x?x:'')+'&utmxx='+(xx?xx:'')+'&utmxtime='+new Date().
+valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
+'" type="text/javascript" charset="utf-8"><\/sc'+'ript>')})();
+</script><script>utmx('url','A/B');</script>
+<!-- End of Google Analytics Content Experiment code -->
+    <% if params[:e] == "52" %>
+      <h2><%= _("What information has been released?") %></h2>
+    <% else %>
+      <h2><%= _("Top requests") %></h2>
+    <% end %>
 
     <% @top_requests.each do |info_request| %>
       <%= render :partial => 'general/frontpage_top_request', :locals => { :info_request => info_request } %>
