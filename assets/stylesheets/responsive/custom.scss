@@ -257,6 +257,7 @@ a.link_button_green_large {
   }
 
   @include respond-min( $main_menu-mobile_menu_cutoff ){
+    padding-right: 0;
     a {
       line-height: 1em;
       padding: 1em;
