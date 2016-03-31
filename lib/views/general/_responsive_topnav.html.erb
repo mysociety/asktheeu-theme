@@ -19,7 +19,7 @@
 
     <% unless AlaveteliConfiguration::blog_feed.empty? %>
       <li class="<%= 'selected' if params[:controller] == 'general' && params[:action] == 'blog' %>">
-        <%= link_to _("News"), blog_path %>
+        <%= link_to _("News & Campaigns"), blog_path %>
       </li>
     <% end %>
 
