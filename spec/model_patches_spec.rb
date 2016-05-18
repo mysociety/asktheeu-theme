@@ -4,19 +4,25 @@ ALAVETELI_TEST_THEME = 'asktheeu-theme'
 require File.expand_path(File.join(File.dirname(__FILE__),'..','..','..','..','spec','spec_helper'))
 
 describe InfoRequest, 'when patched by the asktheeu-theme' do
+  let(:info_request) { InfoRequest.new }
 
-  describe '#law_used_full' do
+  describe '#law_used_human' do
 
-    it 'returns "access to information"' do
-      expect(InfoRequest.new.law_used_full).to eq('access to information')
+    it 'returns "access to documents" when asked for :full' do
+      expect(info_request.law_used_human(:full)).to eq('access to documents')
     end
 
-  end
+    it 'returns "documents" when asked for :short' do
+      expect(info_request.law_used_human(:short)).to eq('documents')
+    end
 
-  describe '#law_used_short' do
+    it 'returns "An access to documents request" when asked for :with_a' do
+      expect(info_request.law_used_human(:short)).
+        to eq('An access to documents request')
+    end
 
-    it 'returns "information"' do
-      expect(InfoRequest.new.law_used_short).to eq('information')
+    it 'returns "Regulation 1049/2001" when asked for :act' do
+      expect(info_request.law_used_human(:act)).to eq('Regulation 1049/2001')
     end
 
   end

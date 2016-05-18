@@ -8,6 +8,18 @@
 Rails.configuration.to_prepare do
 
   # Remove UK-specific references to FOI
+  InfoRequest.instance_eval do
+
+    THEME_LAW_USED_READABLE_DATA =
+      { :foi => { :short => _('documents'),
+                  :full => _('access to documents'),
+                  :with_a => _('An access to documents request'),
+                  :act => _('Regulation 1049/2001') }
+      }
+
+  end
+
+  # Remove UK-specific references to FOI
   InfoRequest.class_eval do
     def self.top_requests
       ids = connection.select_values <<-SQL.strip_heredoc.gsub("\n", " ")
@@ -21,13 +33,14 @@ Rails.configuration.to_prepare do
       where(:id => ids).order("position(id::text in '#{ ids }')")
     end
 
-    def law_used_full
-      _("access to information")
+    def applicable_law
+      begin
+        THEME_LAW_USED_READABLE_DATA.fetch(law_used.to_sym)
+      rescue KeyError
+        raise "Unknown law used '#{law_used}'"
+      end
     end
 
-    def law_used_short
-      _("information")
-    end
   end
 
   OutgoingMessage.class_eval do
