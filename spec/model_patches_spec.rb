@@ -92,3 +92,32 @@ describe OutgoingMessage, 'when patched by the asktheeu-theme' do
   end
 
 end
+
+describe User, 'when patched by the asktheeu-theme' do
+
+  it 'is valid with a first name and last name' do
+    user = User.new(:name => "Test User")
+    user.valid?
+    expect(user.errors[:name].count).to eq(0)
+  end
+
+  it 'is invalid with just a first name' do
+    user = User.new(:name => "Test")
+    user.valid?
+    expect(user.errors[:name].count).to eq(1)
+  end
+
+  it 'provides a message asking for a full name if just one name is entered' do
+    user = User.new(:name => "Test")
+    user.valid?
+    expect(user.errors[:name]).to eq ["Please enter your full name"]
+  end
+
+  it 'still allows pre-existing users to update their info' do
+    old_user = FactoryGirl.build(:user, :name => "SingleName")
+    old_user.save(:validate => false) # save the invalid record!
+    old_user.about_me = "hi, I am a new test user!"
+    expect{ old_user.save! }.not_to raise_error
+  end
+
+end

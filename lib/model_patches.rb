@@ -72,4 +72,16 @@ Rails.configuration.to_prepare do
 
   end
 
+  User.class_eval do
+
+    validates :name,
+              :on => :create,
+              :format => {
+                :with => /\s/,
+                :message => _("Please enter your full name"),
+                :allow_blank => true
+              }
+
+  end
+
 end
