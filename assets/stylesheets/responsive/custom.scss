@@ -393,7 +393,8 @@ a.link_button_green_large {
   margin:1em 0;
   padding: 1.5em;
 
-  p:first-child {
+  p:first-child,
+  h1:first-child {
     margin-top: 0;
   }
 
@@ -407,7 +408,7 @@ a.link_button_green_large {
 }
 
 #notice, #request_header_text {
-  background-color: desaturate(lighten($notice-color, 30%),10%);
+  background-color: mix($notice-color, #f3f3f3, 12%);
   border-color: $notice-color;
 }
 
@@ -420,6 +421,15 @@ a.link_button_green_large {
 .undescribed_requests {
   background-color: desaturate(lighten($action-color, 30%),10%);
   border-color: $action-color;
+}
+
+.share-link {
+  margin-right: 0.4em;
+}
+
+.annotation-reminder {
+  margin-top: 1.5em;
+  max-width: 34em;
 }
 
 
