@@ -8,6 +8,7 @@
     </div>
   </div>
 
+<% if Rails.env.production? && AlaveteliConfiguration.domain == 'www.asktheeu.org' %>
 <!-- Google Analytics Content Experiment code -->
 <script>function utmx_section(){}function utmx(){}(function(){var
 k='50935381-0',d=document,l=d.location,c=d.cookie;
@@ -22,6 +23,7 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 '" type="text/javascript" charset="utf-8"><\/sc'+'ript>')})();
 </script><script>utmx('url','A/B');</script>
 <!-- End of Google Analytics Content Experiment code -->
+<% end %>
 
   <div class="frontpage__secondary">
     <% if params[:e] == "52" %>
