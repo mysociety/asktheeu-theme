@@ -8,11 +8,11 @@
 # Gareth Rees <gareth@mysociety.org>, 2016
 msgid ""
 msgstr ""
-"Project-Id-Version: version 0.0.1\n"
+"Project-Id-Version: alaveteli\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-31 15:55+0000\n"
-"PO-Revision-Date: 2016-03-31 15:52+0000\n"
-"Last-Translator: Gareth Rees <gareth@mysociety.org>\n"
+"POT-Creation-Date: 2016-06-10 11:32+0000\n"
+"PO-Revision-Date: 2016-06-10 11:39+0000\n"
+"Last-Translator: Liz Conlan <liz@mysociety.org>\n"
 "Language-Team: Spanish (http://www.transifex.com/mysociety/asktheeu-theme/language/es/)\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
@@ -31,6 +31,9 @@ msgstr "Sobre nosotros"
 
 msgid "Access Info"
 msgstr "Access Info"
+
+msgid "An access to documents request"
+msgstr ""
 
 msgid "AskTheEU.org is an online platform for citizens to send access to documents requests directly to EU institutions."
 msgstr "AsktheEU.org es una plataforma online para facilitar que los ciudadanos envíen solicitudes de acceso a documentos directamente a las instituciones europeas."
@@ -122,6 +125,9 @@ msgstr "Fuera del horario de oficina:"
 msgid "Partial Success"
 msgstr "Éxito parcial"
 
+msgid "Please enter your full name"
+msgstr ""
+
 msgid "Please kindly use this email address for all replies to this request: {{email}}"
 msgstr "Por favor, utiliza este correo electrónico para contestar a esta solicitud: {{email}}"
 
@@ -130,6 +136,9 @@ msgstr "Privacidad y cookies"
 
 msgid "Referred."
 msgstr "Usuario remitido a otra institución"
+
+msgid "Regulation 1049/2001"
+msgstr ""
 
 msgid "Rejected"
 msgstr "Rechazada"
@@ -212,19 +221,22 @@ msgstr "Esperando Aclaración"
 msgid "Waiting Response"
 msgstr "Esperando Respuesta"
 
+msgid "What information has been released?"
+msgstr ""
+
 msgid "Which EU body?"
 msgstr "¿A quién preguntar?"
 
-msgid "access to information"
-msgstr "acceso a información"
+msgid "access to documents"
+msgstr ""
+
+msgid "documents"
+msgstr ""
 
 msgid "follower"
 msgid_plural "followers"
 msgstr[0] "seguidor"
 msgstr[1] "seguidores"
-
-msgid "information"
-msgstr "información"
 
 msgid "type your search term here"
 msgstr "introduce los términos de búsqueda"

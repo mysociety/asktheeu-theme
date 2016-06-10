@@ -9,11 +9,11 @@
 # Luisa Izuzquiza <luisa@access-info.org>, 2016
 msgid ""
 msgstr ""
-"Project-Id-Version: version 0.0.1\n"
+"Project-Id-Version: alaveteli\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-31 15:55+0000\n"
-"PO-Revision-Date: 2016-03-31 15:53+0000\n"
-"Last-Translator: Gareth Rees <gareth@mysociety.org>\n"
+"POT-Creation-Date: 2016-06-10 11:32+0000\n"
+"PO-Revision-Date: 2016-06-10 11:39+0000\n"
+"Last-Translator: Liz Conlan <liz@mysociety.org>\n"
 "Language-Team: French (http://www.transifex.com/mysociety/asktheeu-theme/language/fr/)\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
@@ -32,6 +32,9 @@ msgstr "À propros"
 
 msgid "Access Info"
 msgstr "Access Info"
+
+msgid "An access to documents request"
+msgstr ""
 
 msgid "AskTheEU.org is an online platform for citizens to send access to documents requests directly to EU institutions."
 msgstr "AsktheEU.org est une plateforme digitale qui aide les citoyens à envoyer des demandes d'accès aux documents directement aux institutions de l'Union européenne."
@@ -123,6 +126,9 @@ msgstr "Hors des heures de bureau (mobile):"
 msgid "Partial Success"
 msgstr "Succès partiel"
 
+msgid "Please enter your full name"
+msgstr ""
+
 msgid "Please kindly use this email address for all replies to this request: {{email}}"
 msgstr "S'il vous plait, veuillez utiliser cette adresse mail pour toutes les réponses à cette demande: {{email}}"
 
@@ -131,6 +137,9 @@ msgstr "Privacité et cookies"
 
 msgid "Referred."
 msgstr "Demande transférée."
+
+msgid "Regulation 1049/2001"
+msgstr ""
 
 msgid "Rejected"
 msgstr "Demande rejetée"
@@ -213,19 +222,22 @@ msgstr "En attendant une clarification"
 msgid "Waiting Response"
 msgstr "En attendant une reponse"
 
+msgid "What information has been released?"
+msgstr ""
+
 msgid "Which EU body?"
 msgstr "À quelle institution?"
 
-msgid "access to information"
+msgid "access to documents"
 msgstr "Accès à l'information"
+
+msgid "documents"
+msgstr ""
 
 msgid "follower"
 msgid_plural "followers"
 msgstr[0] "Supporter"
 msgstr[1] "Supporters"
-
-msgid "information"
-msgstr "Information"
 
 msgid "type your search term here"
 msgstr "Tapez le mot recherché"

@@ -5,11 +5,11 @@
 # Translators:
 msgid ""
 msgstr ""
-"Project-Id-Version: version 0.0.1\n"
+"Project-Id-Version: alaveteli\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-31 15:55+0000\n"
-"PO-Revision-Date: 2016-01-08 17:53+0000\n"
-"Last-Translator: Gareth Rees <gareth@mysociety.org>\n"
+"POT-Creation-Date: 2016-06-10 11:32+0000\n"
+"PO-Revision-Date: 2016-06-10 11:39+0000\n"
+"Last-Translator: Liz Conlan <liz@mysociety.org>\n"
 "Language-Team: English (http://www.transifex.com/mysociety/asktheeu-theme/language/en/)\n"
 "Language: en\n"
 "MIME-Version: 1.0\n"
@@ -28,6 +28,9 @@ msgstr "About"
 
 msgid "Access Info"
 msgstr "Access Info"
+
+msgid "An access to documents request"
+msgstr "An access to documents request"
 
 msgid "AskTheEU.org is an online platform for citizens to send access to documents requests directly to EU institutions."
 msgstr "AskTheEU.org is an online platform for citizens to send access to documents requests directly to EU institutions."
@@ -119,6 +122,9 @@ msgstr "Out of hours mobile (any time):"
 msgid "Partial Success"
 msgstr "Partial Success"
 
+msgid "Please enter your full name"
+msgstr "Please enter your full name"
+
 msgid "Please kindly use this email address for all replies to this request: {{email}}"
 msgstr "Please kindly use this email address for all replies to this request: {{email}}"
 
@@ -127,6 +133,9 @@ msgstr "Privacy and cookies"
 
 msgid "Referred."
 msgstr "Referred."
+
+msgid "Regulation 1049/2001"
+msgstr "Regulation 1049/2001"
 
 msgid "Rejected"
 msgstr "Rejected"
@@ -209,19 +218,22 @@ msgstr "Waiting Clarification"
 msgid "Waiting Response"
 msgstr "Waiting Response"
 
+msgid "What information has been released?"
+msgstr "What information has been released?"
+
 msgid "Which EU body?"
 msgstr "Which EU body?"
 
-msgid "access to information"
-msgstr "access to information"
+msgid "access to documents"
+msgstr "access to documents"
+
+msgid "documents"
+msgstr "documents"
 
 msgid "follower"
 msgid_plural "followers"
 msgstr[0] "follower"
 msgstr[1] "followers"
-
-msgid "information"
-msgstr "information"
 
 msgid "type your search term here"
 msgstr "type your search term here"
