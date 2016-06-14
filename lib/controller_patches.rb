@@ -18,12 +18,7 @@ Rails.configuration.to_prepare do
                              :title => _('Successful requests'),
                              :has_json => true } ]
 
-      begin
-        blog
-      rescue
-        @blog_items = []
-        @twitter_user = MySociety::Config.get('TWITTER_USERNAME', '')
-      end
+      blog_cache("latest_blog_posts-#{@locale}")
 
       @top_requests = if params[:e] == "52"
         InfoRequest.where(:described_state => "successful").
@@ -40,6 +35,52 @@ Rails.configuration.to_prepare do
       if @top_requests.empty?
         @top_requests = InfoRequest.top_requests.limit(2)
       end
+    end
+
+    private
+
+    def blog_cache(cache_key, expires=4.hours)
+      # nothing to do here, call the blog code and return
+      return blog unless AlaveteliConfiguration::cache_fragments
+
+      # read in the last timestamp
+      updated = read_fragment("#{cache_key}-lastupdated")
+
+      # construct the fragment key
+      @fragment_key = "#{cache_key}-#{updated}"
+
+      # if the fragment is unreadable or has reached expiry
+      # attempt to pull in the blog feed
+      if updated.nil? || !fragment_exist?(@fragment_key) ||
+         Time.now > (Time.parse(updated) + expires)
+        # keep a note of the old key
+        old_key = @fragment_key.dup
+
+        # prepare a new timestamp and fragment key
+        updated = create_timestamp
+        @fragment_key = "#{cache_key}-#{updated}"
+
+        logger.info "attempting to pull in the feed"
+        blog
+
+        if @blog_items.empty?
+          # attempt to write the previous fragment to our new cache
+          fragment = read_fragment(old_key)
+          if fragment
+            logger.warn "Writing old blog fragment (#{old_key}) to " \
+                        "current cache (#{@fragment_key}) due to feed " \
+                        "error or timeout."
+            write_fragment(@fragment_key, fragment)
+          end
+        end
+
+        # store the new timestamp
+        write_fragment("#{cache_key}-lastupdated", updated)
+      end
+    end
+
+    def create_timestamp(time=Time.now)
+      time.strftime('%Y%m%d-%H:%M:%S')
     end
   end
 
