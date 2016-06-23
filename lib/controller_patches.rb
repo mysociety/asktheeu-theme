@@ -37,6 +37,11 @@ Rails.configuration.to_prepare do
       end
     end
 
+    def cached_blog
+      blog_cache("blog_posts-")
+      render :action => 'blog'
+    end
+
     def blog_cache(cache_key_root)
       # nothing to do here, call the blog code and return
       return blog unless AlaveteliConfiguration::cache_fragments
