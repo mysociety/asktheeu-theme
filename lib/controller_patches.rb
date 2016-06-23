@@ -37,6 +37,11 @@ Rails.configuration.to_prepare do
       end
     end
 
+    def cached_blog
+      blog_cache("blog_posts-#{@locale}")
+      render :action => 'blog'
+    end
+
     private
 
     def blog_cache(cache_key, expires=4.hours)

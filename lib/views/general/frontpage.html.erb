@@ -44,7 +44,6 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 <% end %>
 
 <% cache_if_caching_fragments(@fragment_key) do %>
-  <% logger.info "RENDERING BLOG IN VIEW" %>
   <div class="frontpage__tertiary">
 
     <div class="wrapper">
