@@ -18,11 +18,35 @@ Rails.configuration.to_prepare do
                              :title => _('Successful requests'),
                              :has_json => true } ]
 
-      begin
+
+      @blog_updated_at = blog_cache_key(Time.zone.now)
+
+      if fragment_exist?(@blog_updated_at)
+        # Use the cached version
+      else
         blog
-      rescue
-        @blog_items = []
-        @twitter_user = MySociety::Config.get('TWITTER_USERNAME', '')
+
+        if @blog_items.empty?
+          # Couldn't get anything from the blog, probably due to a timeout
+          # Look back in time to try to get a cached version
+          old_keys = (1..6).map { |i| blog_cache_key(i.hours.ago) }
+          usable_old_key = old_keys.find { |key| fragment_exist?(key) }
+
+          if usable_old_key
+            # If there's an old cache of the blog, update the current cache so
+            # that we won't get further timeouts
+            logger.warn "Writing old blog fragment (#{usable_old_key}) to " \
+                        "current cache (#{@blog_updated_at}) due to feed " \
+                        "error or timeout."
+            write_fragment(@blog_updated_at, read_fragment(usable_old_key))
+          else
+            # Nothing from the feed and no old cache. Not much we can do now, so
+            # cache the empty items until the next attempt so that we're not
+            # preventing the homepage load
+          end
+        else
+          # We got some new posts. Let the view cache them
+        end
       end
 
       @top_requests = if params[:e] == "52"
@@ -40,6 +64,10 @@ Rails.configuration.to_prepare do
       if @top_requests.empty?
         @top_requests = InfoRequest.top_requests.limit(2)
       end
+    end
+
+    def blog_cache_key(time)
+      "latest_blog_posts-#{ @locale }-#{ time.strftime('%Y%m%d-%H') }"
     end
   end
 

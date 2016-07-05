@@ -47,19 +47,22 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
       <div class="content">
         <h2><%= _("Latest news and campaigns") %> <%= link_to _("See all"), blog_path %></h2>
 
-        <div class="frontpage__blog blog__container">
-          <% @blog_items.take(4).each do |item| %>
-            <div class="frontpage__blog blog__item">
-              <% if item['thumbnail'] %>
-                <%= link_to item['link'][0] do %>
-                  <img <%= item['thumbnail'][0].to_s.html_safe %> width="224" height="134">
+        <% cache_if_caching_fragments(@blog_updated_at) do %>
+          <% logger.info "RENDERING BLOG IN VIEW" %>
+          <div class="frontpage__blog blog__container">
+            <% @blog_items.take(4).each do |item| %>
+              <div class="frontpage__blog blog__item">
+                <% if item['thumbnail'] %>
+                  <%= link_to item['link'][0] do %>
+                    <img <%= item['thumbnail'][0].to_s.html_safe %> width="224" height="134">
+                  <% end %>
                 <% end %>
-              <% end %>
 
-              <h3><%= link_to item['title'][0], item['link'][0] %></h3>
-              <p><%= h excerpt(item['description'][0].to_s, "", :radius => 198) %></p>
-            </div>
-          <% end %>
-        </div>
+                <h3><%= link_to item['title'][0], item['link'][0] %></h3>
+                <p><%= h excerpt(item['description'][0].to_s, "", :radius => 198) %></p>
+              </div>
+            <% end %>
+          </div>
+        <% end %>
 
 <% end %>
