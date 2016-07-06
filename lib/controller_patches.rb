@@ -18,8 +18,7 @@ Rails.configuration.to_prepare do
                              :title => _('Successful requests'),
                              :has_json => true } ]
 
-
-      @blog_updated_at = blog_cache_key(Time.zone.now)
+      @blog_updated_at = blog_cache_key("latest-blog-posts", Time.zone.now)
 
       if fragment_exist?(@blog_updated_at)
         # Use the cached version
@@ -29,7 +28,7 @@ Rails.configuration.to_prepare do
         if @blog_items.empty?
           # Couldn't get anything from the blog, probably due to a timeout
           # Look back in time to try to get a cached version
-          old_keys = (1..6).map { |i| blog_cache_key(i.hours.ago) }
+          old_keys = (1..6).map { |i| blog_cache_key("latest-blog-posts", i.hours.ago) }
           usable_old_key = old_keys.find { |key| fragment_exist?(key) }
 
           if usable_old_key
@@ -66,8 +65,8 @@ Rails.configuration.to_prepare do
       end
     end
 
-    def blog_cache_key(time)
-      "latest_blog_posts-#{ @locale }-#{ time.strftime('%Y%m%d-%H') }"
+    def blog_cache_key(cache_key_root, time)
+      "#{ cache_key_root }-#{ @locale }-#{ time.strftime('%Y%m%d-%H') }"
     end
   end
 
