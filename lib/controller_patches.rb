@@ -18,35 +18,7 @@ Rails.configuration.to_prepare do
                              :title => _('Successful requests'),
                              :has_json => true } ]
 
-      @blog_updated_at = blog_cache_key("latest-blog-posts", Time.zone.now)
-
-      if fragment_exist?(@blog_updated_at)
-        # Use the cached version
-      else
-        blog
-
-        if @blog_items.empty?
-          # Couldn't get anything from the blog, probably due to a timeout
-          # Look back in time to try to get a cached version
-          old_keys = (1..6).map { |i| blog_cache_key("latest-blog-posts", i.hours.ago) }
-          usable_old_key = old_keys.find { |key| fragment_exist?(key) }
-
-          if usable_old_key
-            # If there's an old cache of the blog, update the current cache so
-            # that we won't get further timeouts
-            logger.warn "Writing old blog fragment (#{usable_old_key}) to " \
-                        "current cache (#{@blog_updated_at}) due to feed " \
-                        "error or timeout."
-            write_fragment(@blog_updated_at, read_fragment(usable_old_key))
-          else
-            # Nothing from the feed and no old cache. Not much we can do now, so
-            # cache the empty items until the next attempt so that we're not
-            # preventing the homepage load
-          end
-        else
-          # We got some new posts. Let the view cache them
-        end
-      end
+      blog_cache("latest-blog-posts")
 
       @top_requests = if params[:e] == "52"
         InfoRequest.where(:described_state => "successful").
@@ -62,6 +34,43 @@ Rails.configuration.to_prepare do
 
       if @top_requests.empty?
         @top_requests = InfoRequest.top_requests.limit(2)
+      end
+    end
+
+    def blog_cache(cache_key_root)
+      # nothing to do here, call the blog code and return
+      return blog unless AlaveteliConfiguration::cache_fragments
+
+      @blog_key = blog_cache_key(cache_key_root, Time.zone.now)
+
+      if fragment_exist?(@blog_key)
+        # Use the cached version
+      else
+        blog
+
+        if @blog_items.empty?
+          # Couldn't get anything from the blog, probably due to a timeout
+          # Look back in time to try to get a cached version
+          old_keys = (1..6).map do |i|
+            blog_cache_key("latest-blog-posts", i.hours.ago)
+          end
+          usable_old_key = old_keys.find { |key| fragment_exist?(key) }
+
+          if usable_old_key
+            # If there's an old cache of the blog, update the current cache so
+            # that we won't get further timeouts
+            logger.warn "Writing old blog fragment (#{usable_old_key}) to " \
+                        "current cache (#{@blog_key}) due to feed " \
+                        "error or timeout."
+            write_fragment(@blog_key, read_fragment(usable_old_key))
+          else
+            # Nothing from the feed and no old cache. Not much we can do now, so
+            # cache the empty items until the next attempt so that we're not
+            # preventing the homepage load
+          end
+        else
+          # We got some new posts. Let the view cache them
+        end
       end
     end
 
