@@ -96,6 +96,22 @@ Rails.configuration.to_prepare do
 
   end
 
+  OutgoingMailer.class_eval do
+
+    # Use "confirmatory application" wording instead of "internal review"
+    # in the email subject line to the authority
+    def self.subject_for_followup(info_request, outgoing_message, options = {})
+      if outgoing_message.what_doing == 'internal_review'
+        _("Confirmatory application for {{email_subject}}",
+          :email_subject => info_request.email_subject_request(:html => options[:html]))
+      else
+        info_request.email_subject_followup(:incoming_message => outgoing_message.incoming_message_followup,
+                                            :html => options[:html])
+      end
+    end
+
+  end
+
   # Disable funcionality to let users of the site act on behalf of the public
   # body, since we aren't sure right now this is safe enough
   PublicBody.class_eval do
