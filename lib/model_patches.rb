@@ -43,6 +43,27 @@ Rails.configuration.to_prepare do
 
   end
 
+  OutgoingMessage::Template::InternalReview.class_eval do
+
+    # Override the default template text
+    def letter(replacements = {})
+      msg = _("\n\nPlease pass this on to the person who reviews " \
+              "confirmatory applications.\n\n" \
+              "I am filing the following confirmatory application with " \
+              "regards to my access to documents request " \
+              "'{{info_request_title}}'.",
+              replacements)
+      msg += "\n\n\n\n"
+      msg += " [ #{ self.class.details_placeholder } ] "
+      msg += "\n\n\n\n"
+      msg += _("A full history of my request and all correspondence " \
+               "is available on the Internet at this address: {{url}}",
+               replacements)
+      msg
+    end
+
+  end
+
   OutgoingMessage.class_eval do
 
     # Add intro paragraph to new request template
