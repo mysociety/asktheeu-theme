@@ -18,12 +18,12 @@ Rails.configuration.to_prepare do
                              :title => _('Successful requests'),
                              :has_json => true } ]
 
-      # begin
-      #   blog
-      # rescue
+      begin
+        blog
+      rescue
         @blog_items = []
         @twitter_user = MySociety::Config.get('TWITTER_USERNAME', '')
-      # end
+      end
 
       @top_requests = if params[:e] == "52"
         InfoRequest.where(:described_state => "successful").
