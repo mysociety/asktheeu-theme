@@ -37,9 +37,16 @@ Rails.configuration.to_prepare do
       end
     end
 
-    def cached_blog
+    def blog
+      if AlaveteliConfiguration::blog_feed.empty?
+        raise ActiveRecord::RecordNotFound.new("Page not enabled")
+      end
+
+      medium_cache
+
       blog_cache("blog_posts-#{@locale}")
-      render :action => 'blog'
+
+      respond_to :html
     end
 
     private
@@ -66,7 +73,7 @@ Rails.configuration.to_prepare do
         @fragment_key = "#{cache_key}-#{updated}"
 
         logger.info "attempting to pull in the feed"
-        blog
+        get_blog_content
 
         if @blog_items.empty?
           # attempt to write the previous fragment to our new cache
