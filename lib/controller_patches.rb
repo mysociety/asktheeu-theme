@@ -20,17 +20,12 @@ Rails.configuration.to_prepare do
 
       blog_cache("latest_blog_posts-#{@locale}")
 
-      @top_requests = if params[:e] == "52"
-        InfoRequest.where(:described_state => "successful").
-          order(:updated_at).limit(2)
-      else
-        [
-          InfoRequest.
-            where(:url_title => 'dg_trade_contacts_with_industry').first,
-          InfoRequest.
-            where(:url_title => 'commissioners_expenses_2012_and_2').first
-        ].compact
-      end
+      @top_requests = [
+        InfoRequest.
+          where(:url_title => 'dg_trade_contacts_with_industry').first,
+        InfoRequest.
+          where(:url_title => 'commissioners_expenses_2012_and_2').first
+      ].compact
 
       if @top_requests.empty?
         @top_requests = InfoRequest.top_requests.limit(2)
