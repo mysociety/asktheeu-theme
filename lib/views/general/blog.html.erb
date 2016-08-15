@@ -7,6 +7,7 @@
 
 <div id="main_content">
 
+  <% cache_if_caching_fragments(@fragment_key) do %>
   <div id="blog">
     <% @blog_items.in_groups_of(4, false) do |group| %>
       <div class="blog__container">
@@ -25,4 +26,5 @@
       </div>
     <% end %>
   </div>
+  <% end %>
 </div>
