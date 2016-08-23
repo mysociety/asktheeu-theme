@@ -20,26 +20,28 @@ Rails.configuration.to_prepare do
 
       blog_cache("latest_blog_posts-#{@locale}")
 
-      @top_requests = if params[:e] == "52"
-        InfoRequest.where(:described_state => "successful").
-          order(:updated_at).limit(2)
-      else
-        [
-          InfoRequest.
-            where(:url_title => 'dg_trade_contacts_with_industry').first,
-          InfoRequest.
-            where(:url_title => 'commissioners_expenses_2012_and_2').first
-        ].compact
-      end
+      @top_requests = [
+        InfoRequest.
+          where(:url_title => 'dg_trade_contacts_with_industry').first,
+        InfoRequest.
+          where(:url_title => 'commissioners_expenses_2012_and_2').first
+      ].compact
 
       if @top_requests.empty?
         @top_requests = InfoRequest.top_requests.limit(2)
       end
     end
 
-    def cached_blog
+    def blog
+      if AlaveteliConfiguration::blog_feed.empty?
+        raise ActiveRecord::RecordNotFound.new("Page not enabled")
+      end
+
+      medium_cache
+
       blog_cache("blog_posts-#{@locale}")
-      render :action => 'blog'
+
+      respond_to :html
     end
 
     private
@@ -66,7 +68,7 @@ Rails.configuration.to_prepare do
         @fragment_key = "#{cache_key}-#{updated}"
 
         logger.info "attempting to pull in the feed"
-        blog
+        get_blog_content
 
         if @blog_items.empty?
           # attempt to write the previous fragment to our new cache
@@ -113,12 +115,19 @@ Rails.configuration.to_prepare do
     def play
       session[:request_game] = Time.now
 
-      @missing = InfoRequest.count_old_unclassified(:conditions => ["prominence = 'normal'"])
+      @missing = InfoRequest.
+        where_old_unclassified.
+          where(:prominence => 'normal').
+            count
       @total = InfoRequest.count
       @done = @total - @missing
       @percentage = (@done.to_f / @total.to_f * 10000).round / 100.0
-      @requests = InfoRequest.includes(:public_body, :user).get_random_old_unclassified(3, :conditions => ["prominence = 'normal'"])
-
+      @requests = InfoRequest.
+        includes(:public_body, :user).
+          where_old_unclassified.
+            limit(3).
+              where(:prominence => 'normal').
+                order('random()')
 
       if @missing == 0
         flash[:notice] = _('<p>All done! Thank you very much for your help.</p><p>There are <a href="{{helpus_url}}">more things you can do</a> to help {{site_name}}.</p>',

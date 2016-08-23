@@ -17,7 +17,7 @@ describe InfoRequest, 'when patched by the asktheeu-theme' do
     end
 
     it 'returns "An access to documents request" when asked for :with_a' do
-      expect(info_request.law_used_human(:short)).
+      expect(info_request.law_used_human(:with_a)).
         to eq('An access to documents request')
     end
 

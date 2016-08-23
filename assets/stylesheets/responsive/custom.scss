@@ -265,8 +265,8 @@ a.link_button_green_large {
   }
 }
 
-.navigation_search {
-  padding: 0.5em 1em; // match other navigation links
+#navigation_search {
+  padding: 0.5em 0; // match other navigation links
 
   @include respond-min( $main_menu-mobile_menu_cutoff ){
     width: 14em;
@@ -277,48 +277,47 @@ a.link_button_green_large {
     margin: 0;
   }
 
-  input, button {
-    display: block;
-    margin: 0;
-    float: left;
-    font-size: 1em;
-    line-height: 1em;
-  }
-
-  input {
-    width: 75%;
-    height: 2em;
-    padding: 0 0.5em;
-    border-radius: 0.2em 0 0 0.2em !important; // override `form input[type="search"]`
-    border: none;
-  }
-
-  button {
-    width: 25%;
-
-    height: 0;
-    overflow: hidden;
-    padding: 2em 0 0 0;
-    border-radius: 0 0.2em 0.2em 0;
-
-    background: darken($color_asktheeu_green, 20%) image-url('search.png') no-repeat 50% 50%;
-    background-size: 20px 20px;
-    @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
-      background-image: image-url('search@2.png');
+  #navigation_search_form {
+    input, button {
+      display: block;
+      margin: 0;
+      float: left;
+      font-size: 1em;
+      line-height: 1em;
     }
-    background-image: image-url('search.svg'), none;
 
-    &:hover, &:focus {
-      background-color: darken($color_asktheeu_green, 30%);
+    input {
+      width: 75%;
+      height: 2em;
+      padding: 0 0.5em;
+      border-radius: 0.2em 0 0 0.2em !important; // override `form input[type="search"]`
+      border: none;
+    }
+
+    button {
+      width: 25%;
+
+      height: 0;
+      overflow: hidden;
+      padding: 2em 0 0 0;
+      border-radius: 0 0.2em 0.2em 0;
+
+      background: darken($color_asktheeu_green, 20%) image-url('search.png') no-repeat 50% 50%;
+      background-size: 20px 20px;
+      @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+        background-image: image-url('search@2.png');
+      }
+      background-image: image-url('search.svg'), none;
+
+      &:hover, &:focus {
+        background-color: darken($color_asktheeu_green, 30%);
+      }
     }
   }
 }
 
 
 #logged_in_bar {
-  @include respond-min($main_menu-mobile_menu_cutoff) {
-    top: 0;
-  }
   padding: 0.5em 0; // better vertical padding between this menu and #navigation
 
   a {
@@ -334,7 +333,7 @@ a.link_button_green_large {
   @include respond-min( $main_menu-mobile_menu_cutoff ){
     position: relative;
     left: 0;
-    margin-top: 1em;
+    margin-top: 1.5em;
     float: right;
     clear: right;
     width: auto;
@@ -358,35 +357,29 @@ a.link_button_green_large {
   }
 }
 
-
 #user_locale_switcher {
   margin: 0;
   padding: 0;
   list-style: none outside none;
 
-  a {
+  p {
+    margin: 0;
+    padding: 0;
+  }
+
+  a, span {
     display: block;
     padding: 0.5em 1em;
   }
 
-  .current-locale a {
-    font-weight: normal;
-    color: inherit;
-    cursor: default;
-  }
-
   @include respond-min( $main_menu-mobile_menu_cutoff ){
-    float: right;
     padding-right: 1.5%; // same as grid column padding
     padding-top: 0.5em; // move it away from the top of the header
 
-    li {
-      float: left;
-    }
+    a { font-weight: bold; }
 
-    a {
-      font-weight: bold;
-      padding: 0.25em 0.5em;
+    a, span {
+      padding: 0.5em 0.4em;
     }
   }
 }

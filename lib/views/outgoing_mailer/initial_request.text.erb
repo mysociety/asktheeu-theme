@@ -2,11 +2,21 @@
 
 -------------------------------------------------------------------
 
-<%= _('This is a request for access to information under Article 15 of the TFEU and, where applicable, Regulation 1049/2001 which has been sent via the {{site_name}} website.', :site_name => site_name) %>
+<%= _('This is a request for access to information under Article 15 of the ' \
+	  'TFEU and, where applicable, Regulation 1049/2001 which has been sent ' \
+	  'via the {{site_name}} website.',
+	  :site_name => site_name.html_safe) %>
 
-<%= _('Please kindly use this email address for all replies to this request: {{email}}', :email => @info_request.incoming_email) %>
+<%= _('Please kindly use this email address for all replies to this ' \
+	  'request: {{email}}',
+	  :email => @info_request.incoming_email.html_safe) %>
 
-<%= _('If {{email_address}} is the wrong address for information requests to {{public_body_name}}, please tell the {{site_name}} team on email team@asktheEU.org', :email_address => @info_request.public_body.request_email, :public_body_name => @info_request.public_body.name, :site_name => site_name)%>
+<%= _('If {{email_address}} is the wrong address for information requests to ' \
+	  '{{public_body_name}}, please tell the {{site_name}} team on email ' \
+	  'team@asktheEU.org',
+	  :email_address => @info_request.public_body.request_email.html_safe,
+	  :public_body_name => @info_request.public_body.name.html_safe,
+	  :site_name => site_name.html_safe) %>
 
 <%= render :partial => 'followup_footer' %>
 
