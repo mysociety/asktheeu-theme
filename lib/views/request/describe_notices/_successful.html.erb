@@ -13,7 +13,7 @@
                       "https://twitter.com/intent/tweet?" << {
                         :url => request.url,
                         :via => AlaveteliConfiguration.twitter_username,
-                        :text => "'#{ @info_request.title }'",
+                        :text => "'#{ info_request.title }'",
                         :related => _('mySociety:Helping people set ' \
                                         'up sites like {{site_name}} ' \
                                         'all over the world',
@@ -45,7 +45,7 @@
           'please link to this page, and <a href="{{url}}">add an ' \
           'annotation</a> below telling people ' \
           'about your writing.',
-          :url => new_comment_url(:url_title => @info_request.url_title).html_safe) %>
+          :url => new_comment_url(:url_title => info_request.url_title).html_safe) %>
   </p>
 <% else %>
   <p class="annotation-reminder">
