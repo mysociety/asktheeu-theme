@@ -47,6 +47,11 @@ Rails.configuration.to_prepare do
     private
 
     def blog_cache(cache_key, expires=4.hours)
+      # set @blog_items to an empty array and return if there's no blog feed
+      if AlaveteliConfiguration::blog_feed.empty?
+        @blog_items = []
+        return
+      end
       # nothing to do here, call the blog code and return
       return blog unless AlaveteliConfiguration::cache_fragments
 
