@@ -45,7 +45,7 @@
         <% end %>
 
         <li>
-          <%= link_to _("Request an internal review"), new_request_followup_path(:request_id => @info_request.id, :internal_review => '1', :anchor => 'followup') %>
+          <%= link_to _("Request an internal review (also called a confirmatory application)"), new_request_followup_path(:request_id => @info_request.id, :internal_review => '1', :anchor => 'followup') %>
         </li>
       </ul>
     </div>
