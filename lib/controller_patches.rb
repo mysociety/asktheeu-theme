@@ -53,7 +53,7 @@ Rails.configuration.to_prepare do
         return
       end
       # nothing to do here, call the blog code and return
-      return blog unless AlaveteliConfiguration::cache_fragments
+      return get_blog_content unless AlaveteliConfiguration::cache_fragments
 
       # read in the last timestamp
       updated = read_fragment("#{cache_key}-lastupdated")
