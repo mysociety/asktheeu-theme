@@ -43,6 +43,27 @@ Rails.configuration.to_prepare do
 
   end
 
+  OutgoingMessage::Template::InternalReview.class_eval do
+
+    # Override the default template text
+    def letter(replacements = {})
+      msg = _("\n\nPlease pass this on to the person who reviews " \
+              "confirmatory applications.\n\n" \
+              "I am filing the following confirmatory application with " \
+              "regards to my access to documents request " \
+              "'{{info_request_title}}'.",
+              replacements)
+      msg += "\n\n\n\n"
+      msg += " [ #{ self.class.details_placeholder } ] "
+      msg += "\n\n\n\n"
+      msg += _("A full history of my request and all correspondence " \
+               "is available on the Internet at this address: {{url}}",
+               replacements)
+      msg
+    end
+
+  end
+
   OutgoingMessage.class_eval do
 
     # Add intro paragraph to new request template
@@ -71,6 +92,22 @@ Rails.configuration.to_prepare do
       self.remove_privacy_sensitive_things!(text)
 
       text
+    end
+
+  end
+
+  OutgoingMailer.class_eval do
+
+    # Use "confirmatory application" wording instead of "internal review"
+    # in the email subject line to the authority
+    def self.subject_for_followup(info_request, outgoing_message, options = {})
+      if outgoing_message.what_doing == 'internal_review'
+        _("Confirmatory application for {{email_subject}}",
+          :email_subject => info_request.email_subject_request(:html => options[:html]))
+      else
+        info_request.email_subject_followup(:incoming_message => outgoing_message.incoming_message_followup,
+                                            :html => options[:html])
+      end
     end
 
   end
