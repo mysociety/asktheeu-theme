@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: alaveteli\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-06-10 11:32+0000\n"
-"PO-Revision-Date: 2016-06-10 11:39+0000\n"
+"POT-Creation-Date: 2016-09-26 03:15-0700\n"
+"PO-Revision-Date: 2016-09-26 10:18+0000\n"
 "Last-Translator: Liz Conlan <liz@mysociety.org>\n"
 "Language-Team: German (http://www.transifex.com/mysociety/asktheeu-theme/language/de/)\n"
 "Language: de\n"
@@ -19,6 +19,15 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "<a href=\"{{url}}\">Add an annotation</a> (to help the requester or others)"
+msgstr ""
+
+msgid "<p>All done! Thank you very much for your help.</p><p>There are <a href=\"{{helpus_url}}\">more things you can do</a> to help {{site_name}}.</p>"
+msgstr ""
+
+msgid "A full history of my request and all correspondence is available on the Internet at this address: {{url}}"
+msgstr ""
 
 msgid "A project by <a href=\"http://www.access-info.org\">Access Info Europe</a>, powered by <a href=\"http://alaveteli.org\">Alaveteli</a>"
 msgstr "Ein Projekt von <a href=\\\"http://www.access-info.org\\\">Access Info Europe</a>, ermöglicht durch <a href=\\\"http://alaveteli.org\\\">Alaveteli</a>"
@@ -33,6 +42,9 @@ msgid "Access Info"
 msgstr ""
 
 msgid "An access to documents request"
+msgstr ""
+
+msgid "Anyone:"
 msgstr ""
 
 msgid "AskTheEU.org is an online platform for citizens to send access to documents requests directly to EU institutions."
@@ -59,8 +71,14 @@ msgstr "Anfragen ansehen"
 msgid "Cava de San Miguel 8, 4º centro. 28005 Madrid (Spain)"
 msgstr "Cava de San Miguel 8, 4º centro. 28005 Madrid (Spanien)"
 
+msgid "Confirmatory application for {{email_subject}}"
+msgstr ""
+
 msgid "Contact"
 msgstr "Kontakt"
+
+msgid "Download a zip file of all correspondence"
+msgstr ""
 
 msgid "Error message"
 msgstr ""
@@ -77,6 +95,9 @@ msgstr "Erhalte Antworten von EU-Institutionen"
 msgid "Gone Postal"
 msgstr ""
 
+msgid "Great news!"
+msgstr ""
+
 msgid "Homepage header photo © European Union 2014 - European Parliament"
 msgstr ""
 
@@ -89,6 +110,12 @@ msgstr "Wie benutze ich AsktheEU.org?"
 msgid "If you believe this request is not suitable, you can report it for attention by the site administrators"
 msgstr ""
 
+msgid "If you write about this request (for example in a forum or a blog) please link to this page, and <a href=\"{{url}}\">add an annotation</a> below telling people about your writing."
+msgstr ""
+
+msgid "If you write about this request (for example in a forum or a blog) please link to this page."
+msgstr ""
+
 msgid "If {{email_address}} is the wrong address for information requests to {{public_body_name}}, please tell the {{site_name}} team on email team@asktheEU.org"
 msgstr "Falls {{email_address}} die falsche Email-Adresse für Anfragen auf Dokumentenzugangs an {{public_body_name}} ist, teilen Sie dies dem {{site_name}} team bitte durch eine Email an team@asktheEU.org mit."
 
@@ -97,6 +124,9 @@ msgstr ""
 
 msgid "Latest news and campaigns"
 msgstr "Neuigkeiten und Kampagnen"
+
+msgid "Let other people know what you’ve found out"
+msgstr ""
 
 msgid "Make a request"
 msgstr "Anfrage stellen"
@@ -146,10 +176,16 @@ msgstr ""
 msgid "Report this request"
 msgstr ""
 
+msgid "Request an internal review (also called a confirmatory application)"
+msgstr ""
+
 msgid "Requests for personal information and vexatious requests are not considered valid for FOI purposes (<a href=\"/help/about\">read more</a>)."
 msgstr ""
 
 msgid "Requires Admin"
+msgstr ""
+
+msgid "Respond to request"
 msgstr ""
 
 msgid "SUPPORT THE CAMPAIGNS"
@@ -161,16 +197,28 @@ msgstr ""
 msgid "See all"
 msgstr "Alle ansehen"
 
+msgid "Send a followup"
+msgstr ""
+
 msgid "Send a request"
 msgstr "Anfrage stellen"
 
+msgid "Share on Facebook"
+msgstr ""
+
 msgid "Similar requests"
+msgstr ""
+
+msgid "Submit Search"
 msgstr ""
 
 msgid "Successful"
 msgstr ""
 
 msgid "Successful requests"
+msgstr ""
+
+msgid "Things to do with this request"
 msgstr ""
 
 msgid "This is a request for access to information under Article 15 of the TFEU and, where applicable, Regulation 1049/2001 which has been sent via the {{site_name}} website."
@@ -197,6 +245,9 @@ msgstr "Top-Anfragen"
 msgid "Transferred."
 msgstr ""
 
+msgid "Tweet it"
+msgstr ""
+
 msgid "Under the right of access to documents in the EU treaties, as developed in Regulation 1049/2001, I am requesting documents which contain the following information:\\n\\n"
 msgstr ""
 
@@ -207,6 +258,9 @@ msgid "Unknown Status"
 msgstr ""
 
 msgid "Unsuitable?"
+msgstr ""
+
+msgid "Update the status of this request"
 msgstr ""
 
 msgid "User Withdrawn"
@@ -221,11 +275,17 @@ msgstr ""
 msgid "Waiting Response"
 msgstr ""
 
-msgid "What information has been released?"
+msgid "We're glad you got all the information that you wanted."
 msgstr ""
 
 msgid "Which EU body?"
 msgstr "Wen anfragen?"
+
+msgid "Write a reply"
+msgstr ""
+
+msgid "\\n\\nPlease pass this on to the person who reviews confirmatory applications.\\n\\nI am filing the following confirmatory application with regards to my access to documents request '{{info_request_title}}'."
+msgstr ""
 
 msgid "access to documents"
 msgstr ""
@@ -238,14 +298,26 @@ msgid_plural "followers"
 msgstr[0] ""
 msgstr[1] ""
 
+msgid "mySociety:Helping people set up sites like {{site_name}} all over the world"
+msgstr ""
+
 msgid "type your search term here"
 msgstr ""
 
 msgid "unknown status "
 msgstr ""
 
+msgid "{{info_request_user_name}} only:"
+msgstr ""
+
+msgid "{{public_body_name}} only:"
+msgstr ""
+
 msgid "{{public_body_url}} has replied saying <strong>they have transferred your request to another public body</strong>."
 msgstr ""
 
 msgid "{{public_body_url}} has replied saying <strong>you have to contact another public body</strong>."
+msgstr ""
+
+msgid "{{site_name}} blog and tweets"
 msgstr ""
