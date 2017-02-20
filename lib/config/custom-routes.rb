@@ -8,4 +8,7 @@ Rails.application.routes.draw do
 
   # We want to start by showing the public bodies categories and search only
   match '/body/' => 'public_body#index', :as => "body_index"
+
+  # redirect the blog page to blog.asktheeu.org
+  match '/blog/' => redirect('http://blog.asktheeu.org/')
 end
