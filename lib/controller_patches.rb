@@ -32,18 +32,6 @@ Rails.configuration.to_prepare do
       end
     end
 
-    def blog
-      if AlaveteliConfiguration::blog_feed.empty?
-        raise ActiveRecord::RecordNotFound.new("Page not enabled")
-      end
-
-      medium_cache
-
-      blog_cache("blog_posts-#{@locale}")
-
-      respond_to :html
-    end
-
     private
 
     def blog_cache(cache_key, expires=4.hours)

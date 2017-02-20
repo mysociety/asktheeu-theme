@@ -9,7 +9,7 @@ describe GeneralController, "when patched by the asktheeu-theme" do
   describe "caching blog content" do
 
     before do
-      allow(controller).to receive(:blog).and_return("")
+      allow(controller).to receive(:get_blog_content)
     end
 
     context "creating the timestamp" do
@@ -38,12 +38,13 @@ describe GeneralController, "when patched by the asktheeu-theme" do
       end
 
       it "does not attempt to read from the cache" do
+        allow(controller).to receive(:get_blog_content)
         expect(controller).not_to receive(:read_fragment)
         controller.send(:blog_cache, "test", 1.minute)
       end
 
-      it "calls the blog controller action" do
-        expect(controller).to receive(:blog)
+      it "calls the get_blog_content controller action" do
+        expect(controller).to receive(:get_blog_content)
         controller.send(:blog_cache, "test", 1.minute)
       end
 
@@ -65,8 +66,8 @@ describe GeneralController, "when patched by the asktheeu-theme" do
           controller.instance_variable_set(:@blog_items, ["content"])
         end
 
-        it "calls the blog controller action" do
-          expect(controller).to receive(:blog)
+        it "calls the get_blog_content controller action" do
+          expect(controller).to receive(:get_blog_content)
           controller.send(:blog_cache, "test", 10.minutes)
         end
 
@@ -88,8 +89,8 @@ describe GeneralController, "when patched by the asktheeu-theme" do
             and_return(nil)
         end
 
-        it "calls the blog controller action" do
-          expect(controller).to receive(:blog)
+        it "calls the get_blog_content controller action" do
+          expect(controller).to receive(:get_blog_content)
           controller.send(:blog_cache, "test", 10.minutes)
         end
 
@@ -125,8 +126,8 @@ describe GeneralController, "when patched by the asktheeu-theme" do
 
       context "the cache is fresh" do
 
-        it "does not call the blog controller action" do
-          expect(controller).to_not receive(:blog)
+        it "does not call the get_blog_content controller action" do
+          expect(controller).to_not receive(:get_blog_content)
           controller.send(:blog_cache, "test", 4.minutes)
         end
 
@@ -144,7 +145,7 @@ describe GeneralController, "when patched by the asktheeu-theme" do
               with("test-#{updated}").and_return(false)
             allow(controller).to receive(:read_fragment).
               and_return(nil)
-            expect(controller).to receive(:blog)
+            expect(controller).to receive(:get_blog_content)
             controller.send(:blog_cache, "test", 4.minutes)
           end
 
@@ -162,8 +163,8 @@ describe GeneralController, "when patched by the asktheeu-theme" do
               and_return("old fragment")
           end
 
-          it "calls the blog controller action" do
-            expect(controller).to receive(:blog)
+          it "calls the get_blog_content controller action" do
+            expect(controller).to receive(:get_blog_content)
             controller.send(:blog_cache, "test", 2.minutes)
           end
 
@@ -189,8 +190,8 @@ describe GeneralController, "when patched by the asktheeu-theme" do
             controller.instance_variable_set(:@blog_items, ["content"])
           end
 
-          it "calls the blog controller action" do
-            expect(controller).to receive(:blog)
+          it "calls the get_blog_content controller action" do
+            expect(controller).to receive(:get_blog_content)
             controller.send(:blog_cache, "test", 2.minutes)
           end
 
