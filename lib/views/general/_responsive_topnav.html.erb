@@ -17,11 +17,10 @@
       <%= link_to _("Browse requests"), request_list_all_path %>
     </li>
 
-    <% unless AlaveteliConfiguration::blog_feed.empty? %>
-      <li class="<%= 'selected' if params[:controller] == 'general' && params[:action] == 'blog' %>">
-        <%= link_to _("News & Campaigns"), blog_path %>
-      </li>
-    <% end %>
+
+    <li>
+      <%= link_to _("Blog"), "http://blog.asktheeu.org/" %>
+    </li>
 
     <li id="navigation_search" class="navigation_search">
       <form id="navigation_search_form" class="navigation_search_form" method="get" action="<%= search_redirect_path %>" role="search">
