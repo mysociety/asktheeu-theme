@@ -84,16 +84,6 @@ Rails.configuration.to_prepare do
     end
   end
 
-  PublicBodyController.class_eval do
-    def index
-      # Retrieve no bodies, but return them through a pagination object,
-      # so the view code works the same
-      @public_bodies = PublicBody.where(false).paginate(:page => 10)
-      @description = ''
-      render :template => "public_body/list"
-    end
-  end
-
   HelpController.class_eval do
     def help_out
       render :template => "help/help_out"
