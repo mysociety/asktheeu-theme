@@ -648,8 +648,7 @@ a.link_to_this {
   }
 }
 
-.sidebar h2,
-.after_actions h2 {
+.sidebar h2 {
   font-size: 1.5em;
   text-transform: none;
   color: $color_asktheeu_green;
@@ -697,9 +696,14 @@ a.link_to_this {
   */
 }
 
-.after_actions {
-  ul {
-    margin-top: 0.2em;
+.after-actions {
+  a.action-menu__button {
+    @include button-tertiary;
+    padding-right: 2em;
+    &:after {
+      border-color: #a5a5a5 transparent transparent transparent;
+      right: 7%;
+    }
   }
 }
 
