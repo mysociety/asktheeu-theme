@@ -660,6 +660,13 @@ a.link_to_this {
   @include button-primary();
 }
 
+.act_link.act_link--rss a {
+  background-image: image-url('feed-14.png');
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+    background-image: image-url('feed-28.png');
+  }
+}
+
 .track-request__badge {
   margin-bottom: 2em;
   padding: 1.5em;
