@@ -1,9 +1,8 @@
 <div id="right_column" class="sidebar right_column" role="complementary">
   <div class="track-request">
     <div class="track-request__badge">
-      <% follower_count = TrackThing.count(:all, :conditions => ["info_request_id = ?", @info_request.id]) + 1 %>
-      <span class="track-request__badge__number"><%= follower_count %></span>
-      <span class="track-request__badge__followers"><%= n_('follower', 'followers', follower_count) %></span>
+      <span class="track-request__badge__number"><%= @follower_count %></span>
+      <span class="track-request__badge__followers"><%= n_('follower', 'followers', @follower_count) %></span>
       <%= render :partial => 'track/tracking_links', :locals => { :track_thing => @track_thing, :own_request => @info_request.user && @info_request.user == @user, :location => 'sidebar' } %>
     </div>
     <%= render :partial => 'track/rss_feed', :locals => { :track_thing => @track_thing, :location => 'sidebar' } %>
