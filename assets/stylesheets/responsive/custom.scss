@@ -681,6 +681,13 @@ a.link_to_this {
   }
 }
 
+.track-request__badge,
+.sidebar.header_right {
+  a.track-request-action {
+    margin-left: 0;
+  }
+}
+
 .track-request__badge__number {
   display: block;
   font-weight: bold;
