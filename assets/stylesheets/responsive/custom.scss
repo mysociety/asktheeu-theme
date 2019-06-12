@@ -11,7 +11,9 @@
 %menu-item {
   color: $color_white;
 
-  &:hover, &:focus {
+  &:hover,
+  &:active,
+  &:focus {
     background-color: darken($color_primary, 15%);
     color: $color_white;
   }
@@ -22,7 +24,9 @@
   color: $color_white;
   background-color: darken($color_primary, 15%);
 
-  &:hover, &:focus {
+  &:hover,
+  &:active,
+  &:focus {
     background-color: darken($color_primary, 15%);
   }
 }
@@ -38,10 +42,8 @@ body{
 }
 
 a {
-  &:link,
-  &:visited {
-    color: $link-color;
-  }
+  color: $link-color;
+
   &:hover,
   &:active,
   &:focus {
@@ -186,10 +188,6 @@ a.link_button_green_large {
   background: linear-gradient(to right, $color_asktheeu_green 0%, $color_asktheeu_yellow 50%, $color_asktheeu_blue 100%);
   padding-top: 0.5em;
 
-  a {
-    text-decoration: none;
-  }
-
   .rsp_menu_button {
     position: absolute;
     top: 22px; // vertically centre the button in the header
@@ -243,10 +241,11 @@ a.link_button_green_large {
 }
 
 // Override stupid id selector in core styles
-#navigation {
+.navigation {
   border-bottom: none;
 
   a, a:link {
+    text-decoration: none;
     @extend %menu-item;
   }
 
@@ -266,11 +265,13 @@ a.link_button_green_large {
 }
 
 #navigation_search {
-  padding: 0.5em 0; // match other navigation links
+  padding-right: 1.5%; // same as grid column padding
+  padding-top: 0.5em; // move it away from the top of the header
+
+  top: 3.5em;
 
   @include respond-min( $main_menu-mobile_menu_cutoff ){
-    width: 14em;
-    float: right !important // override `#navigation li`;
+  	width: 16em;
   }
 
   form {
@@ -309,53 +310,69 @@ a.link_button_green_large {
       }
       background-image: image-url('search.svg'), none;
 
-      &:hover, &:focus {
+      &:hover,
+      &:active,
+      &:focus {
         background-color: darken($color_asktheeu_green, 30%);
       }
     }
   }
 }
 
-
-#logged_in_bar {
-  padding: 0.5em 0; // better vertical padding between this menu and #navigation
-
-  a {
-    display: block;
-    padding: 0.5em 1em;
-  }
-
-  .greeting {
-    border-top: 1px solid darken($banner_inner_bg, 10%);
-    padding-top: 1em; // up from 0.5em, for better vertical padding
-  }
-
-  @include respond-min( $main_menu-mobile_menu_cutoff ){
-    position: relative;
-    left: 0;
-    margin-top: 1.5em;
-    float: right;
-    clear: right;
-    width: auto;
-    padding: 0;
-    padding-right: 1.5%; // same as grid column padding
-
-    #logged_in_links {
-      position: static;
-      @include clearfix();
-
-      a, .greeting {
-        float: left;
-        padding: 0.25em 0.5em;
-      }
-
-      .greeting {
-        font-weight: normal;
-        border-top: none;
+.js-loaded {
+  .account-link {
+    padding-right: 2em;
+    @include respond-min( $main_menu-mobile_menu_cutoff ){
+      //make it appear like it's aligned with the grid, even though it isn't
+      margin-right: 0.935em;
+      &:after {
+        top: 2em;
+        right: 3em;
       }
     }
   }
 }
+
+.no-js {
+  .navigation .logged-in-menu a,
+  .navigation .logged-in-menu__signout-link a {
+    @extend %menu-item;
+  }
+}
+
+.js-loaded {
+  .navigation .logged-in-menu__signout-link a {
+    @include respond-min( $main_menu-mobile_menu_cutoff ){
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 0.8em;
+      color: #888;
+      &:hover {
+        color: #888;
+      }
+    }
+  }
+}
+
+.navigation .logged-in-menu a,
+.navigation .logged-in-menu__signout-link a {
+  @include respond-min( $main_menu-mobile_menu_cutoff ) {
+    color: $link-color;
+    background-color: transparent;
+
+    &:hover,
+    &:active,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+
+  .logged-in-menu a,
+  .logged-in-menu__signout-link a {
+    color: $link-color;
+  }
+}
+
 
 #user_locale_switcher {
   margin: 0;
@@ -382,6 +399,13 @@ a.link_button_green_large {
       padding: 0.5em 0.4em;
     }
   }
+}
+
+.locale-list {
+  position: absolute;
+  right: 0;
+  top: 0.5em;
+  left: auto;
 }
 
 
@@ -1039,6 +1063,7 @@ dt {
         color: $color_black;
 
         &:hover,
+        &:active,
         &:focus {
           color: $link-color;
           text-decoration: underline;
@@ -1115,6 +1140,7 @@ dt {
       display: block; // make entire "box" clickable, not just words within it
 
       &:hover,
+      &:active,
       &:focus {
         text-decoration: underline;
       }

@@ -1,39 +1,8 @@
-<div id="topnav" class="topnav">
+<div id="topnav" class="topnav <%= @in_pro_area ? 'topnav--pro' : '' %>">
   <ul id="navigation" class="navigation" role="navigation">
-
-    <li class="<%= 'selected' if params[:controller] == 'help' && params[:action] == 'about' %>">
-      <%= link_to _("How it works"), help_about_path %>
-    </li>
-
-    <li class="<%= 'selected' if params[:controller] == 'public_body' %>">
-      <%= link_to _("Which EU body?"), list_public_bodies_default_path %>
-    </li>
-
-    <li class="<%= 'selected' if params[:controller] == 'request' && %q(new select_authority).include?(params[:action]) %>">
-      <%= link_to _("Make a request"), select_authority_path, :id => 'make-request-link' %>
-    </li>
-
-    <li class="<%= 'selected' if params[:controller] == 'request' && !%q(new select_authority).include?(params[:action]) %>">
-      <%= link_to _("Browse requests"), request_list_all_path %>
-    </li>
-
-
-    <li>
-      <%= link_to _("Blog"), "http://blog.asktheeu.org/" %>
-    </li>
-
-    <li id="navigation_search" class="navigation_search">
-      <form id="navigation_search_form" class="navigation_search_form" method="get" action="<%= search_redirect_path %>" role="search">
-        <label class="visually-hidden" for="navigation_search_button">
-          <%= _("Search") %>
-        </label>
-        <%= text_field_tag 'query', params[:query], { :id => "navigation_search_input", :type => "search", :placeholder => _("Search"), :title => _("type your search term here") } %>
-        <button type="submit">
-          <span class="visually-hidden">
-            <%= _("Submit Search") %>
-          </span>
-        </button>
-      </form>
-    </li>
+    <%= render :partial => 'general/nav_items' %>
+    <% if ! (controller.action_name == 'signin' or controller.action_name == 'signup' or controller.action_name == 'login') %>
+      <%= render partial: 'general/log_in_bar' %>
+    <% end %>
   </ul>
 </div>

@@ -1,0 +1,20 @@
+<li class="<%= 'selected' if params[:controller] == 'help' && params[:action] == 'about' %>">
+  <%= link_to _("How it works"), help_about_path %>
+</li>
+
+<li class="<%= 'selected' if params[:controller] == 'public_body' %>">
+  <%= link_to _("Which EU body?"), list_public_bodies_default_path %>
+</li>
+
+<li class="<%= 'selected' if params[:controller] == 'request' && %q(new select_authority).include?(params[:action]) %>">
+  <%= link_to _("Make a request"), select_authority_path, :id => 'make-request-link' %>
+</li>
+
+<li class="<%= 'selected' if params[:controller] == 'request' && !%q(new select_authority).include?(params[:action]) %>">
+  <%= link_to _("Browse requests"), request_list_all_path %>
+</li>
+
+
+<li>
+  <%= link_to _("Blog"), "http://blog.asktheeu.org/" %>
+</li>
