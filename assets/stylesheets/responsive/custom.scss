@@ -569,12 +569,17 @@ p.footer__credit {
 
 /* Request page */
 
+#right_column {
+  margin-top: 0;
+}
+
 #request_show {
   margin-top: 1em;
 }
 
 #request_status {
   margin-bottom: 2em;
+  border-radius: 5px;
 }
 
 div.correspondence {
@@ -583,28 +588,38 @@ div.correspondence {
   border-radius: 5px;
   margin-bottom: 2em;
   box-shadow: inset 0 0 0 1px rgba(0,0,0,0.05); // box-shadow to avoid weird border bevel next to 8px border-top
+
+  .correspondence__header {
+    background-color: transparent;
+    border-bottom: none;
+    text-align: right;
+    font-weight: bold;
+
+    a.correspondence__header__date {
+      display: block;
+      font-size: 1em;
+      margin-top: 0.5em;
+      color: $color_black;
+    }
+  }
+
+  .correspondence__header__from--with-delivery-status {
+    margin: 0;
+  }
+
+  .correspondence__footer {
+    background-color: transparent;
+  }
 }
 
 .outgoing.correspondence {
   border-top: 8px solid $color_asktheeu_yellow;
   background-color: mix($color_asktheeu_yellow, #fff, 8%);
-
-  a.link_to_this {
-    background-color: $color_asktheeu_yellow;
-  }
 }
 
 .incoming.correspondence {
   border-top: 8px solid $color_asktheeu_blue;
   background-color: mix($color_asktheeu_blue, #fff, 8%);
-
-  a {
-    color: $color_asktheeu_blue;
-  }
-
-  a.link_to_this {
-    background-color: $color_asktheeu_blue;
-  }
 }
 
 .describe_state_form input[type="radio"] + label {
@@ -646,6 +661,10 @@ a.link_to_this {
       border-color: $action-color;
     }
   }
+}
+
+.request-status {
+  margin-bottom: 0;
 }
 
 .sidebar h2 {
