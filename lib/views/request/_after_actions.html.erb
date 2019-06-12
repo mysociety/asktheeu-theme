@@ -67,6 +67,10 @@
             <li>
               <%= link_to _("Download a zip file of all correspondence"), download_entire_request_path(:url_title => @info_request.url_title) %>
             </li>
+
+            <li>
+              <%= link_to _('View event history details'), request_details_path(@info_request) %>
+            </li>
           </ul>
         </li>
       </ul>
