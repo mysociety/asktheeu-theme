@@ -1,7 +1,7 @@
 <div class="track-request__badge">
 
   <div class="track-request__badge__number-wrapper">
-    <% follower_count = TrackThing.count(:all, :conditions => ["info_request_id = ?", info_request.id]) + 1 %>
+    <% follower_count = TrackThing.where(:info_request_id => info_request.id).count + 1 %>
     <span class="track-request__badge__number"><%= follower_count %></span>
     <span class="track-request__badge__followers"><%= n_('follower', 'followers', follower_count) %></span>
   </div>
