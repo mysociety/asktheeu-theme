@@ -616,19 +616,11 @@ div.correspondence {
   .correspondence__header {
     background-color: transparent;
     border-bottom: none;
-    text-align: right;
-    font-weight: bold;
-
-    a.correspondence__header__date {
-      display: block;
-      font-size: 1em;
-      margin-top: 0.5em;
-      color: $color_black;
-    }
   }
 
+  .correspondence__header__from,
   .correspondence__header__from--with-delivery-status {
-    margin: 0;
+    font-weight: bold;
   }
 
   .correspondence__footer {
@@ -644,6 +636,15 @@ div.correspondence {
 .incoming.correspondence {
   border-top: 8px solid $color_asktheeu_blue;
   background-color: mix($color_asktheeu_blue, #fff, 8%);
+}
+
+.correspondence_delivery {
+  padding-top: 0;
+
+  h2 {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .describe_state_form input[type="radio"] + label {
