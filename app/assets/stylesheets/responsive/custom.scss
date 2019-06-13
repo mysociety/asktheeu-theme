@@ -321,7 +321,7 @@ a.link_button_green_large {
 
 .js-loaded {
   .account-link {
-    padding-right: 2em;
+    padding-right: 2.5em;
     @include respond-min( $main_menu-mobile_menu_cutoff ){
       //make it appear like it's aligned with the grid, even though it isn't
       margin-right: 0.935em;
@@ -704,11 +704,9 @@ a.link_to_this {
   @include button-primary();
 }
 
-.act_link.act_link--rss a {
-  background-image: image-url('feed-14.png');
-  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
-    background-image: image-url('feed-28.png');
-  }
+.act_link .act-link-icon--rss {
+  background-image: image-url('feed-16.png');
+  background-size: 16px 16px;
 }
 
 .track-request__badge {
