@@ -83,6 +83,10 @@
             <li>
               <%= link_to _('View event history details'), request_details_path(@info_request) %>
             </li>
+
+            <li>
+              <a tabindex="0" class="js-collapsable-trigger-all" data-text-expanded="<%= _('Collapse all correspondence') %>" data-text-collapsed="<%= _('Expand all correspondence') %>"><%= _('Collapse all correspondence') %></a>
+            </li>
           </ul>
         </li>
       </ul>
