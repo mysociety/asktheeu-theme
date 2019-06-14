@@ -268,6 +268,25 @@ a.link_button_green_large {
   }
 }
 
+#logged_in_bar {
+  @include respond-min( $main_menu-mobile_menu_cutoff ){
+    padding-top: 0.5em;
+    width: 41%;
+  }
+}
+
+.js-loaded .account-link {
+  @include respond-min( $main_menu-mobile_menu_cutoff ){
+    float: right;
+  }
+}
+
+.js-loaded .logged-in-menu {
+  @include respond-min( $main_menu-mobile_menu_cutoff ){
+    top: 3em;
+  }
+}
+
 #navigation_search {
   input {
     font-size: 1em;
@@ -292,12 +311,15 @@ a.link_button_green_large {
       background-color: darken($color_asktheeu_green, 30%);
     }
   }
+
+  @include respond-min( $main_menu-mobile_menu_cutoff ){
+    padding-top: 0.75em;
+  }
 }
 
 #user_locale_switcher {
   margin: 0;
   padding: 0;
-  list-style: none outside none;
 
   p {
     margin: 0;
@@ -318,14 +340,22 @@ a.link_button_green_large {
     a, span {
       padding: 0.5em 0.4em;
     }
+
+    ul {
+      float: right;
+
+      li {
+        float: left;
+      }
+    }
   }
 }
 
 .locale-list {
-  position: absolute;
-  right: 0;
-  top: 0.5em;
-  left: auto;
+  @include respond-min( $main_menu-mobile_menu_cutoff ){
+    width: 66%;
+    float: right;
+  }
 }
 
 

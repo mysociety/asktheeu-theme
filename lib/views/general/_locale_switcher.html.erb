@@ -1,10 +1,9 @@
 <% if @locales[:available].any? %>
   <div id="user_locale_switcher" class="locale-list">
-    <p class="locale-list-trigger <% @locales[:current] %>">
-      <span class="current-locale"><%= locale_name(@locales[:current]) %></span>
-    </p>
-
     <ul class="available-languages">
+      <li class="available-languages__item">
+        <span class="current-locale"><%= locale_name(@locales[:current]) %></span>
+      </li>
       <% @locales[:available].sort.each do |locale| %>
         <li class="available-languages__item">
           <%= link_to locale_name(locale).titlecase, url_for(params.merge(:locale => locale)) %>
