@@ -578,6 +578,15 @@ div.correspondence {
   }
 }
 
+.js-loaded {
+  .js-collapsable.outgoing.correspondence .correspondence__header.hovered {
+    background-color: darken(mix($color_asktheeu_yellow, #fff, 8%), 8%);
+  }
+  .js-collapsable.incoming.correspondence .correspondence__header.hovered {
+    background-color: darken(mix($color_asktheeu_blue, #fff, 8%), 8%);
+  }
+}
+
 .outgoing.correspondence {
   border-top: 8px solid $color_asktheeu_yellow;
   background-color: mix($color_asktheeu_yellow, #fff, 8%);
