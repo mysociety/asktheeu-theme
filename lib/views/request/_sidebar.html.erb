@@ -10,6 +10,8 @@
 
   <%= render :partial => 'request/act' %>
   <%= render :partial => 'request/next_actions' %>
+  <%= render :partial => 'request/batch',
+             :locals => { :info_request => @info_request } %>
 
   <% if (feature_enabled?(:alaveteli_pro) &&
          can?(:create_embargo, @info_request)) %>
