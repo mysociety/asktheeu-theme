@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: version 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-26 03:15-0700\n"
+"POT-Creation-Date: 2019-06-14 15:34+0100\n"
 "PO-Revision-Date: 2016-01-08 14:17+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,9 +17,6 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
-
-msgid "<a href=\"{{url}}\">Add an annotation</a> (to help the requester or others)"
-msgstr ""
 
 msgid "<p>All done! Thank you very much for your help.</p><p>There are <a href=\"{{helpus_url}}\">more things you can do</a> to help {{site_name}}.</p>"
 msgstr ""
@@ -39,10 +36,13 @@ msgstr ""
 msgid "Access Info"
 msgstr ""
 
-msgid "An access to documents request"
+msgid "Actions"
 msgstr ""
 
-msgid "Anyone:"
+msgid "Add an annotation"
+msgstr ""
+
+msgid "An access to documents request"
 msgstr ""
 
 msgid "AskTheEU.org is an online platform for citizens to send access to documents requests directly to EU institutions."
@@ -63,10 +63,16 @@ msgstr ""
 msgid "Authority has transferred your request to a different public body."
 msgstr ""
 
+msgid "Blog"
+msgstr ""
+
 msgid "Browse requests"
 msgstr ""
 
 msgid "Cava de San Miguel 8, 4º centro. 28005 Madrid (Spain)"
+msgstr ""
+
+msgid "Collapse all correspondence"
 msgstr ""
 
 msgid "Confirmatory application for {{email_subject}}"
@@ -81,7 +87,7 @@ msgstr ""
 msgid "Error message"
 msgstr ""
 
-msgid "Event history details"
+msgid "Expand all correspondence"
 msgstr ""
 
 msgid "Find out more"
@@ -96,6 +102,9 @@ msgstr ""
 msgid "Great news!"
 msgstr ""
 
+msgid "Help"
+msgstr ""
+
 msgid "Homepage header photo © European Union 2014 - European Parliament"
 msgstr ""
 
@@ -103,9 +112,6 @@ msgid "How it works"
 msgstr ""
 
 msgid "How to AskTheEU.org"
-msgstr ""
-
-msgid "If you believe this request is not suitable, you can report it for attention by the site administrators"
 msgstr ""
 
 msgid "If you write about this request (for example in a forum or a blog) please link to this page, and <a href=\"{{url}}\">add an annotation</a> below telling people about your writing."
@@ -132,13 +138,19 @@ msgstr ""
 msgid "More similar requests"
 msgstr ""
 
-msgid "NEWS & CAMPAIGNS"
+msgid "My profile"
 msgstr ""
 
-msgid "News & Campaigns"
+msgid "My requests"
+msgstr ""
+
+msgid "My wall"
 msgstr ""
 
 msgid "Not Held"
+msgstr ""
+
+msgid "Offensive? Unsuitable?"
 msgstr ""
 
 msgid "Office number (10-19 hrs CET):"
@@ -159,7 +171,13 @@ msgstr ""
 msgid "Please kindly use this email address for all replies to this request: {{email}}"
 msgstr ""
 
+msgid "Please note that in some cases publication of requests and responses will be delayed."
+msgstr ""
+
 msgid "Privacy and cookies"
+msgstr ""
+
+msgid "RSS feed"
 msgstr ""
 
 msgid "Referred."
@@ -177,16 +195,16 @@ msgstr ""
 msgid "Request an internal review (also called a confirmatory application)"
 msgstr ""
 
-msgid "Requests for personal information and vexatious requests are not considered valid for FOI purposes (<a href=\"/help/about\">read more</a>)."
+msgid "Request hidden"
+msgstr ""
+
+msgid "Requests like this"
 msgstr ""
 
 msgid "Requires Admin"
 msgstr ""
 
 msgid "Respond to request"
-msgstr ""
-
-msgid "SUPPORT THE CAMPAIGNS"
 msgstr ""
 
 msgid "Search"
@@ -204,7 +222,10 @@ msgstr ""
 msgid "Share on Facebook"
 msgstr ""
 
-msgid "Similar requests"
+msgid "Sign in or sign up"
+msgstr ""
+
+msgid "Sign out"
 msgstr ""
 
 msgid "Submit Search"
@@ -214,9 +235,6 @@ msgid "Successful"
 msgstr ""
 
 msgid "Successful requests"
-msgstr ""
-
-msgid "Things to do with this request"
 msgstr ""
 
 msgid "This is a request for access to information under Article 15 of the TFEU and, where applicable, Regulation 1049/2001 which has been sent via the {{site_name}} website."
@@ -246,6 +264,9 @@ msgstr ""
 msgid "Tweet it"
 msgstr ""
 
+msgid "Unavailable"
+msgstr ""
+
 msgid "Under the right of access to documents in the EU treaties, as developed in Regulation 1049/2001, I am requesting documents which contain the following information:\\n\\n"
 msgstr ""
 
@@ -255,9 +276,6 @@ msgstr ""
 msgid "Unknown Status"
 msgstr ""
 
-msgid "Unsuitable?"
-msgstr ""
-
 msgid "Update the status of this request"
 msgstr ""
 
@@ -265,6 +283,9 @@ msgid "User Withdrawn"
 msgstr ""
 
 msgid "Vexatious"
+msgstr ""
+
+msgid "View event history details"
 msgstr ""
 
 msgid "Waiting Clarification"
@@ -305,17 +326,17 @@ msgstr ""
 msgid "unknown status "
 msgstr ""
 
-msgid "{{info_request_user_name}} only:"
+msgid "{{info_request_user_name}}"
 msgstr ""
 
-msgid "{{public_body_name}} only:"
+msgid "{{pro_site_name}} Terms"
+msgstr ""
+
+msgid "{{public_body_name}}"
 msgstr ""
 
 msgid "{{public_body_url}} has replied saying <strong>they have transferred your request to another public body</strong>."
 msgstr ""
 
 msgid "{{public_body_url}} has replied saying <strong>you have to contact another public body</strong>."
-msgstr ""
-
-msgid "{{site_name}} blog and tweets"
 msgstr ""

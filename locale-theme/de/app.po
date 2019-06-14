@@ -7,22 +7,20 @@
 # andreas.pavlou <andreas@access-info.org>, 2016
 # Gareth Rees <gareth@mysociety.org>, 2016
 # SteinQuadrat, 2017
+# SteinQuadrat, 2017
 msgid ""
 msgstr ""
 "Project-Id-Version: alaveteli\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-26 03:15-0700\n"
-"PO-Revision-Date: 2017-09-22 19:08+0000\n"
-"Last-Translator: SteinQuadrat\n"
+"POT-Creation-Date: 2019-06-14 15:34+0100\n"
+"PO-Revision-Date: 2019-06-14 14:35+0000\n"
+"Last-Translator: Graeme Porteous <graeme@mysociety.org>\n"
 "Language-Team: German (http://www.transifex.com/mysociety/asktheeu-theme/language/de/)\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-
-msgid "<a href=\"{{url}}\">Add an annotation</a> (to help the requester or others)"
-msgstr "<a href=\"{{url}}\">Anmerkung hinzufügen</a> (um dem Anfragenden oder anderen zu helfen)"
 
 msgid "<p>All done! Thank you very much for your help.</p><p>There are <a href=\"{{helpus_url}}\">more things you can do</a> to help {{site_name}}.</p>"
 msgstr "<p>Alles erledigt! Vielen Dank für Ihre Hilfe!</p><p>Es gibt <a href=\"{{helpus_url}}\">noch mehr Dinge, die Sie tun können</a>, um {{site_name}} zu helfen.</p>"
@@ -42,11 +40,14 @@ msgstr "Über"
 msgid "Access Info"
 msgstr "Access Info"
 
+msgid "Actions"
+msgstr ""
+
+msgid "Add an annotation"
+msgstr ""
+
 msgid "An access to documents request"
 msgstr "Eine Informationszugangs-Anfrage"
-
-msgid "Anyone:"
-msgstr "Jedermann:"
 
 msgid "AskTheEU.org is an online platform for citizens to send access to documents requests directly to EU institutions."
 msgstr "AsktheEU.org ist eine Online-Plattform, mit der jede Person direkt Dokumente von EU-Institutionen anfragen kann."
@@ -66,11 +67,17 @@ msgstr "Die Behörde hat Ihre Anfrage geschlossen und verwies Sie auf eine ander
 msgid "Authority has transferred your request to a different public body."
 msgstr "Die Behörde hat Ihre Anfrage an eine andere öffentliche Körperschaft weitergeleitet."
 
+msgid "Blog"
+msgstr ""
+
 msgid "Browse requests"
 msgstr "Anfragen ansehen"
 
 msgid "Cava de San Miguel 8, 4º centro. 28005 Madrid (Spain)"
 msgstr "Cava de San Miguel 8, 4º centro. 28005 Madrid (Spanien)"
+
+msgid "Collapse all correspondence"
+msgstr ""
 
 msgid "Confirmatory application for {{email_subject}}"
 msgstr "Bestätigung für {{email_subject}}"
@@ -84,8 +91,8 @@ msgstr "Eine ZIP-Datei mit der gesamten Korrespondenz herunterladen"
 msgid "Error message"
 msgstr "Fehlermeldung"
 
-msgid "Event history details"
-msgstr "Ereignisverlauf-Details"
+msgid "Expand all correspondence"
+msgstr ""
 
 msgid "Find out more"
 msgstr "Mehr Informationen"
@@ -99,6 +106,9 @@ msgstr "Durchgedreht"
 msgid "Great news!"
 msgstr "Wunderbare Neuigkeiten!"
 
+msgid "Help"
+msgstr ""
+
 msgid "Homepage header photo © European Union 2014 - European Parliament"
 msgstr "Startseite Kopfbereich Foto © Europäische Union 2014 - Europäisches Parlament"
 
@@ -107,9 +117,6 @@ msgstr "So funktioniert's"
 
 msgid "How to AskTheEU.org"
 msgstr "Wie benutze ich AsktheEU.org?"
-
-msgid "If you believe this request is not suitable, you can report it for attention by the site administrators"
-msgstr "Wenn Sie glauben, dass diese Anfrage unpassend ist, können Sie es den Administratoren dieser Seite zwecks Prüfung melden"
 
 msgid "If you write about this request (for example in a forum or a blog) please link to this page, and <a href=\"{{url}}\">add an annotation</a> below telling people about your writing."
 msgstr "Wenn Sie über diese Anfrage schreiben, beispielsweise in einem Forum oder Blog, verlinken Sie bitte diese Seite und </a>fügen Sie eine Anmerkung darunter hinzu</a>, um Menschen über Ihre Arbeit zu informieren"
@@ -135,14 +142,20 @@ msgstr "Anfrage stellen"
 msgid "More similar requests"
 msgstr "Weitere ähnliche Anfragen"
 
-msgid "NEWS & CAMPAIGNS"
-msgstr "NEUIGKEITEN & KAMPAGNEN"
+msgid "My profile"
+msgstr ""
 
-msgid "News & Campaigns"
-msgstr "Neuigkeiten & Kampagnen"
+msgid "My requests"
+msgstr ""
+
+msgid "My wall"
+msgstr ""
 
 msgid "Not Held"
 msgstr "Nicht vorhanden"
+
+msgid "Offensive? Unsuitable?"
+msgstr ""
 
 msgid "Office number (10-19 hrs CET):"
 msgstr "Büronummer (10-19 Uhr CET):"
@@ -162,8 +175,14 @@ msgstr "Bitte geben Sie Ihren vollständigen Namen an"
 msgid "Please kindly use this email address for all replies to this request: {{email}}"
 msgstr "Bitte verwendet Sie dies Email-Adresse für alle Antworten zu folgender Anfrage: {{email}}"
 
+msgid "Please note that in some cases publication of requests and responses will be delayed."
+msgstr ""
+
 msgid "Privacy and cookies"
 msgstr "Datenschutz und cookies"
+
+msgid "RSS feed"
+msgstr ""
 
 msgid "Referred."
 msgstr "Weitergeleitet."
@@ -180,17 +199,17 @@ msgstr "Diese Anfrage melden"
 msgid "Request an internal review (also called a confirmatory application)"
 msgstr "Eine interne Überprüfung erbitten"
 
-msgid "Requests for personal information and vexatious requests are not considered valid for FOI purposes (<a href=\"/help/about\">read more</a>)."
-msgstr "Anfragen zwecks persönlichen Informationen oder Beschwerden sind nicht von der Informationsfreiheit gedeckt (<a href=\"/help/about\">Weiteres dazu</a>)."
+msgid "Request hidden"
+msgstr ""
+
+msgid "Requests like this"
+msgstr ""
 
 msgid "Requires Admin"
 msgstr "Administrator benötigt"
 
 msgid "Respond to request"
 msgstr "Auf Anfrage antworten"
-
-msgid "SUPPORT THE CAMPAIGNS"
-msgstr "UNTERSTÜTZE DIE KAMPAGNEN"
 
 msgid "Search"
 msgstr "Suche"
@@ -207,8 +226,11 @@ msgstr "Anfrage stellen"
 msgid "Share on Facebook"
 msgstr "Auf Facebook teilen"
 
-msgid "Similar requests"
-msgstr "Ähnliche Anfragen"
+msgid "Sign in or sign up"
+msgstr ""
+
+msgid "Sign out"
+msgstr ""
 
 msgid "Submit Search"
 msgstr "Suchanfrage absenden"
@@ -218,9 +240,6 @@ msgstr "Erfolgreich"
 
 msgid "Successful requests"
 msgstr "Erfolgreiche Anfragen"
-
-msgid "Things to do with this request"
-msgstr "Handlungsmöglichkeiten für diese Anfrage"
 
 msgid "This is a request for access to information under Article 15 of the TFEU and, where applicable, Regulation 1049/2001 which has been sent via the {{site_name}} website."
 msgstr "Dies ist eine Anfrage auf Dokumentenzugangs unter Artikel 15 des Vertrags über die Arbeitsweise der Europäischen Union (AEUV) und, wo zutreffend, Verordnung 1049/2001 welche über die Internetsetite {{site_name}} gesendet wurde."
@@ -249,6 +268,9 @@ msgstr "Weitergeleitet"
 msgid "Tweet it"
 msgstr "Darüber twittern"
 
+msgid "Unavailable"
+msgstr ""
+
 msgid "Under the right of access to documents in the EU treaties, as developed in Regulation 1049/2001, I am requesting documents which contain the following information:\\n\\n"
 msgstr "Auf Basis der Informationsfreiheit in den EU-Verträgen, verbrieft in Verordnung 1049/2001, beantrage ich Dokumente, welche folgende Informationen enthalten:\\n\\n"
 
@@ -258,9 +280,6 @@ msgstr "Unbekannt"
 msgid "Unknown Status"
 msgstr "Unbekannter Status"
 
-msgid "Unsuitable?"
-msgstr "Unpassend?"
-
 msgid "Update the status of this request"
 msgstr "Den Status dieser Anfrage aktualisieren"
 
@@ -269,6 +288,9 @@ msgstr "Vom Benutzer zurückgezogen"
 
 msgid "Vexatious"
 msgstr "Unpassend"
+
+msgid "View event history details"
+msgstr ""
 
 msgid "Waiting Clarification"
 msgstr "Wartet auf Klarstellung"
@@ -311,17 +333,17 @@ msgstr "Geben Sie Ihren Suchbegriff hier ein"
 msgid "unknown status "
 msgstr "Unbekannter Status"
 
-msgid "{{info_request_user_name}} only:"
-msgstr "{{info_request_user_name}} ausschließlich:"
+msgid "{{info_request_user_name}}"
+msgstr ""
 
-msgid "{{public_body_name}} only:"
-msgstr "{{public_body_name}} ausschließlich:"
+msgid "{{pro_site_name}} Terms"
+msgstr ""
+
+msgid "{{public_body_name}}"
+msgstr ""
 
 msgid "{{public_body_url}} has replied saying <strong>they have transferred your request to another public body</strong>."
 msgstr "{{public_body_url}} hat geantwortet, dass <strong>sie Ihre Anfrage zu einer anderen öffentlichen Körperschaft weitergeleitet haben</strong>."
 
 msgid "{{public_body_url}} has replied saying <strong>you have to contact another public body</strong>."
 msgstr "{{public_body_url}} hat geantwortet, dass <strong>Sie eine andere öffentliche Körperschaft kontaktieren müssen</strong>."
-
-msgid "{{site_name}} blog and tweets"
-msgstr "{{site_name}} Blog und Tweets"
