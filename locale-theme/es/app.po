@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Translators:
-# andreas.pavlou <andreas@access-info.org>, 2016
+# andreas.pavlou <andreas@access-info.org>, 2016-2017
 # andreas.pavlou <andreas@access-info.org>, 2016
 # Gareth Rees <gareth@mysociety.org>, 2016
 msgid ""
@@ -11,8 +11,8 @@ msgstr ""
 "Project-Id-Version: alaveteli\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-09-26 03:15-0700\n"
-"PO-Revision-Date: 2016-09-26 10:18+0000\n"
-"Last-Translator: Liz Conlan <liz@mysociety.org>\n"
+"PO-Revision-Date: 2017-09-22 19:08+0000\n"
+"Last-Translator: andreas.pavlou <andreas@access-info.org>\n"
 "Language-Team: Spanish (http://www.transifex.com/mysociety/asktheeu-theme/language/es/)\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
@@ -21,16 +21,18 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 msgid "<a href=\"{{url}}\">Add an annotation</a> (to help the requester or others)"
-msgstr ""
+msgstr "<a href=\"{{url}}\">Haz un comentario</a> (para ayudar al solicitante o a otros)"
 
 msgid "<p>All done! Thank you very much for your help.</p><p>There are <a href=\"{{helpus_url}}\">more things you can do</a> to help {{site_name}}.</p>"
 msgstr ""
+"<p>Hecho! Gracias por tu ayuda.</p>\n"
+"<p>Hay <a href=\"{{helpus_url}}\"> cosas más que puedes hacer</a> para ayudar a {{site_name}}.</p>"
 
 msgid "A full history of my request and all correspondence is available on the Internet at this address: {{url}}"
-msgstr ""
+msgstr "Se puede encontrar la historia completa de mi solicitud y toda la correspondencia en el siguente enlace: {{url}}"
 
 msgid "A project by <a href=\"http://www.access-info.org\">Access Info Europe</a>, powered by <a href=\"http://alaveteli.org\">Alaveteli</a>"
-msgstr "Un project d’<a href=\\\"http://www.access-info.org\\\">Access Info Europe</a> rendu possible par <a href=\\\"http://alaveteli.org\\\">Alaveteli</a>"
+msgstr "Un projecto de <a href=\\\"http://www.access-info.org\\\">Access Info Europe</a>, posible gracias a <a href=\\\"http://alaveteli.org\\\">Alaveteli</a>"
 
 msgid "API"
 msgstr "API"
@@ -42,10 +44,10 @@ msgid "Access Info"
 msgstr "Access Info"
 
 msgid "An access to documents request"
-msgstr ""
+msgstr "Una solicitud de acceso a documentos"
 
 msgid "Anyone:"
-msgstr ""
+msgstr "Cualquiera:"
 
 msgid "AskTheEU.org is an online platform for citizens to send access to documents requests directly to EU institutions."
 msgstr "AsktheEU.org es una plataforma online para facilitar que los ciudadanos envíen solicitudes de acceso a documentos directamente a las instituciones europeas."
@@ -72,13 +74,13 @@ msgid "Cava de San Miguel 8, 4º centro. 28005 Madrid (Spain)"
 msgstr "Cava de San Miguel 8, 4º centro. 28005 Madrid (España)"
 
 msgid "Confirmatory application for {{email_subject}}"
-msgstr ""
+msgstr "Una aplicación confirmatoria de {{email_subject}}"
 
 msgid "Contact"
 msgstr "Contacto"
 
 msgid "Download a zip file of all correspondence"
-msgstr ""
+msgstr "Descarga un archivo zip de toda la correspondencia"
 
 msgid "Error message"
 msgstr "Mensaje de error"
@@ -96,7 +98,7 @@ msgid "Gone Postal"
 msgstr "Tramitada por correo postal"
 
 msgid "Great news!"
-msgstr ""
+msgstr "Buenas noticias!"
 
 msgid "Homepage header photo © European Union 2014 - European Parliament"
 msgstr "Foto de portada © Unión Europea 2014 - Parlamento Europeo"
@@ -111,10 +113,10 @@ msgid "If you believe this request is not suitable, you can report it for attent
 msgstr "Si crees que esta solicitud no es apropiada, puedes informar a los administradores web"
 
 msgid "If you write about this request (for example in a forum or a blog) please link to this page, and <a href=\"{{url}}\">add an annotation</a> below telling people about your writing."
-msgstr ""
+msgstr "Si escribes algo sobre esta solicitud (por ejemplo en un foro o blog) por favor haz un enlace con esta página, y <a href=\"{{url}}\">haz un comentario</a> abajo para informar a la gente de lo que has escrito."
 
 msgid "If you write about this request (for example in a forum or a blog) please link to this page."
-msgstr ""
+msgstr "Si escribes algo sobre esta solicitud (por ejemplo en un foro o blog) por favor haz un enlace con esta página."
 
 msgid "If {{email_address}} is the wrong address for information requests to {{public_body_name}}, please tell the {{site_name}} team on email team@asktheEU.org"
 msgstr "Si {{email_address}} no es la dirección correcta para enviar solicitudes a {{public_body_name}}, por favor informa al equipo de {{site_name}} por team@asktheEU.org"
@@ -126,7 +128,7 @@ msgid "Latest news and campaigns"
 msgstr "Últimas noticias y campañas"
 
 msgid "Let other people know what you’ve found out"
-msgstr ""
+msgstr "Informa a otros de lo que has descubierto"
 
 msgid "Make a request"
 msgstr "Enviar una solicitud"
@@ -156,7 +158,7 @@ msgid "Partial Success"
 msgstr "Éxito parcial"
 
 msgid "Please enter your full name"
-msgstr ""
+msgstr "Por favor introduce tu nombre completo"
 
 msgid "Please kindly use this email address for all replies to this request: {{email}}"
 msgstr "Por favor, utiliza este correo electrónico para contestar a esta solicitud: {{email}}"
@@ -168,7 +170,7 @@ msgid "Referred."
 msgstr "Usuario remitido a otra institución"
 
 msgid "Regulation 1049/2001"
-msgstr ""
+msgstr "Regulación 1049/2001"
 
 msgid "Rejected"
 msgstr "Rechazada"
@@ -177,7 +179,7 @@ msgid "Report this request"
 msgstr "Alerta acerca de esta solicitud"
 
 msgid "Request an internal review (also called a confirmatory application)"
-msgstr ""
+msgstr "Solicita un recurso interno (llamado \"aplicación confirmatoria\")"
 
 msgid "Requests for personal information and vexatious requests are not considered valid for FOI purposes (<a href=\"/help/about\">read more</a>)."
 msgstr "No se consideran válidas las solicitudes de información de carácter personal o aquellas que son abusivas (<a href=\"/help/about\">leer más</a>)."
@@ -186,7 +188,7 @@ msgid "Requires Admin"
 msgstr "Requiere Administrador"
 
 msgid "Respond to request"
-msgstr ""
+msgstr "Responde a la solicitud"
 
 msgid "SUPPORT THE CAMPAIGNS"
 msgstr "APOYA LAS CAMPAÑAS"
@@ -198,19 +200,19 @@ msgid "See all"
 msgstr "Ver todas"
 
 msgid "Send a followup"
-msgstr ""
+msgstr "Envia un recordatorio"
 
 msgid "Send a request"
 msgstr "Enviar una solicitud"
 
 msgid "Share on Facebook"
-msgstr ""
+msgstr "Comparte en Facebook"
 
 msgid "Similar requests"
 msgstr "Solicitudes relacionadas"
 
 msgid "Submit Search"
-msgstr ""
+msgstr "Buscar"
 
 msgid "Successful"
 msgstr "Exitosa"
@@ -219,7 +221,7 @@ msgid "Successful requests"
 msgstr "Solicitudes exitosas"
 
 msgid "Things to do with this request"
-msgstr ""
+msgstr "Cosas que puedes hacer con esta solicitud"
 
 msgid "This is a request for access to information under Article 15 of the TFEU and, where applicable, Regulation 1049/2001 which has been sent via the {{site_name}} website."
 msgstr "Esta es una solicitud de acceso a documentos al amparo del Artículo 15 de los tratados de la UE y, donde aplicable, el Reglamento 1049/2001, la cual se ha enviado a través de {{site_name}}."
@@ -246,7 +248,7 @@ msgid "Transferred."
 msgstr "Remitida."
 
 msgid "Tweet it"
-msgstr ""
+msgstr "Tuiteala"
 
 msgid "Under the right of access to documents in the EU treaties, as developed in Regulation 1049/2001, I am requesting documents which contain the following information:\\n\\n"
 msgstr "Al amparo del derecho de acceso a documentos contemplado en los tratados de la UE, y desarrollado en el Reglamento 1049/2001, solicito los documentos que contienen la siguiente información:\\n\\n"
@@ -261,7 +263,7 @@ msgid "Unsuitable?"
 msgstr "¿Insatisfactoria?"
 
 msgid "Update the status of this request"
-msgstr ""
+msgstr "Actualizar el estado de esta solicitud"
 
 msgid "User Withdrawn"
 msgstr "Retirada por Usuario"
@@ -276,22 +278,24 @@ msgid "Waiting Response"
 msgstr "Esperando Respuesta"
 
 msgid "We're glad you got all the information that you wanted."
-msgstr ""
+msgstr "Nos alegra que hayas recibido toda la información que buscabas."
 
 msgid "Which EU body?"
 msgstr "¿A quién preguntar?"
 
 msgid "Write a reply"
-msgstr ""
+msgstr "Responder"
 
 msgid "\\n\\nPlease pass this on to the person who reviews confirmatory applications.\\n\\nI am filing the following confirmatory application with regards to my access to documents request '{{info_request_title}}'."
 msgstr ""
+"\n"
+"\\n\\nPor favor, pasa este mensaje al encargado de aplicaciones confirmatorias.\\n\\nEnvío esta aplicación confirmatoria para mi solicitud de acceso a documentos '{{info_request_title}}'."
 
 msgid "access to documents"
-msgstr ""
+msgstr "acceso a documentos"
 
 msgid "documents"
-msgstr ""
+msgstr "documentos"
 
 msgid "follower"
 msgid_plural "followers"
@@ -299,7 +303,7 @@ msgstr[0] "seguidor"
 msgstr[1] "seguidores"
 
 msgid "mySociety:Helping people set up sites like {{site_name}} all over the world"
-msgstr ""
+msgstr "mySociety:Facilitando la creación de sitios web como {{site_name}} por todoel mundo"
 
 msgid "type your search term here"
 msgstr "introduce los términos de búsqueda"
@@ -308,10 +312,10 @@ msgid "unknown status "
 msgstr "estado desconocido"
 
 msgid "{{info_request_user_name}} only:"
-msgstr ""
+msgstr "{{info_request_user_name}} sólo:"
 
 msgid "{{public_body_name}} only:"
-msgstr ""
+msgstr "{{public_body_name}} sólo:"
 
 msgid "{{public_body_url}} has replied saying <strong>they have transferred your request to another public body</strong>."
 msgstr "{{public_body_url}} ha contestado y dice que <strong>ha remitido tu solicitud a otro organismo</strong>."
@@ -320,4 +324,4 @@ msgid "{{public_body_url}} has replied saying <strong>you have to contact anothe
 msgstr "{{public_body_url}} ha contestado y dice que <strong>tienes que remitir tu solicitud a otra institución</strong>."
 
 msgid "{{site_name}} blog and tweets"
-msgstr ""
+msgstr "{{site_name}} blog y tweets"
