@@ -319,61 +319,6 @@ a.link_button_green_large {
   }
 }
 
-.js-loaded {
-  .account-link {
-    padding-right: 2.5em;
-    @include respond-min( $main_menu-mobile_menu_cutoff ){
-      //make it appear like it's aligned with the grid, even though it isn't
-      margin-right: 0.935em;
-      &:after {
-        top: 2em;
-        right: 3em;
-      }
-    }
-  }
-}
-
-.no-js {
-  .navigation .logged-in-menu a,
-  .navigation .logged-in-menu__signout-link a {
-    @extend %menu-item;
-  }
-}
-
-.js-loaded {
-  .navigation .logged-in-menu__signout-link a {
-    @include respond-min( $main_menu-mobile_menu_cutoff ){
-      text-transform: uppercase;
-      font-weight: bold;
-      font-size: 0.8em;
-      color: #888;
-      &:hover {
-        color: #888;
-      }
-    }
-  }
-}
-
-.navigation .logged-in-menu a,
-.navigation .logged-in-menu__signout-link a {
-  @include respond-min( $main_menu-mobile_menu_cutoff ) {
-    color: $link-color;
-    background-color: transparent;
-
-    &:hover,
-    &:active,
-    &:focus {
-      text-decoration: underline;
-    }
-  }
-
-  .logged-in-menu a,
-  .logged-in-menu__signout-link a {
-    color: $link-color;
-  }
-}
-
-
 #user_locale_switcher {
   margin: 0;
   padding: 0;
