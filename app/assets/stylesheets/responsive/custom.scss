@@ -221,6 +221,10 @@ a.link_button_green_large {
 
 #banner_inner {
   background-color: $banner_inner_bg;
+
+  a, a:link {
+    text-decoration: none;
+  }
 }
 
 .topnav {
@@ -265,56 +269,27 @@ a.link_button_green_large {
 }
 
 #navigation_search {
-  padding-right: 1.5%; // same as grid column padding
-  padding-top: 0.5em; // move it away from the top of the header
-
-  top: 3.5em;
-
-  @include respond-min( $main_menu-mobile_menu_cutoff ){
-  	width: 16em;
+  input {
+    font-size: 1em;
+    border-radius: 0.2em 0 0 0.2em;
+    border: none;
   }
 
-  form {
-    margin: 0;
-  }
+  button[type="submit"] {
+    padding: 2em 0 0 0;
+    border-radius: 0 0.2em 0.2em 0;
 
-  #navigation_search_form {
-    input, button {
-      display: block;
-      margin: 0;
-      float: left;
-      font-size: 1em;
-      line-height: 1em;
+    background: darken($color_asktheeu_green, 20%) image-url('search.png') no-repeat 50% 50%;
+    background-size: 20px 20px;
+    @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+      background-image: image-url('search@2.png');
     }
+    background-image: image-url('search.svg'), none;
 
-    input {
-      width: 75%;
-      height: 2em;
-      padding: 0 0.5em;
-      border-radius: 0.2em 0 0 0.2em !important; // override `form input[type="search"]`
-      border: none;
-    }
-
-    button {
-      width: 25%;
-
-      height: 0;
-      overflow: hidden;
-      padding: 2em 0 0 0;
-      border-radius: 0 0.2em 0.2em 0;
-
-      background: darken($color_asktheeu_green, 20%) image-url('search.png') no-repeat 50% 50%;
-      background-size: 20px 20px;
-      @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
-        background-image: image-url('search@2.png');
-      }
-      background-image: image-url('search.svg'), none;
-
-      &:hover,
-      &:active,
-      &:focus {
-        background-color: darken($color_asktheeu_green, 30%);
-      }
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: darken($color_asktheeu_green, 30%);
     }
   }
 }
