@@ -7,14 +7,15 @@
 # andreas.pavlou <andreas@access-info.org>, 2016
 # Gareth Rees <gareth@mysociety.org>, 2016
 # SteinQuadrat, 2017
+# Liz Conlan <liz@mysociety.org>, 2019
 # SteinQuadrat, 2017
 msgid ""
 msgstr ""
 "Project-Id-Version: alaveteli\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-06-14 15:34+0100\n"
-"PO-Revision-Date: 2019-06-14 14:35+0000\n"
-"Last-Translator: Graeme Porteous <graeme@mysociety.org>\n"
+"PO-Revision-Date: 2019-06-17 14:10+0000\n"
+"Last-Translator: Liz Conlan <liz@mysociety.org>\n"
 "Language-Team: German (http://www.transifex.com/mysociety/asktheeu-theme/language/de/)\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
@@ -119,7 +120,7 @@ msgid "How to AskTheEU.org"
 msgstr "Wie benutze ich AsktheEU.org?"
 
 msgid "If you write about this request (for example in a forum or a blog) please link to this page, and <a href=\"{{url}}\">add an annotation</a> below telling people about your writing."
-msgstr "Wenn Sie über diese Anfrage schreiben, beispielsweise in einem Forum oder Blog, verlinken Sie bitte diese Seite und </a>fügen Sie eine Anmerkung darunter hinzu</a>, um Menschen über Ihre Arbeit zu informieren"
+msgstr "Wenn Sie über diese Anfrage schreiben, beispielsweise in einem Forum oder Blog, verlinken Sie bitte diese Seite und <a href=\"{{url}}\">fügen Sie eine Anmerkung darunter hinzu</a>, um Menschen über Ihre Arbeit zu informieren"
 
 msgid "If you write about this request (for example in a forum or a blog) please link to this page."
 msgstr "Wenn Sie über diese Anfrage schreiben, beispielsweise in einem Forum oder Blog, verlinken Sie bitte diese Seite."
