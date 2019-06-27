@@ -52,7 +52,7 @@ Rails.configuration.to_prepare do
       # if the fragment is unreadable or has reached expiry
       # attempt to pull in the blog feed
       if updated.nil? || !fragment_exist?(@fragment_key) ||
-         Time.now > (Time.parse(updated) + expires)
+         Time.zone.now > (Time.zone.parse(updated) + expires)
         # keep a note of the old key
         old_key = @fragment_key.dup
 
@@ -79,7 +79,7 @@ Rails.configuration.to_prepare do
       end
     end
 
-    def create_timestamp(time=Time.now)
+    def create_timestamp(time=Time.zone.now)
       time.strftime('%Y%m%d-%H:%M:%S')
     end
   end
@@ -96,7 +96,7 @@ Rails.configuration.to_prepare do
 
   RequestGameController.class_eval do
     def play
-      session[:request_game] = Time.now
+      session[:request_game] = Time.zone.now
 
       @missing = InfoRequest.
         where_old_unclassified.
@@ -118,7 +118,7 @@ Rails.configuration.to_prepare do
                            :site_name => site_name)
       end
 
-      @league_table_28_days = RequestClassification.league_table(10, [ "created_at >= ?", Time.now - 28.days ])
+      @league_table_28_days = RequestClassification.league_table(10, [ "created_at >= ?", Time.zone.now - 28.days ])
       @league_table_all_time = RequestClassification.league_table(10)
       @play_urls = true
     end
