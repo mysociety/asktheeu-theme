@@ -23,9 +23,9 @@ describe GeneralController, "when patched by the asktheeu-theme" do
       end
 
       it "can be read back correctly" do
-        time = Time.parse("2016-08-01 09:29:16")
+        time = Time.zone.parse("2016-08-01 09:29:16")
         timestamp = controller.send(:create_timestamp, time)
-        expect(Time.parse(timestamp)).to eq(time)
+        expect(Time.zone.parse(timestamp)).to eq(time)
       end
 
     end
@@ -112,7 +112,7 @@ describe GeneralController, "when patched by the asktheeu-theme" do
     end
 
     context "there is cached content" do
-      let(:updated) { "#{Time.now - 3.minutes}"}
+      let(:updated) { "#{Time.zone.now - 3.minutes}"}
 
       before do
         allow(AlaveteliConfiguration).to receive(:cache_fragments).
