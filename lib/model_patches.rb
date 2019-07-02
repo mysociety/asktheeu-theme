@@ -8,15 +8,18 @@
 Rails.configuration.to_prepare do
 
   # Remove UK-specific references to FOI
-  InfoRequest.instance_eval do
-
-    THEME_LAW_USED_READABLE_DATA =
+  InfoRequest::TranslatedConstants.instance_eval do
+    def self.law_used_readable_data
       { :foi => { :short => _('documents'),
                   :full => _('access to documents'),
                   :with_a => _('An access to documents request'),
-                  :act => _('Regulation 1049/2001') }
+                  :act => _('Regulation 1049/2001') },
+        :eir => { :short => _('EIR'),
+                  :full => _('Environmental Information Regulations'),
+                  :with_a => _('An Environmental Information request'),
+                  :act => _('Environmental Information Regulations') }
       }
-
+    end
   end
 
   # Remove UK-specific references to FOI
@@ -32,15 +35,6 @@ Rails.configuration.to_prepare do
 
       where(:id => ids).order("position(id::text in '#{ ids }')")
     end
-
-    def applicable_law
-      begin
-        THEME_LAW_USED_READABLE_DATA.fetch(law_used.to_sym)
-      rescue KeyError
-        raise "Unknown law used '#{law_used}'"
-      end
-    end
-
   end
 
   OutgoingMessage::Template::InternalReview.class_eval do

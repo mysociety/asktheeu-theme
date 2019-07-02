@@ -48,12 +48,12 @@ describe OutgoingMessage, 'when patched by the asktheeu-theme' do
   describe '#default_letter' do
 
     it 'returns nil for a follow up message' do
-      internal_review_request = FactoryGirl.build(:internal_review_request)
+      internal_review_request = FactoryBot.build(:internal_review_request)
       expect(internal_review_request.default_letter).to be_nil
     end
 
     it 'returns text about Regulation 1049/2001' do
-      initial_request = FactoryGirl.build(:initial_request)
+      initial_request = FactoryBot.build(:initial_request)
       expected = 'Regulation 1049/2001'
       expect(initial_request.default_letter).to match(expected)
     end
@@ -67,7 +67,7 @@ describe OutgoingMessage, 'when patched by the asktheeu-theme' do
       Dear someone,
       Please give me some information
       EOF
-      initial_request = FactoryGirl.build(:initial_request, :body => body)
+      initial_request = FactoryBot.build(:initial_request, :body => body)
       expected = 'Dear someone'
       expect(initial_request.get_text_for_indexing).not_to match(expected)
     end
@@ -77,7 +77,7 @@ describe OutgoingMessage, 'when patched by the asktheeu-theme' do
       Dear someone,
       Please give me some information
       EOF
-      initial_request = FactoryGirl.build(:initial_request)
+      initial_request = FactoryBot.build(:initial_request)
       initial_request.update_attribute(:body, initial_request.default_letter + body)
       expect(initial_request.get_text_for_indexing).
         not_to match(initial_request.default_letter)
@@ -88,7 +88,7 @@ describe OutgoingMessage, 'when patched by the asktheeu-theme' do
       Dear someone,
       Please give me some information to me@example.com
       EOF
-      initial_request = FactoryGirl.build(:initial_request)
+      initial_request = FactoryBot.build(:initial_request)
       expected = /[email address]/
       initial_request.update_attribute(:body, initial_request.default_letter + body)
       expect(initial_request.get_text_for_indexing).
@@ -120,7 +120,7 @@ describe User, 'when patched by the asktheeu-theme' do
   end
 
   it 'still allows pre-existing users to update their info' do
-    old_user = FactoryGirl.build(:user, :name => "SingleName")
+    old_user = FactoryBot.build(:user, :name => "SingleName")
     old_user.save(:validate => false) # save the invalid record!
     old_user.about_me = "hi, I am a new test user!"
     expect{ old_user.save! }.not_to raise_error
