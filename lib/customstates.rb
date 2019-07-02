@@ -10,9 +10,9 @@ module InfoRequestCustomStates
     waiting_response = self.described_state == "waiting_response" || self.described_state == "deadline_extended"
     return self.described_state unless waiting_response
     return 'waiting_response_very_overdue' if
-      Time.now.strftime("%Y-%m-%d") > self.date_very_overdue_after.strftime("%Y-%m-%d")
+      Time.zone.now.strftime("%Y-%m-%d") > self.date_very_overdue_after.strftime("%Y-%m-%d")
     return 'waiting_response_overdue' if
-      Time.now.strftime("%Y-%m-%d") > self.date_response_required_by.strftime("%Y-%m-%d")
+      Time.zone.now.strftime("%Y-%m-%d") > self.date_response_required_by.strftime("%Y-%m-%d")
     return 'waiting_response'
   end
 
