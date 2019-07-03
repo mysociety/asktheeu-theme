@@ -51,7 +51,7 @@
 
         <% if xapian_similar_more %>
           <p class="sidebar_similar_requests__more-link">
-            <%= link_to similar_request_path(@info_request.url_title, utm_params) do %>
+            <%= link_to similar_request_path(@info_request.url_title) do %>
               <%= _("More similar requests") %>
             <% end %>
           </p>
