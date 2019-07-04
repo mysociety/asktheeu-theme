@@ -4,207 +4,91 @@ ALAVETELI_TEST_THEME = 'asktheeu-theme'
 require File.expand_path(File.join(File.dirname(__FILE__),
                          '..','..','..','..', '..', 'spec','spec_helper'))
 
-describe GeneralController, "when patched by the asktheeu-theme" do
+describe GeneralController, 'blog caching' do
 
-  describe "caching blog content" do
+  class GeneralController
+    def get_blog_content
+      @blog_items = ["blog_item"]
+    end
+  end
+
+  let(:blog_feed) { 'http://example.com/feed' }
+  let(:cache_fragments) { true }
+
+  before do
+    allow(AlaveteliConfiguration).to receive(:blog_feed).and_return(blog_feed)
+    allow(AlaveteliConfiguration).to receive(:cache_fragments)
+      .and_return(cache_fragments)
+  end
+
+  context 'blog not configured' do
+
+    let(:blog_feed) { '' }
+
+    it 'assigns empty array to blog cache instance variable' do
+      controller.send(:blog_cache, 'cache_key', 1.minute)
+      expect(controller.instance_variable_get(:@blog_items)).to eq []
+    end
+
+  end
+
+  context 'cache disabled' do
+
+    let(:cache_fragments) { false }
+
+    it 'calls the get_blog_content controller action' do
+      expect(controller).to receive(:get_blog_content)
+      controller.send(:blog_cache, 'cache_key', 1.minute)
+    end
+
+    it 'does not calls the fragment controller actions' do
+      allow(controller).to receive(:get_blog_content)
+      expect(controller).to_not receive(:read_fragment)
+      expect(controller).to_not receive(:write_fragment)
+      controller.send(:blog_cache, 'cache_key', 1.minute)
+    end
+
+  end
+
+  context 'cache empty' do
 
     before do
-      allow(controller).to receive(:get_blog_content)
+      allow(controller).to receive(:read_fragment)
+        .with('cache_key')
+        .and_return(nil)
     end
 
-    context "creating the timestamp" do
-
-      it "returns a string" do
-        expect(controller.send(:create_timestamp)).to be_a(String)
-      end
-
-      it "does not contain spaces" do
-        expect(controller.send(:create_timestamp)).not_to include(" ")
-      end
-
-      it "can be read back correctly" do
-        time = Time.zone.parse("2016-08-01 09:29:16")
-        timestamp = controller.send(:create_timestamp, time)
-        expect(Time.zone.parse(timestamp)).to eq(time)
-      end
-
+    it 'calls the get_blog_content controller action' do
+      expect(controller).to receive(:get_blog_content)
+      controller.send(:blog_cache, 'cache_key', 1.minute)
     end
 
-    context "caching is disabled" do
-
-      before do
-        allow(AlaveteliConfiguration).to receive(:cache_fragments).
-          and_return(false)
-      end
-
-      it "does not attempt to read from the cache" do
-        allow(controller).to receive(:get_blog_content)
-        expect(controller).not_to receive(:read_fragment)
-        controller.send(:blog_cache, "test", 1.minute)
-      end
-
-      it "calls the get_blog_content controller action" do
-        expect(controller).to receive(:get_blog_content)
-        controller.send(:blog_cache, "test", 1.minute)
-      end
-
+    it 'writes fragment cache' do
+      expect(controller).to receive(:write_fragment)
+        .with('cache_key', '["blog_item"]', expires_in: 1.minute)
+      controller.send(:blog_cache, 'cache_key', 1.minute)
     end
 
-    context "the cache is empty" do
+  end
 
-      before do
-        allow(AlaveteliConfiguration).to receive(:cache_fragments).
-          and_return(true)
-        allow(controller).to receive(:read_fragment).with("test-lastupdated").
-          and_return(nil)
-        allow(controller).to receive(:write_fragment)
-      end
+  context 'cache full' do
 
-      context "the blog is available" do
-
-        before do
-          controller.instance_variable_set(:@blog_items, ["content"])
-        end
-
-        it "calls the get_blog_content controller action" do
-          expect(controller).to receive(:get_blog_content)
-          controller.send(:blog_cache, "test", 10.minutes)
-        end
-
-        it "sets the cache that holds the last updated timestamp" do
-          expect(controller).to receive(:write_fragment).
-            with("test-lastupdated", anything)
-          controller.send(:blog_cache, "test", 10.minutes)
-        end
-
-      end
-
-      context "the blog is not available" do
-
-        before do
-          controller.instance_variable_set(:@blog_items, [])
-          allow(controller).to receive(:read_fragment).with("test-lastupdated").
-            and_return(nil)
-          allow(controller).to receive(:read_fragment).with("test-").
-            and_return(nil)
-        end
-
-        it "calls the get_blog_content controller action" do
-          expect(controller).to receive(:get_blog_content)
-          controller.send(:blog_cache, "test", 10.minutes)
-        end
-
-        it "sets the cache that holds the last updated timestamp" do
-          expect(controller).to receive(:write_fragment).
-            with("test-lastupdated", anything)
-          controller.send(:blog_cache, "test", 10.minutes)
-        end
-
-        it "does not attempt to write new fragment if there isn't an old one" do
-          allow(controller).to receive(:read_fragment).with("test-").
-            and_return(nil)
-          expect(controller).to receive(:write_fragment).once
-          controller.send(:blog_cache, "test", 10.minutes)
-        end
-
-      end
-
+    before do
+      allow(controller).to receive(:read_fragment)
+        .with('cache_key')
+        .and_return('["cached_blog_item"]')
     end
 
-    context "there is cached content" do
-      let(:updated) { "#{Time.zone.now - 3.minutes}"}
+    it 'does not call the get_blog_content controller action' do
+      expect(controller).to_not receive(:get_blog_content)
+      controller.send(:blog_cache, 'cache_key', 1.minute)
+    end
 
-      before do
-        allow(AlaveteliConfiguration).to receive(:cache_fragments).
-          and_return(true)
-        allow(controller).to receive(:write_fragment)
-        allow(controller).to receive(:read_fragment).with("test-lastupdated").
-          and_return(updated)
-        allow(controller).to receive(:fragment_exist?).with("test-#{updated}").
-          and_return(true)
-      end
-
-      context "the cache is fresh" do
-
-        it "does not call the get_blog_content controller action" do
-          expect(controller).to_not receive(:get_blog_content)
-          controller.send(:blog_cache, "test", 4.minutes)
-        end
-
-        it "does not set the cache that holds the last updated timestamp" do
-          expect(controller).to_not receive(:write_fragment).
-            with("test-lastupdated", anything)
-          controller.send(:blog_cache, "test", 4.minutes)
-        end
-
-        context "but the content fragment can not be read" do
-
-          it "calls the blog controller action" do
-            controller.instance_variable_set(:@blog_items, ["content"])
-            allow(controller).to receive(:fragment_exist?).
-              with("test-#{updated}").and_return(false)
-            allow(controller).to receive(:read_fragment).
-              and_return(nil)
-            expect(controller).to receive(:get_blog_content)
-            controller.send(:blog_cache, "test", 4.minutes)
-          end
-
-        end
-
-      end
-
-      context "the cache is stale" do
-
-        context "the blog is not available" do
-
-          before do
-            controller.instance_variable_set(:@blog_items, [])
-            allow(controller).to receive(:read_fragment).with("test-#{updated}").
-              and_return("old fragment")
-          end
-
-          it "calls the get_blog_content controller action" do
-            expect(controller).to receive(:get_blog_content)
-            controller.send(:blog_cache, "test", 2.minutes)
-          end
-
-          it "sets the cache that holds the last updated timestamp" do
-            expect(controller).to receive(:write_fragment).
-              with("test-lastupdated", anything)
-            controller.send(:blog_cache, "test", 2.minutes)
-          end
-
-          it "writes out the previous fragment if there is one" do
-            allow(controller).to receive(:write_fragment).
-              with("test-lastupdated", anything)
-            expect(controller).to receive(:write_fragment).
-              with(anything, "old fragment")
-            controller.send(:blog_cache, "test", 2.minutes)
-          end
-
-        end
-
-        context "the blog is available" do
-
-          before do
-            controller.instance_variable_set(:@blog_items, ["content"])
-          end
-
-          it "calls the get_blog_content controller action" do
-            expect(controller).to receive(:get_blog_content)
-            controller.send(:blog_cache, "test", 2.minutes)
-          end
-
-          it "sets the cache that holds the last updated timestamp" do
-            expect(controller).to receive(:write_fragment).
-              with("test-lastupdated", anything)
-            controller.send(:blog_cache, "test", 2.minutes)
-          end
-
-        end
-
-      end
-
+    it 'assigns fragment to blog cache instance variable' do
+      controller.send(:blog_cache, 'cache_key', 1.minute)
+      expect(controller.instance_variable_get(:@blog_items)).to(
+        eq ['cached_blog_item']
+      )
     end
 
   end

@@ -22,7 +22,7 @@
 
 <% end %>
 
-<% cache_if_caching_fragments(@fragment_key) do %>
+<% cache_if_caching_fragments("latest_blog_posts-#{@locale}", :expires_in => 5.minutes) do %>
   <div class="frontpage__tertiary">
 
     <div class="wrapper">

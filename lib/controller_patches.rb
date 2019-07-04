@@ -18,7 +18,7 @@ Rails.configuration.to_prepare do
                              :title => _('Successful requests'),
                              :has_json => true } ]
 
-      blog_cache("latest_blog_posts-#{@locale}")
+      blog_cache("json_blog_posts-#{@locale}", 4.hours)
 
       @top_requests = [
         InfoRequest.
@@ -34,53 +34,23 @@ Rails.configuration.to_prepare do
 
     private
 
-    def blog_cache(cache_key, expires=4.hours)
+    def blog_cache(fragment_key, expires)
       # set @blog_items to an empty array and return if there's no blog feed
-      if AlaveteliConfiguration::blog_feed.empty?
+      if AlaveteliConfiguration.blog_feed.empty?
         @blog_items = []
         return
       end
+
       # nothing to do here, call the blog code and return
-      return get_blog_content unless AlaveteliConfiguration::cache_fragments
+      return get_blog_content unless AlaveteliConfiguration.cache_fragments
 
-      # read in the last timestamp
-      updated = read_fragment("#{cache_key}-lastupdated")
+      json_content = read_fragment(fragment_key)
+      @blog_items = JSON.parse(json_content) if json_content
 
-      # construct the fragment key
-      @fragment_key = "#{cache_key}-#{updated}"
+      return if @blog_items
 
-      # if the fragment is unreadable or has reached expiry
-      # attempt to pull in the blog feed
-      if updated.nil? || !fragment_exist?(@fragment_key) ||
-         Time.zone.now > (Time.zone.parse(updated) + expires)
-        # keep a note of the old key
-        old_key = @fragment_key.dup
-
-        # prepare a new timestamp and fragment key
-        updated = create_timestamp
-        @fragment_key = "#{cache_key}-#{updated}"
-
-        logger.info "attempting to pull in the feed"
-        get_blog_content
-
-        if @blog_items.empty?
-          # attempt to write the previous fragment to our new cache
-          fragment = read_fragment(old_key)
-          if fragment
-            logger.warn "Writing old blog fragment (#{old_key}) to " \
-                        "current cache (#{@fragment_key}) due to feed " \
-                        "error or timeout."
-            write_fragment(@fragment_key, fragment)
-          end
-        end
-
-        # store the new timestamp
-        write_fragment("#{cache_key}-lastupdated", updated)
-      end
-    end
-
-    def create_timestamp(time=Time.zone.now)
-      time.strftime('%Y%m%d-%H:%M:%S')
+      get_blog_content
+      write_fragment(fragment_key, @blog_items.to_json, expires_in: expires)
     end
   end
 
