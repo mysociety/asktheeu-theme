@@ -69,6 +69,13 @@ describe GeneralController, 'blog caching' do
       controller.send(:blog_cache, 'cache_key', 1.minute)
     end
 
+    it 'assigns fragment to blog cache instance variable' do
+      controller.send(:blog_cache, 'cache_key', 1.minute)
+      expect(controller.instance_variable_get(:@blog_items)).to(
+        eq ['blog_item']
+      )
+    end
+
   end
 
   context 'cache full' do
