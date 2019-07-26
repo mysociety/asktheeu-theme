@@ -30,6 +30,10 @@
 
   <h2><%= link_to_unless_current "Credits", help_credits_path %></h2>
 
+  <% if feature_enabled?(:alaveteli_pro) %>
+    <h2><%= link_to_unless_current "Pro", help_pro_path %></h2>
+  <% end %>
+
   <h2 id="contact">Contact us</h2>
   <p>If your question isn't answered here, or you just wanted to let us know
   something about the site, <%= link_to 'contact us', help_contact_path %>.

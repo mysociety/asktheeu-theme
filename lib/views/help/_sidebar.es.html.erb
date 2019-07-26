@@ -38,6 +38,10 @@
 
   <h3><%= link_to_unless_current "Agradecimientos", help_credits_path %></h3>
 
+  <% if feature_enabled?(:alaveteli_pro) %>
+    <h2><%= link_to_unless_current "Pro", help_pro_path %></h2>
+  <% end %>
+
   <h2 id="contact">Contáctanos</h2>
   <p>Si tu pregunta no está resuelta aquí, o quieres hacernos llegar algún comentario
   sobre la web, <%= link_to 'contáctanos', help_contact_path %>.

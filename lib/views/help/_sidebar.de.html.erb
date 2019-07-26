@@ -38,6 +38,10 @@
 
   <h3><%= link_to_unless_current "Impressum", help_credits_path %></h3>
 
+  <% if feature_enabled?(:alaveteli_pro) %>
+    <h2><%= link_to_unless_current "Pro", help_pro_path %></h2>
+  <% end %>
+
   <h2 id="contact">Kontakt</h2>
   <p>Sollten Sie hier keine Antwort auf Ihre Frage finden oder sollten Sie uns etwas mitteilen wollen, <%= link_to 'nehmen Sie Kontakt auf', help_contact_path %>.
   </p>
