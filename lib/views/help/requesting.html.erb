@@ -70,9 +70,14 @@
   <p>Our team of staff and volunteers reserve the right to remove inappropriate statements, such as those which are abusive or potentially defamatory. We may also remove material and/or block users where the request is not for access to documents but a complaint or other form of communication. In cases where there is any doubt, we will of course be in contact with the requester. </p>
   <p>You can also report inappropriate material if you see it. Just <a href="mailto:team@access-info.org">write to the AsktheEU.org team</a>.</p>
 
-  <h2>Can I keep my request confidential until I release my story/article?</h2>
+  <h2 id="private_requests">Can I keep my request confidential until I release my story/article?</h2>
   <p>AsktheEU.org is designed for public requests. All responses that we receive are automatically published on the website for anyone to read.</p>
-  <p>If you are a journalist, NGO, or other person who wants to keep the answer private until you have written your story or for other reasons, please get in contact with us.</p>
+
+  <% if feature_enabled?(:alaveteli_pro) %>
+    <p>If you are a journalist, NGO, or other person who wants to keep the answer private until you have written your story or for other reasons, then please try <%= link_to pro_site_name, account_request_index_path %>, our FOI toolkit for journalists, researchers and campaigners.</p>
+  <% else %>
+    <p>If you are a journalist, NGO, or other person who wants to keep the answer private until you have written your story or for other reasons, please get in contact with us.</p>
+  <% end %>
 
   <h2>I have the response to a request filed directly with an EU body; can I share it here?</h2>
   <p>At the moment we do not upload requests which were made via other means. </p>
