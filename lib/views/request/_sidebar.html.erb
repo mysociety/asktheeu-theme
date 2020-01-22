@@ -5,7 +5,6 @@
       <span class="track-request__badge__followers"><%= n_('follower', 'followers', @follower_count) %></span>
       <%= render :partial => 'track/tracking_links', :locals => { :track_thing => @track_thing, :own_request => @info_request.user && @info_request.user == @user, :location => 'sidebar' } %>
     </div>
-    <%= render :partial => 'track/rss_feed', :locals => { :track_thing => @track_thing, :location => 'sidebar' } %>
   </div>
 
   <% if (feature_enabled?(:alaveteli_pro) &&
