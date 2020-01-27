@@ -1,7 +1,7 @@
 <div id="after_actions" class="after-actions">
   <ul class="action-menu after-actions__action-menu">
     <li>
-      <a href="#" class="action-menu__button"><%= _("Actions") %></a>
+      <a href="#" class="action-menu__button"><%= _('Actions') %></a>
 
       <ul class="action-menu__menu">
         <% unless @info_request.is_external? %>
@@ -20,7 +20,7 @@
                 <% end %>
               </li>
 
-              <% if !@old_unclassified %>
+              <% if @show_owner_update_status_action %>
                 <li>
                   <%= link_to _("Update the status of this request"), request_path(@info_request, :update_status => 1) %>
                 </li>
@@ -48,6 +48,7 @@
 
         <li class="action-menu__menu__item">
           <ul class="action-menu__menu__submenu anyone_actions">
+
             <% if @info_request.attention_requested %>
               <%# The request has already been reported %>
               <li>
@@ -64,13 +65,13 @@
               </li>
             <% end %>
 
-            <% if AlaveteliConfiguration.enable_annotations && @info_request.comments_allowed? %>
+            <% if feature_enabled?(:annotations) && @info_request.comments_allowed? %>
               <li>
                 <%= link_to _('Add an annotation'), new_comment_path(:url_title => @info_request.url_title) %>
               </li>
             <% end %>
 
-            <% if @old_unclassified %>
+            <% if @show_other_user_update_status_action %>
               <li>
                 <%= link_to _('Update the status of this request'), '#describe_state_form_1' %>
               </li>
@@ -86,6 +87,12 @@
 
             <li>
               <a tabindex="0" class="js-collapsable-trigger-all" data-text-expanded="<%= _('Collapse all correspondence') %>" data-text-collapsed="<%= _('Expand all correspondence') %>"><%= _('Collapse all correspondence') %></a>
+            </li>
+
+            <li>
+              <%= render :partial => 'track/rss_feed',
+                         :locals => { :track_thing => @track_thing,
+                                      :location => 'action-menu' } %>
             </li>
           </ul>
         </li>
