@@ -1,0 +1,209 @@
+<% @title = 'Pro' %>
+
+<%= render partial: 'sidebar' %>
+
+<div id="left_column_flip" class="left_column_flip">
+  <h1 id="pro">
+    <%= @title %>
+  </h1>
+
+  <ul>
+    <li><%= link_to 'Solicitudes privadas', '#private-requests' %></li>
+    <li><%= link_to 'Tandas de solicitudes', '#batch' %></li>
+  </ul>
+
+  <h2 id="private-requests">
+    Solicitudes privadas
+    <a href="#private-requests">#</a>
+  </h2>
+
+  <p>
+    Si eres un usuario Pro, puedes establecer un periodo de privacidad para tu
+    solicitud, haciendo que ésta no sea visible al público y que sólo tú puedas
+    verla mientras trabajas en tu artículo o investigación.
+  </p>
+
+
+  <p>
+    Cuando una solicitud es privada, nos aseguramos de que ésta sea visible en
+    AsktheEU.org únicamente durante el periodo que selecciones. Los
+    administradores de AsktheEU.org podrán ver tu solicitud, pero sólo lo harán
+    en caso de que necesiten resolver un problema relacionado con la misma (por
+    ejemplo, entrega fallida de la solicitud al organismo de la UE). Ellos
+    nunca revelarán a nadie los contenidos de tu solicitud o cualquiera de las
+    respuestas que recibas. Aun así, cabe la posibilidad de que el organismo de
+    la UE lo publique en un “disclosure log”, como es habitual.
+  </p>
+
+  <h3 id="how-long-can-i-keep-requests-private">
+    ¿Durante cuánto tiempo puedo mantener mis solicitudes privadas?
+    <a href="#how-long-can-i-keep-requests-private">#</a>
+  </h3>
+
+  <p>
+    Los periodos de privacidad pueden tener una duración de 3, 6 o 12 meses. Se
+    te notificará automáticamente una semana antes de que el periodo de
+    privacidad vaya a expirar, y en la fecha exacta de expiración.
+  </p>
+
+  <p>
+    <%= image_tag 'alaveteli-pro/screenshot-embargo.jpg',
+                  alt: 'Adding a privacy period' %>
+  </p>
+
+  <p>
+    You will be automatically notified a week before the privacy period expires,
+    and on the date of expiry.
+  </p>
+
+  <p>
+    Una vez que el periodo de privacidad termine, tu solicitud y las respuestas
+    a ésta, incluyendo información como tu nombre, se <strong><%= link_to 'harán
+    públicas', help_privacy_path(anchor: 'public_request') %></strong>
+    en la página web.
+  </p>
+
+  <h3 id="i-need-more-time-can-i-extend-a-privacy-period">
+    I need more time. Can I extend a privacy period?
+   <a href="#i-need-more-time-can-i-extend-a-privacy-period">#</a>
+  </h3>
+
+  <p>
+    Los periodos de privacidad pueden extenderse, pero puedes extenderlos
+    únicamente durante la semana previa a la fecha de expiración, haciendo clic
+    en “mantener privada esta solicitud más tiempo – selecciona la duración”.
+  </p>
+
+  <p>
+    <%= image_tag 'alaveteli-pro/screenshot-embargo-extension.jpg',
+                  alt: 'Extending a privacy period' %>
+  </p>
+
+  <p>
+    No hay límite en el número de veces que quieras extender un periodo de
+    privacidad, pero cada extensión de duración requiere una confirmación
+    manual.
+  </p>
+
+  <h3 id="how-do-i-publish-a-request">
+    How do I publish a request?
+   <a href="#how-do-i-publish-a-request">#</a>
+  </h3>
+
+  <p>
+    Las solicitudes pueden publicarse en cualquier momento, haciendo clic en
+    “publicar solicitud”.
+  </p>
+
+  <p>
+    <%= image_tag 'alaveteli-pro/screenshot-embargo-publish.jpg',
+                  alt: 'Publish a request' %>
+  </p>
+
+  <h3 id="can-i-make-private-batch-requests">
+    Can I make private batch requests?
+   <a href="#can-i-make-private-batch-requests">#</a>
+  </h3>
+
+  <p>
+    Los periodos de privacidad también se pueden aplicar a solicitudes enviadas
+    en tanda, y su funcionamiento es idéntico al de las solicitudes enviadas
+    individualmente. Los cambios que realices sobre la duración de un periodo
+    de privacidad de una solicitud concreta perteneciente a una tanda de
+    solicitudes también se aplicarán a todo el resto de solicitudes de la
+    tanda.
+  </p>
+
+  <h2 id="batch">
+    Tandas de solicitudes
+   <a href="#batch">#</a>
+  </h2>
+
+  <p>
+    Las tandas de solicitudes facilitan enviar y administrar solicitudes a
+    distintas autoridades, permitiéndote seleccionar una lista de autoridades y
+    escribir una misma plantilla de solicitud para todas. La solicitud se envía
+    de forma individual a cada autoridad cómo un “mail merge”.
+  </p>
+
+  <h3 id="how-do-i-make-a-batch-request">
+    ¿Cómo puedo hacer una tanda de solicitudes?
+   <a href="#how-do-i-make-a-batch-request">#</a>
+  </h3>
+
+  <p>
+    Simplemente tienes que seleccionar distintas autoridades para una tanda y
+    usar la plantilla para enviar la solicitud.
+  </p>
+
+  <p>
+    <%= image_tag 'alaveteli-pro/screenshot-batch-selection.jpg',
+                  alt: 'Select authorities for a batch' %>
+  </p>
+
+  <p>
+    <%= image_tag 'alaveteli-pro/screenshot-batch-write.jpg',
+                  alt: 'Write a batch template' %>
+  </p>
+
+  <h3 id="how-do-i-manage-a-batch-request">
+    How do I manage a batch request?
+   <a href="#how-do-i-manage-a-batch-request">#</a>
+  </h3>
+
+  <p>
+    Puedes usar un medidor de progreso para administrar el estado de tu tanda
+    de solicitudes, que te sirve para analizar cómo de cerca estás de recibir
+    respuestas por parte de todas las autoridades a las que mandaste una
+    solicitud y ayudándote así a decidir qué hacer a continuación.
+  </p>
+
+  <p>
+    <%= image_tag 'alaveteli-pro/screenshot-batch-list.jpg',
+                  alt: 'Managing batch requests' %>
+  </p>
+
+  <h3 id="how-do-i-manage-batch-privacy-periods">
+    How do I manage batch privacy periods?
+   <a href="#how-do-i-manage-batch-privacy-periods">#</a>
+  </h3>
+
+  <p>
+    Batches can be made private, and privacy periods easily managed across the
+    batch.
+  </p>
+
+  <p>
+    <%= image_tag 'alaveteli-pro/screenshot-batch-privacy.jpg',
+                  alt: 'Manage batch privacy' %>
+  </p>
+
+  <h3 id="how-many-authorities-can-i-add-to-a-batch">
+    How many authorities can I add to a batch?
+   <a href="#how-many-authorities-can-i-add-to-a-batch">#</a>
+  </h3>
+
+  <p>
+    El número máximo de autoridades que puedes añadir a una tanda son
+    <%= AlaveteliConfiguration.pro_batch_authority_limit %>.
+  </p>
+
+  <h3 id="how-many-batch-requests-can-i-make">
+    How many batch requests can I make?
+   <a href="#how-many-batch-requests-can-i-make">#</a>
+  </h3>
+
+  <p>
+    Te recomendamos que hagas primero una prueba inicial de una tanda de
+    solicitudes a una muestra pequeña de autoridades. Una vez que compruebes
+    que las autoridades tienen en su mano el tipo de datos que estás
+    solicitando, podrás enviar la tanda al resto de autoridades.
+  </p>
+
+  <p>
+    No hay límite respecto al número de tandas de solicitudes que se pueden
+    enviar, pero los usuarios Pro están obligados a respetar nuestras normas de
+    sobre cómo escribir solicitudes de <%= link_to 'forma responsable',
+      help_requesting_path(anchor: 'responsible') %>.
+  </p>
+</div>
