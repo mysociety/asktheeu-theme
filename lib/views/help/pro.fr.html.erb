@@ -1,0 +1,205 @@
+<% @title = 'Pro' %>
+
+<%= render partial: 'sidebar' %>
+
+<div id="left_column_flip" class="left_column_flip">
+  <h1 id="pro">
+    <%= @title %>
+  </h1>
+
+  <ul>
+    <li><%= link_to 'Demandes privées', '#private-requests' %></li>
+    <li><%= link_to 'Lots de demandes', '#batch' %></li>
+  </ul>
+
+  <h2 id="private-requests">
+    Demandes privées
+   <a href="#private-requests">#</a>
+  </h2>
+
+  <p>
+    Si vous êtes un usager Pro, vous pouvez fixer une période de
+    confidentialité sur une demande pour retarder sa publication pendant que
+    vous travaillez sur votre article ou vos recherches.
+  </p>
+
+  <p>
+    Lorsqu'une demande est privée, nous garantissons qu'elle ne sera visible
+    sur AsktheEU.org que pour la période que vous sélectionnez. Les
+    administrateurs de AsktheEU.org Pro pourront également consulter votre
+    demande, mais uniquement s'ils ont besoin de résoudre un problème avec
+    celle-ci (par exemple, un échec de livraison à l'autorité). Ils ne
+    révéleront jamais à personne le contenu de votre demande ni les réponses
+    que vous recevrez. Toutefois, l'organisme de l’UE peut le publier dans un
+    registre de divulgation, comme d'habitude.
+  </p>
+
+  <h3 id="how-long-can-i-keep-requests-private">
+    Combien de temps puis-je garder mes demandes privées?
+   <a href="#how-long-can-i-keep-requests-private">#</a>
+  </h3>
+
+  <p>
+    Les périodes de confidentialité peuvent avoir une durée de 3, 6 ou 12 mois.
+  </p>
+
+  <p>
+    <%= image_tag 'alaveteli-pro/screenshot-embargo.jpg',
+                  alt: 'Adding a privacy period' %>
+  </p>
+
+  <p>
+    Vous serez automatiquement averti une semaine avant l'expiration de la
+    période de confidentialité et à la date d'expiration.
+  </p>
+
+  <p>
+    Une fois la période de confidentialité terminée, votre demande et les
+    réponses à celle-ci, y compris votre nom, seront <strong>
+    <%= link_to 'affichées publiquement',
+      help_privacy_path(anchor: 'public_request') %></strong> sur ce site Web.
+  </p>
+
+  <h3 id="i-need-more-time-can-i-extend-a-privacy-period">
+    I need more time. Can I extend a privacy period?
+   <a href="#i-need-more-time-can-i-extend-a-privacy-period">#</a>
+  </h3>
+
+  <p>
+    Les périodes de confidentialité peuvent être prolongées, mais seulement
+    dans la semaine précédant la date d'expiration, en cliquant sur "garder la
+    confidentialité pour une autre période - choisir une durée".
+  </p>
+
+  <p>
+    <%= image_tag 'alaveteli-pro/screenshot-embargo-extension.jpg',
+                  alt: 'Extending a privacy period' %>
+  </p>
+
+  <p>
+    Il n'y a pas de limite au nombre de fois qu'une période de confidentialité
+    peut être prolongée, mais chaque prolongation nécessite une confirmation
+    manuelle.
+  </p>
+
+  <h3 id="how-do-i-publish-a-request">
+    How do I publish a request?
+   <a href="#how-do-i-publish-a-request">#</a>
+  </h3>
+
+  <p>
+    Les demandes peuvent être publiées à tout moment, en cliquant sur "publier
+    la demande".
+  </p>
+
+  <p>
+    <%= image_tag 'alaveteli-pro/screenshot-embargo-publish.jpg',
+                  alt: 'Publish a request' %>
+  </p>
+
+  <h3 id="can-i-make-private-batch-requests">
+    Can I make private batch requests?
+   <a href="#can-i-make-private-batch-requests">#</a>
+  </h3>
+
+  <p>
+    Les périodes de confidentialité peuvent également s’appliquer aux demandes
+    de lots, et leur fonctionnement suit les mêmes principes que les demandes
+    individuelles. Les modifications apportées à une période de confidentialité
+    sur une demande particulière dans un lot de demandes s’appliqueront
+    également à toutes les autres demandes du lot.
+  </p>
+
+  <h2 id="batch">
+    Lots de demandes
+   <a href="#batch">#</a>
+  </h2>
+
+  <p>
+    Les lots de demandes facilitent l'envoi et la gestion des demandes à
+    plusieurs autorités en vous permettant de sélectionner une liste
+    d'autorités et de rédiger une demande type. La demande est envoyée
+    individuellement à chaque autorité comme un mail merge.
+  </p>
+
+  <h3 id="how-do-i-make-a-batch-request">
+    Comment puis-je faire un lot de demandes?
+   <a href="#how-do-i-make-a-batch-request">#</a>
+  </h3>
+
+  <p>
+    Il vous suffit de sélectionner les autorités pour un lot et d'utiliser le
+    modèle de lot pour envoyer la demande.
+  </p>
+
+  <p>
+    <%= image_tag 'alaveteli-pro/screenshot-batch-selection.jpg',
+                  alt: 'Select authorities for a batch' %>
+  </p>
+
+  <p>
+    <%= image_tag 'alaveteli-pro/screenshot-batch-write.jpg',
+                  alt: 'Write a batch template' %>
+  </p>
+
+  <h3 id="how-do-i-manage-a-batch-request">
+    How do I manage a batch request?
+   <a href="#how-do-i-manage-a-batch-request">#</a>
+  </h3>
+
+  <p>
+    La progression d'un lot peut être gérée à l'aide d'un indicateur de
+    progression pratique pour voir à quel point vous êtes près d'obtenir des
+    réponses de toutes les autorités et pour faciliter le choix des mesures à
+    prendre ensuite.
+  </p>
+
+  <p>
+    <%= image_tag 'alaveteli-pro/screenshot-batch-list.jpg',
+                  alt: 'Managing batch requests' %>
+  </p>
+
+  <h3 id="how-do-i-manage-batch-privacy-periods">
+    How do I manage batch privacy periods?
+   <a href="#how-do-i-manage-batch-privacy-periods">#</a>
+  </h3>
+
+  <p>
+    Batches can be made private, and privacy periods easily managed across the
+    batch.
+  </p>
+
+  <p>
+    <%= image_tag 'alaveteli-pro/screenshot-batch-privacy.jpg',
+                  alt: 'Manage batch privacy' %>
+  </p>
+
+  <h3 id="how-many-authorities-can-i-add-to-a-batch">
+    How many authorities can I add to a batch?
+   <a href="#how-many-authorities-can-i-add-to-a-batch">#</a>
+  </h3>
+
+  <p>
+    Le nombre maximum d'autorités qui peuvent être ajoutées à un lot est de
+    <%= AlaveteliConfiguration.pro_batch_authority_limit %>.
+  </p>
+
+  <h3 id="how-many-batch-requests-can-i-make">
+    How many batch requests can I make?
+   <a href="#how-many-batch-requests-can-i-make">#</a>
+  </h3>
+
+  <p>
+    Nous recommandons d'envoyer un lot pilote à un échantillon d'autorités pour
+    tester la demande. Une fois que vous savez que les autorités possèdent le
+    type de données que vous demandez, vous pouvez demander aux autres
+    autorités.
+  </p>
+
+  <p>
+    Il n'y a pas de limite au nombre de lots qui peuvent être envoyés, mais les
+    utilisateurs Pro sont tenus de respecter nos directives sur la rédaction de
+    demandes dans une forme responsable <%= link_to 'forme responsable',
+    help_requesting_path(anchor: 'responsible') %>.
+  </p>
+</div>
