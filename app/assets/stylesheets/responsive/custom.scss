@@ -1101,3 +1101,12 @@ dt {
     max-width: 224px;
   }
 }
+
+// Pro Plans
+.pricing__tier__heading {
+  background-image: linear-gradient(46deg, #aacc4b 0%, $color_asktheeu_green 9%, $color_asktheeu_blue 63%);
+}
+
+.pricing__tier__content {
+  background-color: $color_sand;
+}
