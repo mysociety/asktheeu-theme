@@ -1,0 +1,121 @@
+<% @title = "CONFIDENTIALITÉ" %>
+
+<%= render :partial => 'sidebar' %>
+
+<div id="left_column_flip">
+
+  <div class="page__header">
+    <h1 class="page__header__title">CONFIDENTIALITÉ</h1>
+    <h2 class="page__header__subtitle">¡BIENVENUE A ASKTHEEU.ORG!</h2>
+  </div>
+
+  <p>Sur AsktheEU.org, seulement sera visible votre nom per le grand publique, sauf si vous incluez
+d'autres informations personnelles dans le corps de la demande.</p>
+<p>Nous vous recommandons de ne pas ajouter d'autres renseignements personnels au corps de la
+demande. Cela comprend le fait de ne pas ajouter votre numéro de téléphone, votre adresse postale,
+votre courriel personnel ou d'autres renseignements personnels, ainsi que des détails sur votre
+famille ou votre travail.</p>
+<p>La plateforme AsktheEU.org est gérée par Access Info Europe et nous prenons votre vie privée au
+sérieux. C'est pourquoi nous respectons la <a href="https://gdpr-info.eu/">réglementation générale de protection des données de
+l'Union européenne.</a></p>
+  
+  <h2>Quelle partie de mes renseignements personnels traitez-vous ?</h2>
+<p>Access Info a accès à votre nom complet et à votre adresse e-mail personnelle. Nous les utilisons
+pour administrer le site AsktheEU.org. Nous ne partagerons jamais votre adresse électronique avec
+personne sans votre consentement préalable.</p>
+<p>Le site AsktheEU.org transfère votre nom aux organes de l'Union européenne auxquels vous avez adressé une demande d'accès à l'information. Si vous décidez d'utiliser AsktheEU.org, vous nous
+autorisez expressément à transférer votre nom à cet organisme. Vous consentez également à ce que
+cet organisme traite votre nom afin de répondre à votre demande. Cela signifie que votre nom sera
+communiqué aux fonctionnaires de l'Union européenne qui travaillent à la recherche des documents
+que vous avez demandés et à la préparation et à la signature de la réponse qu'ils vous envoient.</p>
+<p>Il est important que vous sachiez que nous indiquons clairement à l'UE qu'en aucun cas vous
+autorisez l'UE à transférer votre nom à des tiers sans votre consentement explicite préalable.</p>
+
+  <h2 id="email_address">Qui peut voir mon adresse email personnel ?</h2>
+  <p>Votre adresse électronique n'apparaîtra pas sur le site web à moins que vous ne l'incluiez dans le
+corps de votre demande.</p>
+<p>Les fonctionnaires de l'UE ne voient pas non plus votre adresse électronique personnelle. En effet, le
+système génère un e-mail unique pour chaque demande, et cet e-mail n'a rien à voir avec vous ou
+votre nom.</p>
+<p>L'équipe AsktheEU.org d'Access Info Europe peut voir votre adresse e-mail. Si nous l'utilisons, ce ne
+sera que pour vous contacter au sujet de votre demande ou pour vous informer des mises à jour du
+site AsktheEU.org.</p>
+<p>Nous ne donnerons jamais votre adresse email à des tiers, à moins que nous soyons obligés
+légalement de le faire, ou si vous nous l'avez demandé.</p>
+
+<p>Si vous envoyez un message via le site à un autre utilisateur, ce dernier verra votre adresse email. Un
+avertissement vous le rappellera au moment de l'envoi.</p>
+
+  <h2 id="public_request">Why is my name and my request public on this site?</h2>
+  <p>We publish your name and request so that everyone can benefit from the information you've obtained. </p>
+  
+
+  <h2 id="real_name">Dois-je donner un vrai nom?</h2>
+  <p>Oui. Nous vous demandons d'utiliser un nom réel. Vous exercez un droit qui est à la base d'une
+société démocratique et ouverte et vous devriez donc l'exercer en utilisant votre vrai nom.
+En plus, si vous souhaitez déposer une plainte auprès du Ombudsman europénn ou de la Cour de
+justice de l’Union européenne, vous devez avoir utilisé votre vrai nom au moment de la demande
+d'accès à l'information.</p>
+<p>Veuillez noter que certains organismes de l'UE peuvent vous demander de vérifier votre adresse
+postale ou même de leur fournir une pièce d'identité. Nous sommes contre cette pratique, mais cela
+peut arriver.</p>
+<p>Si vous êtes un journaliste ou une personne célèbre et que vous ne voulez pas révéler que vous
+demandez des informations, la solution est de demander à quelqu'un d'autre, comme un ami ou un
+collègue, d'envoyer la demande.</p>
+<p>Si vous ne trouvez pas d’alternative, contactez-nous et nous essayerons de vous aider. Veuillez noter
+que nous ne disposons pas assez de ressources pour le faire avec tout le monde.</p>
+<p>Nous vous demandons d'indiquer vos nom et prénom. Si vous avez plus d&'un prénom ou nom de
+famille, vous pouvez utiliser les autres, mais le moins que vous puissiez faire est de donner au moins
+un prénom et un nom. Si nous voyons des noms non sérieux ou des pseudonymes très évidents, nous
+procéderons au retrait de la demande et contacterons le demandeur pour en parler. Dans tous les
+cas ne vous faites jamais passer pour quelqu'un d'autre !</p>
+
+  <h2 id="takedown">¿Pouvez-vous retirer des renseignements personnels me
+concernant?</h2>
+  <p>Si un organisme de l’UE vous demande de fournir votre adresse postale et vous le faites travers la
+plateforme, ou si vous fournissez involontairement d'autres informations personnelles vous
+concernant (votre numéro de téléphone ou toute autre donnée personnelle), nous vous demandons
+simplement de nous contacter pour les cacher de votre demande.</p>
+<p>Veuillez noter que dans de tels cas, même si l'information n'apparaît plus sur le site web, elle aura
+été envoyée à l'organisme de l'UE auquel vous avez demandé accès aux documents. Si vous êtes
+préoccupé par les renseignements personnels que vous avez fournis, veuillez également nous en
+informer. Nous vous aiderons à négocier avec l'organisme de l'UE auquel vous avez envoyé vos
+informations personnelles pour les détruire.</p>
+<p>Pour des raisons techniques, nous ne pouvons pas toujours supprimer automatiquement les adresses
+électroniques ou les numéros de téléphone des pièces jointes, comme les fichiers PDF scannés, bien
+que dans la plupart des cas nous puissions le faire manuellement si vous nous contactez.</p>
+
+  <h2>L'organisme européen m'a demandé mon numéro de téléphone ou
+mon adresse postale !</h2>
+  <p>Si un organisme de l'UE vous demande votre numéro de téléphone pour discuter ou clarifier votre
+demande, nous vous recommandons de le lui donner, mais directement et non via la plate-forme en
+ligne. Si vous ne voulez pas leur donner votre numéro de téléphone, vous pouvez décider de
+continuer à discuter de la demande par email, ou vous pouvez leur demander le numéro de
+téléphone et fixer un rendez-vous pour clarifier ce qui doit être clarifié.</p>
+
+<p>Si une autorité publique vous demande votre adresse postale physique complète, répondez en disant
+que vous préférez que l'information vous soit envoyée sous forme électronique. C'est votre droit en
+vertu du règlement 1049/2001 si l'information existe dans ce format.</p>
+<p>Cela dit, l'UE peut souhaiter vous envoyer une lettre par la poste en plus de l'envoyer via
+AsktheEU.org. Dans ces cas, nous vous recommandons de fournir votre adresse postale.</p>
+<p>Si vous ne recevez la réponse que par la poste, veuillez nous le faire savoir. Il y a deux solutions
+possibles. L'une est que vous avez la gentillesse de scanner la réponse et de nous l'envoyer pour que
+nous puissions la télécharger sur la plateforme en ligne. L'autre est que nous contactons l'organisme
+compétent et lui demandons d'envoyer également la version numérique.</p>
+
+<h2 id="delete">Que faire si je veux supprimer mon nom ou mon compte?</h2>
+  <p>L’équipe d’AsktheEU.org peut supprimer des demandes d’accès à l’information especifiques. Cela
+signifie que la demande et les réponses reçues seront perdues.</p>
+<p>L’équipe d’AsktheEU.org peut aussi supprimer votre compte. Vous devriez nous contacter si vous
+souhaitez le faire. Nous répondrons toujours à la demande de suppression de votre compte le plus
+rapidement possible. Cela signifie que nous essaierons de le faire immédiatement ou au moins le jour
+même où vous en ferez la demande.</p>
+<p>Une fois votre compte supprimé, toutes les informations connexes - les demandes et leurs réponses -
+seront également supprimées.</p>
+<p>Nous ne pouvons pas simplement supprimer votre nom et laisser les demandes, parce que le corps
+des demandes et les réponses à celles-ci contiennent votre nom.</p>
+<p>Pour cette raison, nous vous demandons de bien réfléchir si vous voulez vraiment que nous
+supprimions l'une de vos demandes ou votre compte, car cela signifie que toutes les informations
+connexes seront perdues pour les autres également. Cependant, si vous voulez vraiment supprimer
+votre compte, c'est votre droit !</p>
+</div>
