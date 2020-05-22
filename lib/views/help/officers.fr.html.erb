@@ -1,0 +1,108 @@
+<% @title = "Guide de AsktheEU.org pour les fonctionnaires" %>
+
+<%= render :partial => 'sidebar' %>
+
+<div id="left_column_flip">
+
+  <div class="page__header">
+    <h1 class="page__header__title">Guide de AsktheEU.org pour les fonctionnaires</h1>
+    <h2 class="page__header__subtitle">BIENVENUE À ASKTHEEU.ORG!</h2>
+  </div>
+
+<h2 id="what">Qu'est-ce que AskTheEU?</h2>
+  <p><i>Si vous êtes un fonctionnaire et que vous avez accédé à cette page en suivant un lien dans un
+email que vous avez reçu, vous trouverez ici des informations que vous devriez savoir sur
+AsktheEU.org et son fonctionnement...</i></p>
+<p>Le but du site web AsktheEU.org est de permettre à tout citoyen européen de faire des
+demandes d’accès aux documents des institutions publiques de l’UE.</p>
+<p>C'est aussi un moyen de s'assurer que tout document diffusé publiquement à un demandeur
+est également accessible à d'autres citoyens. Nous espérons ainsi encourager le public à
+s'intéresser et à s'impliquer davantage dans le travail de l'Union européenne.</p>
+<p>Si vous êtes fonctionnaire de l'UE, AsktheEU.org vous facilite également votre travail, car
+vous aurez moins de chances de devoir répondre plusieurs fois à des demandes sur le même
+sujet.</p>
+<p>AsktheEU.org est un site web géré par deux organisations non gouvernementales à but non
+lucratif, Access Info Europe et mySociety. La plate-forme en ligne aide tout citoyen à
+demander des documents et des informations aux différents organes de l'UE, et partage
+également toutes les réponses reçues avec le grand public. </p>
+  
+  <h2>Comment fonctionne AsktheEU.org</h2>
+  <p>Les demandeurs s'inscrivent sur le site web AsktheEU.org et l'utilisent pour faire des
+demandes d’accès aux documents.</p>
+<p>Chaque application génère un email unique. Vous devez répondre à cet email afin de
+répondre à cette demande, comme vous le feriez pour toute autre demande d'accès à des
+documents. La seule différence est que votre réponse sera automatiquement publiée sur
+AsktheEU.org.</p>
+
+<h2 id="spam_problems">Les personnes qui font des demandes sont-elles des personnes réelles ?</h2>
+  <p>Oui. Avant de pouvoir envoyer une demande, chaque utilisateur doit s'inscrire sur le site
+avec une adresse email unique que nous avons vérifiée dans un processus en deux étapes.
+Ainsi, on protège AsktheEU.org contre les spammeurs.</p>
+<p>Vous pouvez aussi trouver sur AsktheEU la liste de toutes les demandes faites par chaque
+utilisateur.</p>
+
+  <h2 id="why_publish">Why are you publishing responses to access to EU documents requests?</h2>
+  <p>There are many benefits to making answers to access to documents requests public, including that it will encourage the public to be more interested and involved in the work of the European Union.</p>
+  <p>We also hope that it will reduce the number of duplicate requests on any subject that each EU body will receive.</p>
+  <p>Putting requests online permits members of the public to know about the information released and it helps them understand how the EU transparency rules work. </p>
+  <p>Given that responses to access to documents requests contain public information, which anybody else could easily request again from the same EU body and given that the European Court of Human Rights has linked the right of access to information to the right to freedom of expression, there is no reason not to publish this information. </p>
+
+ <h2 id="processing_requests">Comment puis-je répondre à la démande ?</h2>
+<p>Répondez simplement à l'email de la manière normale, en utilisant l'adresse email qui
+correspond à la demande. La réponse que vous donnerez sera envoyée au demandeur et
+sera publiée sur le site AsktheEU.org.</p>
+
+<h2 id="large_file">Comment puis-je envoyer de gros fichiers qui ne passent pas par email ?</h2>
+<p>Si vous devez envoyer un fichier trop gros qui n’est pas possible d’envoyer par email (au-delà
+de 50Mb), contactez-nous.</p>
+
+  <h2 id="no_email">I can see a request on AsktheEU.org, but we never got it by email!</h2>
+  <p>If a request appears on the site, then we have attempted to send it to the relevant EU body by email. Any delivery failure messages will automatically appear on the site. Our team monitors for such messages but we may have missed one. If this is the case, please don’t hesitate to let us know. </p>
+  <p>You can check the address we're using with the "View email address" link which appears on the page for each EU body. </p>
+  <p>Please kindly <%= link_to 'contact us', help_contact_path %> if there is a better email address we can use. </p>
+  <p>Requests are sometimes blocked by "spam filters". To make sure that this doesn't happen by asking your IT departments to "whitelist" any email from @asktheeu.org. </p>
+  <p>If you <a href="mailto:team@asktheeu.org">ask us</a> we will resend any request, and/or give technical details of delivery so an IT department can chase up what happened to the message. </p>
+
+<h2 id="privacy_issues">Que faire si j’ai publié accidentalement des données personelles ?</h2>
+  <p>Si vous envoyez involontairement des données personnelles ou des informations qui ne
+devraient pas être publiques, veuillez nous contacter immédiatement. Veuillez noter que la
+façon la plus efficace de le faire est par téléphone ou par email. Vous pouvez également
+envoyer une lettre recommandée, mais n'oubliez pas que cela peut prendre plusieurs jours
+pour arriver à notre bureau à Madrid.</p>
+<p>Il est possible que nous vous demandions une confirmation écrite formelle de la demande
+d'effacement des données personnelles publiées, mais si elles sont effectivement publiées
+accidentellement, il est préférable de téléphoner : c'est plus rapide et plus efficace.</p>
+
+  <h2 id="mobiles">Quelles informations sur les fonctionnaires de l'UE publiez-vous ?</h2>
+  <p>Nous publierons toute information incluse dans la réponse à la demande d'accès aux
+documents.</p>
+<p>La seule exception à cette règle est que, pour empêcher le spam, les adresses emails et les
+numéros de téléphone seront automatiquement supprimés des réponses aux demandes. Si
+vous avez besoin d'accéder à l'une de ces informations générées automatiquement,
+<%= link_to 'contactez-nous.', help_contact_path %>.</p>
+<p>Mis à part cette exception, le reste de la réponse à une demande d'accès aux documents est
+rendu public. La logique sous-jacente est que, si un demandeur peut recevoir l'information,
+cela signifie que l'information est publique et devrait donc être accessible à tous.
+Cela est conforme à la jurisprudence de la Cour européenne des droits de l'homme, qui a
+confirmé le lien intrinsèque entre le droit d'accès à l'information et le droit à la liberté
+d'expression. </p>
+
+  <h2 id="days">Comment calculez-vous le délai pour répondre à chaque demande?</h2>
+  <p>AsktheEU.org compte automatiquement 15 jours ouvrables, en confomité au reglèment
+1049/2001 pour la plupart des intitutions de l’UE.</p>
+<p>Nous commençons a compter les jours ensuite le jour où la demande est delivrée par email.
+Si vous envoyez une demande dans un jour ouvrable, on commence a compter dans le
+prochaine jour ouvrable.</p>
+<p>Le système a connaissance des vacances publiques des institutions publiques de l’UE. Si
+votre institution a un calendrier diffèrent à celui de Bruxelles, nous vous demandons de nous
+le faire savoir.</p>
+
+  
+  
+
+  
+ 
+
+  
+
+</div>
