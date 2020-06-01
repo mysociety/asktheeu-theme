@@ -1,68 +1,45 @@
-<% @title = "Information for EU Officials" %>
-
+<% @title = "AsktheEU.org Guide for Public Officials" %>
 <%= render :partial => 'sidebar' %>
-
 <div id="left_column_flip">
-
   <div class="page__header">
-    <h1 class="page__header__title">INFORMATION FOR EU OFFICIALS</h1>
-    <h2 class="page__header__subtitle">WELCOME TO ASKTHEEU.ORG!</h2>
+    <h1 class="page__header__title"><%= @title %></h1>
   </div>
-
   <ul>
-    <li><a href="#what">I just got here from bottom of a documents request, what is going on?</a></li>
-    <li><a href="#why_publish">Why are you publishing responses to access to EU documents requests?</a></li>
+    <li><a href="#what">AsktheEU.org Guide for Public Officials</a></li>
+    <li><a href="#how">How AsktheEU.org works</a></li>
     <li><a href="#spam_problems">Are the people making requests real people?</a></li>
-    <li><a href="#no_email">I can see a request on AsktheEU.org, but we never got it by email!</a></li>
-    <li><a href="#days">How do you calculate the deadline shown on request pages?</a></li>
     <li><a href="#processing_requests">How do I answer the request?</a></li>
     <li><a href="#large_file">How can I send a large file, which won't go by email?</a></li>
-    <li><a href="#privacy_issues">Why do you publish the names of EU public officials and the text of emails?</a></li>
-    <li><a href="#privacy_issue2">Do you publish email addresses or mobile phone numbers?</a></li>
+    <li><a href="#mobiles">Which information about EU public officials do you publish?</a></li>
+    <li><a href="#privacy_issues">What do I do if I accidentally released personal data?</a></li>
+    <li><a href="#days">How do you calculate the deadline shown on request pages?</a></li>
   </ul>
-
-  <h2 id="what">I just got here from bottom of a documents request, what is going on?</h2>
-  <p>AsktheEU.org is a website run by non-governmental organisations, <a href="http://www.access-info.org">Access Info Europe</a> and <a href="http://www.mysociety.org">mySociety</a>. It helps ordinary members of the public make requests for documents and information to EU bodies and shares the responses with the wider public. </p>
-  <p>The request you received was made by someone using AsktheEU.org.</p>
-  <p>You can simply reply to the request as you would any other request for documents. The only difference is that your response will be automatically published on the internet via the website.</p>
-  <p>If you have privacy or other concerns, please read the answers below.</p>
-  <p>You might also like to read the <%= link_to 'About AsktheEU.org', help_about_path %> section to find out more about what the site does from the point of view of a user.
-  <p>We welcome comments and thoughts from EU officials, so please <%= link_to 'get in touch', help_contact_path %>.</p>
-
-  <h2 id="why_publish">Why are you publishing responses to access to EU documents requests?</h2>
-  <p>There are many benefits to making answers to access to documents requests public, including that it will encourage the public to be more interested and involved in the work of the European Union.</p>
-  <p>We also hope that it will reduce the number of duplicate requests on any subject that each EU body will receive.</p>
-  <p>Putting requests online permits members of the public to know about the information released and it helps them understand how the EU transparency rules work. </p>
-  <p>Given that responses to access to documents requests contain public information, which anybody else could easily request again from the same EU body and given that the European Court of Human Rights has linked the right of access to information to the right to freedom of expression, there is no reason not to publish this information. </p>
-
+  <h2 id="what">AsktheEU.org Guide for Public Officials</h2>
+  <p><em>If you are an EU official and you reached this page following a link in an email you received, here is some information for you about AsktheEU.org and how it works...</em></p>
+  <p>The goal of AsktheEU.org is to make it easier for the European public to make requests for documents.</p>
+  <p>It is also a way to ensure that any documents released into the public domain to one requester are available to everyone. We hope that this will encourage the public to be more interested and involved in the work of the European Union.</p>
+  <p>If you are an EU public official, AsktheEU.org also makes life easier you, because you will be less likely to have to answer repeated requests about the same subject.</p>
+  <p>AsktheEU.org is a website run by non-governmental organisations, Access Info Europe and mySociety. It helps ordinary members of the public make requests for documents and information to EU bodies and shares the responses with the wider public.</p>
+  <h2 id="how">How AsktheEU.org works</h2>
+  <p>Requesters sign up to the AsktheEU.org website and then use it to make requests.</p>
+  <p>Each request generates a unique email. You need to answer the email for that request. Just like you would for any other documents request. The only difference is that your response will be automatically published on AsktheEU.org.</p>
   <h2 id="spam_problems">Are the people making requests real people?</h2>
-  <p>Yes, each request is submitted by a person who has created an account on AsktheEU.org and who has gone through a two-step process to verify the email he or she is using. In this way we help to protect AsktheEU.org against spammers. </p>
-  <p>For the purposes of keeping track of responses we use computer-generated email addresses which are unique to each request. </p>
+  <p>Yes, each request is submitted by a person who has created an account on AsktheEU.org and who has gone through a two-step process to verify the email he or she is using. In this way we help to protect AsktheEU.org against spammers.</p>
   <p>You can search this site and find a list of all requests that each person has made.</p>
-
-  <h2 id="no_email">I can see a request on AsktheEU.org, but we never got it by email!</h2>
-  <p>If a request appears on the site, then we have attempted to send it to the relevant EU body by email. Any delivery failure messages will automatically appear on the site. Our team monitors for such messages but we may have missed one. If this is the case, please don’t hesitate to let us know. </p>
-  <p>You can check the address we're using with the "View email address" link which appears on the page for each EU body. </p>
-  <p>Please kindly <%= link_to 'contact us', help_contact_path %> if there is a better email address we can use. </p>
-  <p>Requests are sometimes blocked by "spam filters". To make sure that this doesn't happen by asking your IT departments to "whitelist" any email from @asktheeu.org. </p>
-  <p>If you <a href="mailto:team@asktheeu.org">ask us</a> we will resend any request, and/or give technical details of delivery so an IT department can chase up what happened to the message. </p>
-
-  <h2 id="days">How do you calculate the deadline shown on request pages?</h2>
-  <p>The AsktheEU.org system automatically calculates 15 working days in line with Regulation 1049/2001 for most EU institutions. </p>
-  <p>We start calculating days on the first working day after the delivery of the request. If the request is sent on a working day, we start counting the next working day. We calculate the time limit to include EU institution holidays.</p>
-
   <h2 id="processing_requests">How do I answer the request?</h2>
   <p>Just reply to the email in the normal way to the unique email address for the request. The request will be delivered to the requester as well as being published on the AsktheEU.org website.</p>
-
   <h2 id="large_file">How can I send a large file, which won't go by email?</h2>
-  <p>Instead of email, you can respond to a request directly from your web browser, including uploading a file. To do this, choose "respond to request" at the bottom of the request's page. Contact us if it is too big for even that (more than, say, 50Mb).</p>
-
-  <h2 id="privacy_issues">Why do you publish the names of EU public officials and the text of emails?</h2>
-  <p>We consider what public officials do in the course of their employment to be public information. This includes names and job titles of those processing and responding to access to documents requests. It also includes similar information contained in documents released in response to requests. </p>
-  <p>We will only remove such names in exceptional circumstances, such as where the disclosure of a name and position of employment would substantially risk an individual's safety. If you are such an official and you wish to have your name removed for such an urgent reason, please contact us by email or telephone. This request must demonstrate that there is a risk which outweighs the public interest, and must demonstrate that efforts have been made to conceal the data in other potentially public documents. We may ask for a letter signed by a head of department and/or other justifications in order to comply with the request.</p>
-
-  <h2 id="mobiles">Do you publish email addresses or mobile phone numbers?</h2>
-  <p>To prevent spam, emails and mobile numbers are automatically removed from responses to requests. If you need access to any of this automatically-redacted information, please <%= link_to 'get in contact with us', help_contact_path %>.</p> 
-  <p>For technical reasons we are not always able automatically to remove emails and phone numbers from attachments, such as scanned PDFs, although in many cases this can be done manually if you <%= link_to 'contact us', help_contact_path %>.</p>
-
+  <p>If you have a very large file to send (bigger than about 50 MB), please contact us and we will help you upload it.</p>
+  <h2 id="mobiles">Which information about EU public officials do you publish?</h2>
+  <p>We publish all information included in responses to access to documents requests.</p>
+  <p>The one exception to that is that, to prevent spam, emails and mobile numbers are automatically removed from responses to requests. If you need access to any of this automatically-redacted information, please get in contact with us.</p>
+  <p>Apart from that, all information in the answer to an access to documents request is public. The basic principle here is that if one person can receive the information, it is public and so is available to everyone.</p>
+  <p>This is consistent with the jurisprudence of the European Court of Human Rights which has confirmed the intrinsic link between right of access to information to the right to freedom of expression.</p>
+  <h2 id="privacy_issues">What do I do if I accidentally released personal data?</h2>
+  <p>If you accidentally released personal data or information that should not be public, please contact us immediately. Please note that they best way to do this is by telephone or email. You can also send a certified letter, but please bear in mind that this can take a few days to reach our office in Madrid.</p>
+  <p>We may ask for a formal written confirming the request to take down the data, but if there is really an accidental release of personal data, then it is best to phone: that's faster and more effective.</p>
+  <h2 id="days">How do you calculate the deadline shown on request pages?</h2>
+  <p>The AsktheEU.org system automatically calculates 15 working days in line with Regulation 1049/2001 for most EU institutions.</p>
+  <p>We start calculating days on the first working day after the delivery of the request. If the request is sent on a working day, we start counting the next working day.</p>
+  <p>We programme into the system the EU institutional holidays. If your EU body or agency has different holidays from those based in Brussels, please do kindly let us know.</p>
 </div>
