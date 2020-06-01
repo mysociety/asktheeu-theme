@@ -1,11 +1,10 @@
-<% @title = "Your privacy" %>
+<% @title = "Privacy" %>
 <%= render :partial => 'sidebar' %>
 <div id="left_column_flip">
   <div class="page__header">
-    <h1 class="page__header__title">YOUR PRIVACY</h1>
-    <h2 class="page__header__subtitle">WELCOME TO ASKTHEEU.ORG!</h2>
+    <h1 class="page__header__title"><%= @title %></h1>
   </div>
-  <p>On AsktheEU.org, only your name is visible to the general public unless you put other personal information in the body of the request.</p>
+  <p id="public_request">On AsktheEU.org, only your name is visible to the general public unless you put other personal information in the body of the request.</p>
   <p>We strongly advise you not to put any personal information in the body of the request. That includes not putting your phone number, home address, email address or other personal or family or work details.</p>
   <p>The AsktheEU.org website is run by Access Info Europe and we take your privacy very seriously. We comply with the <a href="https://gdpr-info.eu/">European Union's General Data Protection Regulation</a>.</p>
   <h2>What personal data of mine will you process?</h2>
@@ -13,32 +12,28 @@
   <p>The AsktheEU.org website transfers your name in access to documents requests to European Union bodies. By using the AsktheEU.org website, you expressly give your permission for us to transfer your name to the relevant EU body. You also expressly give your permission for that EU body to process your name for the purpose of answering your request. That means that the name will be shared with relevant European Union officials who are involved in searching for the requested documents and in preparing and signing the response to you.</p>
   <p>We make clear to the EU that in no circumstances have you given permission to the EU to transfer your name to any other third party without your express consent.</p>
   <h2 id="email_address">Who gets to see my email address?</h2>
-  <p>Your e-mail address will not be shown on the website unless you include in the message or in a footer to your email.</p>
+  <p>Your e-mail address will not be shown on the website unless you include it in the message or in a footer to your email.</p>
   <p>EU officials do not see your email address. This is because the system generated a unique email address for each request, and that unique email has nothing to do with you or your name.</p>
   <p>The AsktheEU.org team at Access Info Europe can see your email address. We may use it to contact you for issues relating to your request or for updates about issues relating to the AsktheEU.org website.</p>
-  <p> We will never disclose your email address to anyone unless either you ask us to do so or unless we are obliged to by law.</p>
+  <p>We will never disclose your email address to anyone unless either you ask us to do so or unless we are obliged to by law.</p>
   <p>If you send a message to another user on the site, then it will reveal your email address to them. You will be told that this is going to happen.</p>
-  <h2 id="public_request">Why will my name and my request appear publicly on the site?</h2>
-  <p>We publish your request on the internet so that anybody can read it and make use of the information that you have found.</p>
   <h2 id="real_name">Do I have to give a real name?</h2>
   <p>Yes. We ask you to use a real name. You are exercising a right which is the basis for an open and democratic society and this should be under your real name.</p>
   <p>Also, if you want to appeal later to the European Ombudsman or to the Court of Justice of the European Union you should have used your real name.</p>
   <p>Please note that some EU bodies may ask you to verify your address or even to provide an ID. We are against this practice but it can happen.</p>
   <p>If you are a journalist or a well-known person and not want to reveal that you are asking for information, the solution is to get another person, a friend or colleague, to send the request.</p>
-  <p>If you are really stuck, contact us and we will try to help you send the request; please note that we don't have the resources to do this for everyone.</p>
-  <p>We ask for a first and a last name. If you have more than one first or last name you can use these, but the minimum is a first and last name.</p>
-  <p>If we see silly names or really obvious pseudonyms, we will remove the request and contact the requester about this.</p>
-  <p>Please do not impersonate someone else!</p>
+  <p>If you are really stuck, <%= link_to 'contact us', help_contact_path %> and we will try to help you send the request; please note that we don't have the resources to do this for everyone.</p>
+  <p>We ask for a first and a last name. If you have more than one first or last name you can use these, but the minimum is a first and last name. If we see silly names or really obvious pseudonyms, we will remove the request and contact the requester about this. Please do not impersonate someone else!</p>
   <h2 id="takedown">Can you take down personal information about me?</h2>
   <p>If you are asked to provide your postal address and you do so via the website, please simply contact us and we can redact it from the request.</p>
   <p>If you accidentally gave other personal information (your phone number, or any other personal details), please contact us and we can redact them from the request.</p>
-  <p> Please note that in these cases, even if the information is no longer online, it has been sent to the EU body. If you are concerned about information you have sent, please talk to us. We will help you mediate with an EU body for them to also destroy the personal information.</p>
+  <p>Please note that in these cases, even if the information is no longer online, it has been sent to the EU body. If you are concerned about information you have sent, please talk to us. We will help you mediate with an EU body for them to also destroy the personal information.</p>
   <p>For technical reasons we are not always able automatically to remove emails and phone numbers from attachments, such as scanned PDFs, although in many cases this can be done manually if you <%= link_to 'contact us', help_contact_path %>.</p>
   <h2 id="postal_answer">The EU body has asked for my phone number or postal address!</h2>
-  <p>If an EU body asks for your <strong>phone number</strong> to discuss or clarify the request we recommend that you give it, but directly to them not across the site. If you do not want to give out your number, you can opt to continue discussing by email or you could ask for their number and arrange a time to phone and discuss the request.</p>
-  <p>If a public authority asks you for your full, physical address (<strong>postal address</strong>), reply to them saying that you would prefer to receive information in electronic form. This is your right under Regulation 1049/2001 if the information exists in that format.</p>
+  <p>If an EU body asks for your phone number to discuss or clarify the request we recommend that you give it, but directly to them not across the site. If you do not want to give out your number, you can opt to continue discussing by email or you could ask for their number and arrange a time to phone and discuss the request.</p>
+  <p>If a public authority asks you for your full, physical address (postal address), reply to them saying that you would prefer to receive information in electronic form. This is your right under Regulation 1049/2001 if the information exists in that format.</p>
   <p>That said, the EU might want to send you a formal decision letter by post in addition to sending it to you via AsktheEU.org. In those cases, we recommend you provide your postal address.</p>
-  <p>If you receive a response only by post, please <%= link_to 'let us know', help_contact_path %>. There are two solutions. One is that you kindly scan the response so that we can put it on line. The other is that we contact the EU body and ask them to send the digital version as well.</p>
+  <p>If you receive a response only by post, please let us know. There are two solutions. One is that you kindly scan the response so that we can put it on line. The other is that we contact the EU body and ask them to send the digital version as well.</p>
   <h2 id="delete">What if I want to delete my name or to delete my account?</h2>
   <p>The AsktheEU.org team can delete individual requests – that means the request and all answers are lost.</p>
   <p>The AsktheEU.org team can also delete your account. You need to contact us to do this. We will always comply with a request to delete your account in the shortest practical timeframe. That means that it can often be done immediately or at least within the same day.</p>
