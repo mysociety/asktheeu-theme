@@ -1,54 +1,77 @@
 <% @title = "Quiénes somos" %>
-
-<div id="contentAbout">
 <%= render :partial => 'sidebar' %>
-
 <div id="left_column_flip">
-  <!--<h1>Quiénes somos</h1>
-  <h3><a href="#welcome">¡Bienvenido a AskTheEU.org!</a></h3>
-  <h3><a href="#how">¿Cómo funciona?</a></h3>
-  <h3><a href="#users">¿Quién puede utilizar AsktheEU.org?</a></h3>
-  <h3><a href="#who">¿Quién creó AsktheEU.org?</a></h3>
-  <h3><a href="#funders">¿Quién financia Ask the UE?</a></h3>
-  <h3><a href="#supporters">AsktheEU.org Supporters</a></h3>
-  <h3><a href="#ip">Propiedad Intelectual</a></h3>-->
-
   <div class="page__header">
-    <h1 class="page__header__title">QUIÉNES SOMOS</h1>
-    <h2 class="page__header__subtitle">¡BIENVENIDO A ASKTHEEU.ORG!</h2>
+    <h1 class="page__header__title"><%= @title %></h1>
+    <h2 class="page__header__subtitle">¡Bienvenido a AsktheEU.org!</h2>
   </div>
-
-  <h2 id="welcome">¡Bienvenido a AskTheEU.org!</h2>
-  <p>Esta página ha sido diseñada por las organizaciones de la sociedad civil para ayudar a los ciudadanos como tú a obtener la información que precisan acerca de la Unión Europea - preguntando.</p>
-  <p>Esta página facilitará el trabajo de los funcionarios públicos puesto que no tendrán que responder varias veces a solicitudes sobre el mismo tema: una vez que se responda una pregunta, todo el mundo tendrá acceso a esa información publicada en la página web.</p>
-
+  <p id="welcome">La plataforma online de AsktheEU.org te permite obtener la información que quieras sobre la Unión Europea. Es tan fácil como hacer una pregunta.</p>
+  <p>La página web está gestionada por dos organizaciones no gubernamentales sin ánimo de lucro: <a href="http://www.access-info.org">Access Info Europe</a> y <a href="http://www.mysociety.org">mySociety</a>. Por lo tanto, esta <strong>no</strong> es una página web oficial de la UE.</p>
+  <h2 id="users">¿Tengo derecho a solicitar documentos a la UE?</h2>
+  <p>Todos los ciudadanos europeos y los residentes en la UE tienen el derecho a solicitar documentos a la Unión Europea. Es un derecho que se encuentra en los Tratados de la UE.</p>
+  <p>Todas las personas jurídicas (por ejemplo, las empresas o las asociaciones) domiciliadas en la Unión Europea también pueden hacer solicitudes.</p>
+  <p>Las personas que sean ciudadanos de cualquier otro Estado también pueden preguntar, y normalmente recibirán una respuesta. Algunas instituciones de la UE podrían pedir que les facilites un documento de identificación o el código postal del solicitante. Contacta con el equipo de AsktheEU.org si no eres ciudadano de la Unión Europea y necesitas ayuda al realizar una solicitud de acceso a documentos.</p>
+  <h2>¿Cuál es la ley que me otorga el derecho a solicitar documentos a la UE?</h2>
+  <p>La norma que regula el derecho de acceso a los documentos en la UE es el <a href="https://eur-lex.europa.eu/legal-content/ES/TXT/PDF/?uri=CELEX:32001R1049&from=EN">Reglamento 1049/2001</a> relativo al acceso del público a los documentos del Parlamento Europeo, del Consejo y de la Comisión.</p>
+  <p>El derecho a solicitar documentos a la UE se encuentra en el Artículo 15 del Tratado de Funcionamiento de la Unión Europea y en el Artículo 42 de la Carta de Derechos Fundamentales de la Unión Europea.</p>
+  <p>Solicitar documentos a la UE es gratuito y nunca estás obligado a decir por o para qué quieres la información.</p>
   <h2 id="how">¿Cómo funciona?</h2>
-  <p>Es muy sencillo: presentas una solicitud para la UE a través de esta página. Nosotros a continuación enviamos un correo electrónico al organismo de la UE correspondiente. Ellos tienen la obligación de responder en un plazo de 15 días laborables (3 semanas aproximadamente).</p>
-  <p>En el momento en el que obtenemos una respuesta, te la enviamos y automáticamente la publicamos en nuestro portal. Debes indicar si estás o no satisfecho con la respuesta, si necesitas mayor información o si por el contrario quieres presentar un recurso o apelación.</p>
-  <p>De esta manera, todo el mundo podrá consultar la respuesta y no tienen que formular la misma pregunta de nuevo.</p>
-
-  <h2 id="users">¿Quién puede utilizar AsktheEU.org?</h2>
-  <p>Cualquiera de los 500 millones de personas que viven en la Unión Europea (tanto ciudadanos como residentes) tienen el derecho legalmente garantizado a solicitar información a los organismos de la UE.</p>
-  <p>La gente que vive en países no pertenecientes a la UE pueden también solicitar información (únicamente no poseen el mismo derecho de apelar al Tribunal Europeo en caso de negativa). Sin embargo, es posible presentar una reclamación al Defensor del Pueblo Europeo, puesto que en la práctica, no hace distinción entre los demandantes que son ciudadanos de la EU y los que no lo son.</p>
-  <p>Las ONG y negocios (denominados personas jurídicas) pueden también realizar solicitudes de documentación. Si estás registrado en un país de la UE tienes también el derecho a apelar al Tribunal Europeo.</p>
-  <p>Esta página puede ser especialmente interesante si trabajas en una ONG, si eres periodista, formas parte de un grupo de ciudadanos locales, eres estudiante o profesor, abogado o empresario…. O si tan sólo tienes curiosidad por conocer más a cerca de la UE y su funcionamiento. <strong>No esperes más: ¡pregunta ya!</strong></p>
-
-  <h2 id="who">¿Quién creó AsktheEU.org?</h2>
-  <p>AsktheEU.org es un proyecto de la organización internacional para los derechos humanos <a href="http://www.access-info.org/">Access Info Europe</a>, con sede en Madrid, y desarrollado mediante software por la organización <a href="http://www.mysociety.com/">mySociety</a>, en Londres.</p>
-  <p>Access Info Europe es una organización de derechos humanos sin ánimo de lucro registrada en España ante el Ministerio del Interior (referencia 587828) y ante el <a href="http://europa.eu/transparency-register/index_en.htm">registro de Transparencia de la Unión Europea</a> (referencia 49931835063-67).</p>
-  <p>El proyecto AsktheEU.org está apoyado por una <%= link_to 'coalición de organizaciones europeas e internacionales', help_credits_path %>.</p>
-  <p>AsktheEU.org se basa en la exitosa página británica de mySociety, <a href="http://WhatDoTheyKnow.com">WhatDoTheyKnow.com</a>. <a href="http://FragdenStaat.de">FragdenStaat.de</a> es una página parecida de Alemania.</p>
-  <p>En España, Access-Info Europe tiene programado el lanzamiento de TuDerechoaSaber.es con otras organizaciones de la sociedad civil y grupos de tecnología por la transparencia.</p>
-
-  <h2 id="funders"></h2>
-  <p>AsktheEU.org estaba financiado por la Fundación Open Society en su primera fase de desarrollo. Todavía necesitamos más fondos y voluntarios para que siga funcionando. <a href="http://www.access-info.org/en/support-us">¡Apóyanos!</a></p>
-
-  <h2 id="supporters">AsktheEU.org Supporters</h2>
-  <p>Las siguientes organizaciones forman parte del AsktheEU Advisory Group:
-    <%= render :partial => 'help/supporters' %>
-  </p>
-
-  <h2 id="ip">Intellectual Property</h2>
-  <p>Este sitio web forma parte del proyecto <a href="http://www.alaveteli.org/">Alaveteli</a> – un desarrollo de software libre gestionado por <a href="http://www.mysociety.org/">mySociety</a> en colaboración con <a href="http://www.access-info.org">Access Info Europe</a> y otras organizaciones de la sociedad civil. El otro contenido original del sitio web ha sido desarrollado por Access Info Europe y es público bajo <a href="http://creativecommons.org/licenses/by-sa/3.0/">licencia Creative Commons Reconocimiento-CompartirIgual 3.0 (CC-BY-SA 3.0)</a>.
-  </p>
-</div></div>
+  <p>La página web envía tu solicitud a un organismo de la UE. Cuando recibas respuesta por parte de dicho organismo, ésta se publicará automáticamente en la página web y recibirás una notificación en tu correo electrónico.</p>
+  <p>Cada mensaje que envíes o recibas a través de AsktheEU.org se hará público en la página web, para que otros usuarios puedan consultar la información que has recibido.</p>
+  <p>El reglamento establece un plazo de 15 días laborables (unas 3 semanas naturales) para que recibas la información. Si el plazo termina sin que recibas una respuesta enviaremos un recordatorio automático a dicho organismo de la UE. Tú también recibirás un recordatorio.</p>
+  <h2>Cómo mandar tu solicitud en 4 pasos:</h2>
+  <ol>
+    <li>Regístrate en la página web.</li>
+    <li>Identifica el organismo al que quieres enviar la solicitud.</li>
+    <li>Rellena la solicitud – parte del texto aparece automáticamente – revísala, y luego pulsa el botón "enviar".</li>
+    <li>Cuando recibas una respuesta por parte del organismo, te llegará un email. A veces recibes antes un "acuse de recibo", y más tarde, dentro de los 15 días que estipula el reglamento (3 semanas), una respuesta.</li>
+  </ol>
+  <h2>¿Qué debería decir en mi solicitud?</h2>
+  <p>Simplemente pregunta por aquellos documentos que contengan la información que quieres. Sé claro y específico. No te preocupes demasiado por hacer una solitud perfecta: si lo que quieres no queda claro, el organismo al que le estás solicitando los documentos podrá pedirte que aclares los puntos que considere confusos.</p>
+  <p>Recuerda: Nunca estás obligado a explicar el motivo de tu solicitud.</p>
+  <p>Contacta con el equipo de AsktheEU.org de Access Info Europe si no estás seguro de qué decir en tu solicitud.</p>
+  <p>Te rogamos que realices tus solicitudes con un lenguaje cortés y respetuoso – si encontramos una solicitud cuyo lenguaje es inapropiado, ofensivo, o difamatorio, nos reservamos el derecho de retirarla de AsktheEU.org.</p>
+  <div>
+    <h3>¿Puedo solicitar información sobre mí mismo?</h3>
+    <p>No deberías usar AsktheEU.org para acceder a tu información personal. Para solicitudes sobre datos personales existen las Normas de Protección de Datos de la UE. Haz clic <a href="https://ec.europa.eu/commission/priorities/justice-and-fundamental-rights/data-protection/2018-reform-eu-data-protection-rules/eu-data-protection-rules_es">aquí</a> para obtener más información.</p>
+  </div>
+  <div>
+    <h3>¿Puedo solicitar Información sobre el Medio Ambiente?</h3>
+    <p>Sí, puedes usar AsktheEU.org para solicitar información sobre el medio ambiente. Si lo haces, por favor incluye en tu solicitud que además de basarte en el Reglamento 1049/2001 para pedir dicha información, te apoyas también en la Directiva de Aarhus relativa al acceso del público a la información medioambiental (Directiva 2003/4/EC).</p>
+  </div>
+  <h2>¿Qué idioma puedo utilizar para realizar mi solicitud?</h2>
+  <p>AsktheEU.org está disponible en inglés, francés, alemán y español.</p>
+  <p>Tienes derecho a preguntar en cualquiera de los 24 idiomas oficiales y de trabajo de la UE: búlgaro, croata, checo, danés, neerlandés, inglés, estonio, finlandés, francés, alemán, griego, húngaro, irlandés, italiano, letón, lituano, maltés, polaco, portugués, rumano, eslovaco, esloveno, español y sueco.</p>
+  <p>En teoría, la UE debería responderte en el idioma en el que realizaste tu solicitud, pero en realidad hay muchos documentos que no existen en todos los idiomas. Aun así, merece la pena intentarlo. Si necesitas ayuda, contacta con el equipo de AsktheEU.org</p>
+  <h2>¿Qué debo hacer si un organismo de la UE me pide mi dirección postal o un documento de identificación?</h2>
+  <p>Algunos organismos de la UE pueden pedirte tu dirección postal o una copia de tu documento de identidad.</p>
+  <p>Aunque estamos en contra de esta práctica, los organismos tienen el derecho a hacerlo. Háznoslo saber si te lo solicitan. Podemos ocultar tu dirección postal una vez que la hayas enviado.</p>
+  <p>También podemos proporcionarte el email adecuado del organismo al que mandar tu documento de identificación.</p>
+  <h2>¿Mi información personal será pública?</h2>
+  <p>Tu nombre será público, vinculado a tu solicitud. Nunca le daremos tu email personal a nadie. Para saber más, lee en este enlace nuestra <%= link_to 'política de privacidad completa', help_privacy_path %> – ¡Está en un lenguaje sencillo!</p>
+  <p>Para prevenir spam, emails y números de teléfono se retiran automáticamente de las respuestas a solicitudes.</p>
+  <p>Si necesitas acceder a alguna de esta información automáticamente censurada, te rogamos que contactes con nosotros.</p>
+  <p>Por motivos técnicos, no siempre podemos retirar de forma automática emails y números de teléfono de archivos adjuntos, como por ejemplo de PDFs escaneados. En muchas ocasiones podemos hacerlo de forma manual si contactas con nosotros.</p>
+  <h2>¿Qué pasa si no estoy satisfecho con la respuesta recibida o me niegan acceso a los documentos?</h2>
+  <p>Si no estás satisfecho con la respuesta, o si te es denegado el acceso a los documentos, tienes derecho a reclamar.</p>
+  <p>Puedes recurrir la decisión a través de esta página web. Los recursos a la UE se llaman "solicitudes confirmatorias". Simplemente pulsa en el botón que dice "Solicita un recurso interno".</p>
+  <p>Para que la reclamación sea válida, debes realizarla dentro del plazo de 15 días laborables (aproximadamente 3 semanas naturales) desde el momento en el que se te haya notificado la denegación de la información. El organismo de la UE tiene entonces un plazo de otros 15 días para responder a tu reclamación.</p>
+  <p>Si sigues sin estar satisfecho, puedes recurrir al <a href="https://www.ombudsman.europa.eu/es/home">Defensor del Pueblo Europeo</a>.</p>
+  <p>Otra opción es recurrir en el Tribunal de Justicia de la Unión Europea. Si decides hacer esto, necesitarás la asistencia de un abogado.</p>
+  <p>Si quieres recurrir, pero no estás seguro de cómo hacerlo, contacta con el equipo de AsktheEU.org y te ayudaremos.</p>
+  <h2>¿Qué hago si no recibo respuesta?</h2>
+  <p>Si no recibes una respuesta dentro de los 15 días laborables (3 semanas) estipulados, esto se conoce como "silencio administrativo" y tienes derecho a recurrir.</p>
+  <p>Antes de reclamar, puedes enviarle un recordatorio al organismo que no te ha respondido. Si después de hacerlo sigues sin recibir respuesta, entonces puedes pasar a enviar una reclamación.</p>
+  <p>Si después de enviar tu reclamación sigues sin obtener respuesta, puedes presentar una reclamación ante el Defensor del Pueblo Europeo.</p>
+  <p>Haz saber al equipo de AsktheEU.org si necesitas ayuda recurriendo un silencio administrativo.</p>
+  <h2 id="who">¿Quiénes somos?</h2>
+  <p>AsktheEU.org es un proyecto de Access Info Europe, una organización de derechos humanos con sede en Madrid.</p>
+  <p>Access Info Europe es una organización sin ánimo de lucro que defiende los Derechos Humanos registrada en Madrid ante el Ministerio del Interior (referencia 587828) y ante el Registro de Transparencia de la UE (referencia 49931835063-67).</p>
+  <p id="ip">Esta página web funciona gracias al software de Alavateli, desarrollado y gestionado por mySociety, que también gestiona la exitosa página <a href="https://www.whatdotheyknow.com/">WhatDoTheyKnow.com</a> en Gran Bretaña. Actualmente, también hay <a href="https://alaveteli.org/deployments/">otras páginas web similares</a> alrededor del mundo.</p>
+  <h2>¡Estamos aquí para ayudarte!</h2>
+  <p>El equipo de AsktheEU.org forma parte del equipo de Access Info Europe, con sede en Madrid, España.</p>
+  <p>Estamos encantados de ayudarte con cualquier aspecto de tu solicitud, tanto si necesitas identificar al organismo adecuado, como si necesitas ayuda en escribirla o en mandar una reclamación.</p>
+  <p>Puedes escribirnos aquí: <a href="mailto:team@asktheeu.org">team@asktheeu.org</a>/p>
+  <p>También puedes mandarnos un WhatsApp a este número: <strong>+34 637 22 66 09</strong></p>
+  <p><strong>CRÉDITOS</strong>: Foto de portada con bandera de la Unión Europea hecha por <a href="http://www.flickr.com/photos/robdeman/">Rock Cohen</a> (licencia CC-BY-SA).</p>
+</div>
