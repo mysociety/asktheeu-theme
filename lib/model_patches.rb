@@ -35,6 +35,13 @@ Rails.configuration.to_prepare do
 
       where(:id => ids).order("position(id::text in '#{ ids }')")
     end
+
+    def self.theme_short_description(state)
+      {
+        'referred' => _('Referred'),
+        'transferred' => _('Transferred')
+      }[state]
+    end
   end
 
   OutgoingMessage::Template::InternalReview.class_eval do
