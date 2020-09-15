@@ -1,5 +1,6 @@
 <% id_suffix ||= '' %>
+
 <div>
-  <%= radio_button "classification", "described_state", "transferred", :id => 'transferred' + id_suffix %>
-  <label for="transferred<%=id_suffix%>"><%= _('Authority has <strong>transferred your request</strong> to another public body.') %></label>
+  <%= classification_radio_button 'transferred', id_suffix: id_suffix %>
+  <%= classification_label('transferred', _('Authority has <strong>transferred your request</strong> to another public body.'), id_suffix: id_suffix) %>
 </div>
