@@ -1,5 +1,6 @@
-<div>
-  <%= radio_button "incoming_message", "described_state", "referred", :id => 'referred' + id_suffix %>
-  <label for="referred<%=id_suffix%>"><%= _('Authority has <strong>referred you to another public body</strong> for an answer') %></label>
-</div>
+<% id_suffix ||= '' %>
 
+<div>
+  <%= classification_radio_button 'referred', id_suffix: id_suffix %>
+  <%= classification_label('referred', _('Authority has <strong>referred you to another public body</strong> for an answer'), id_suffix: id_suffix) %>
+</div>
