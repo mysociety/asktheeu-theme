@@ -27,8 +27,7 @@ end
 # Monkey patch app code
 for patch in ['controller_patches.rb',
               'model_patches.rb',
-              'patch_mailer_paths.rb',
-              'alaveteli_text_masker.rb']
+              'patch_mailer_paths.rb']
   require File.expand_path "../#{patch}", __FILE__
 end
 
