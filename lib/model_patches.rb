@@ -7,18 +7,29 @@
 #
 Rails.configuration.to_prepare do
 
-  # Remove UK-specific references to FOI
-  InfoRequest::TranslatedConstants.instance_eval do
-    def self.law_used_readable_data
-      { :foi => { :short => _('documents'),
-                  :full => _('access to documents'),
-                  :with_a => _('An access to documents request'),
-                  :act => _('Regulation 1049/2001') },
-        :eir => { :short => _('EIR'),
-                  :full => _('Environmental Information Regulations'),
-                  :with_a => _('An Environmental Information request'),
-                  :act => _('Environmental Information Regulations') }
-      }
+  Legislation.class_eval do
+    class << self
+      def all
+        [
+          # Remove UK-specific references to FOI
+          new(
+            key: 'foi',
+            short: _('documents'),
+            full: _('access to documents'),
+            with_a: _('An access to documents request'),
+            act: _('Regulation 1049/2001'),
+            refusals: refusals['foi']
+          ),
+          new(
+            key: 'eir',
+            short: _('EIR'),
+            full: _('Environmental Information Regulations'),
+            with_a: _('An Environmental Information request'),
+            act: _('Environmental Information Regulations'),
+            refusals: refusals['eir']
+          )
+        ]
+      end
     end
   end
 
