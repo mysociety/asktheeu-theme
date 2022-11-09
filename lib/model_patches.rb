@@ -6,6 +6,27 @@
 # See http://stackoverflow.com/questions/7072758/plugin-not-reloading-in-development-mode
 #
 Rails.configuration.to_prepare do
+  # Remove UK-specific references to FOI
+  InfoRequest.class_eval do
+    def self.top_requests
+      ids = connection.select_values <<-SQL.strip_heredoc.gsub("\n", " ")
+      SELECT info_request_id
+      FROM "track_things"
+      WHERE (info_request_id IS NOT NULL)
+      GROUP BY info_request_id
+      ORDER BY COUNT(*) DESC;
+      SQL
+
+      where(:id => ids).order("position(id::text in '#{ ids }')")
+    end
+
+    def self.theme_short_description(state)
+      {
+        'referred' => _('Referred'),
+        'transferred' => _('Transferred')
+      }[state]
+    end
+  end
 
   Legislation.class_eval do
     class << self
@@ -33,30 +54,21 @@ Rails.configuration.to_prepare do
     end
   end
 
-  # Remove UK-specific references to FOI
-  InfoRequest.class_eval do
-    def self.top_requests
-      ids = connection.select_values <<-SQL.strip_heredoc.gsub("\n", " ")
-      SELECT info_request_id
-      FROM "track_things"
-      WHERE (info_request_id IS NOT NULL)
-      GROUP BY info_request_id
-      ORDER BY COUNT(*) DESC;
-      SQL
-
-      where(:id => ids).order("position(id::text in '#{ ids }')")
-    end
-
-    def self.theme_short_description(state)
-      {
-        'referred' => _('Referred'),
-        'transferred' => _('Transferred')
-      }[state]
+  OutgoingMailer.class_eval do
+    # Use "confirmatory application" wording instead of "internal review"
+    # in the email subject line to the authority
+    def self.subject_for_followup(info_request, outgoing_message, options = {})
+      if outgoing_message.what_doing == 'internal_review'
+        _("Confirmatory application for {{email_subject}}",
+          :email_subject => info_request.email_subject_request(:html => options[:html]))
+      else
+        info_request.email_subject_followup(:incoming_message => outgoing_message.incoming_message_followup,
+                                            :html => options[:html])
+      end
     end
   end
 
   OutgoingMessage::Template::InternalReview.class_eval do
-
     # Override the default template text
     def letter(replacements = {})
       if replacements[:letter]
@@ -84,7 +96,6 @@ Rails.configuration.to_prepare do
   end
 
   OutgoingMessage.class_eval do
-
     # Add intro paragraph to new request template
     def default_letter
       return nil if self.message_type == 'followup'
@@ -112,49 +123,17 @@ Rails.configuration.to_prepare do
 
       text
     end
-
-  end
-
-  OutgoingMailer.class_eval do
-
-    # Use "confirmatory application" wording instead of "internal review"
-    # in the email subject line to the authority
-    def self.subject_for_followup(info_request, outgoing_message, options = {})
-      if outgoing_message.what_doing == 'internal_review'
-        _("Confirmatory application for {{email_subject}}",
-          :email_subject => info_request.email_subject_request(:html => options[:html]))
-      else
-        info_request.email_subject_followup(:incoming_message => outgoing_message.incoming_message_followup,
-                                            :html => options[:html])
-      end
-    end
-
   end
 
   # Disable funcionality to let users of the site act on behalf of the public
   # body, since we aren't sure right now this is safe enough
   PublicBody.class_eval do
-
     def is_foi_officer?(user)
       false
     end
-
-  end
-
-  User.class_eval do
-
-    validates :name,
-              :on => :create,
-              :format => {
-                :with => /\s/,
-                :message => _("Please enter your full name"),
-                :allow_blank => true
-              }
-
   end
 
   RawEmail.class_eval do
-
     alias original_data data
 
     def data
@@ -164,7 +143,15 @@ Rails.configuration.to_prepare do
         \s+(From: [^\n]+)
       /x, '\1\2\3')
     end
-
   end
 
+  User.class_eval do
+    validates :name,
+              :on => :create,
+              :format => {
+                :with => /\s/,
+                :message => _("Please enter your full name"),
+                :allow_blank => true
+              }
+  end
 end
