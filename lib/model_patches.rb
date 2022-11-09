@@ -145,6 +145,10 @@ Rails.configuration.to_prepare do
     end
   end
 
+  ReplyToAddressValidator.invalid_reply_addresses = %w[
+    automated-notifications@nomail.ec.europa.eu
+  ]
+
   User.class_eval do
     validates :name,
               :on => :create,
