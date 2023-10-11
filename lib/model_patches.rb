@@ -17,7 +17,7 @@ Rails.configuration.to_prepare do
       ORDER BY COUNT(*) DESC;
       SQL
 
-      where(:id => ids).order("position(id::text in '#{ ids }')")
+      where(:id => ids).order(Arel.sql("position(id::text in '#{ids.join(",")}')"))
     end
 
     def self.theme_short_description(state)
