@@ -1,0 +1,22 @@
+<% if blog_posts_for_frontpage.any? %>
+  <div class="frontpage__tertiary">
+    <div class="wrapper">
+      <div class="content">
+
+        <h2>
+          <%= _('Latest news and campaigns') %>
+          <%= link_to _('See all &rarr;'), blog_path, class: 'button-secondary' %>
+        </h2>
+
+        <div class="frontpage__blog blog__container">
+          <% blog_posts_for_frontpage.each do |post| %>
+            <div class="frontpage__blog blog__item blog_post">
+              <h3><%= link_to post.title, post.url %></h3>
+              <p><%= excerpt(post.description, "", radius: 198) %></p>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>

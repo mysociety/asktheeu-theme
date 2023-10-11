@@ -20,31 +20,5 @@
   </div><%# close div#content %>
   </div><%# close div#wrapper %>
 
-<% end %>
-
-<% cache_if_caching_fragments(@fragment_key, skip_digest: true) do %>
-  <div class="frontpage__tertiary">
-
-    <div class="wrapper">
-      <div class="content">
-        <% unless AlaveteliConfiguration.blog_feed.empty? %>
-          <h2><%= _("Latest news and campaigns") %>
-              <%= link_to _("See all"), "http://blog.asktheeu.org" %></h2>
-
-          <div class="frontpage__blog blog__container">
-            <% @blog_items.take(4).each do |item| %>
-              <div class="frontpage__blog blog__item blog_post">
-                <% if item['thumbnail'] %>
-                  <%= link_to item['link'][0] do %>
-                    <img <%= item['thumbnail'][0].to_s.html_safe %> width="224" height="134">
-                  <% end %>
-                <% end %>
-
-                <h3><%= link_to item['title'][0], item['link'][0] %></h3>
-                <p><%= h excerpt(item['description'][0].to_s, "", :radius => 198) %></p>
-              </div>
-            <% end %>
-          </div>
-        <% end %>
-
+  <%= render partial: 'frontpage_blog' if Blog.enabled? %>
 <% end %>
