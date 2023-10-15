@@ -37,7 +37,7 @@ Rails.configuration.to_prepare do
     private
 
     def blog_cache
-      Timeout.timeout(5) do
+      Timeout.timeout(1) do
         Blog.new.posts
       end
     rescue Timeout::Error
