@@ -1,4 +1,4 @@
-<% cache_if_caching_fragments("frontpage-#{@locale}", :expires_in => 5.minutes) do %>
+<% cache_if_caching_fragments("frontpage-#{@locale}", expires_in: 5.minutes) do %>
 
   <div class="frontpage__primary">
     <h2><%= _("How to AskTheEU.org") %><% if params[:e] == "52" %><br /><br /><% end %></h2>

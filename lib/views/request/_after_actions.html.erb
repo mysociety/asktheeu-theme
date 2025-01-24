@@ -14,25 +14,26 @@
             <ul class="action-menu__menu__submenu owner_actions">
               <li>
                 <% if last_response.nil? %>
-                  <%= link_to _("Send a followup"), new_request_followup_path(:request_id => info_request.id, :anchor => 'followup') %>
+                  <%= link_to _('Send a followup'), new_request_followup_path(info_request.url_title) %>
                 <% else %>
-                  <%= link_to _("Write a reply"), new_request_incoming_followup_path(:request_id => info_request.id, :incoming_message_id => last_response.id, :anchor => 'followup') %>
+                  <%= link_to _('Write a reply'), new_request_incoming_followup_path(info_request.url_title, incoming_message_id: last_response.id) %>
                 <% end %>
               </li>
 
               <% if show_owner_update_status_action %>
                 <li>
-                  <%= link_to _("Update the status of this request"), request_path(info_request, :update_status => 1) %>
+                  <%= link_to _('Update the status of this request'), request_path(info_request, update_status: 1) %>
                 </li>
               <% end %>
 
               <li>
-                <%= link_to _("Request an internal review (also called a confirmatory application)"), new_request_followup_path(:request_id => info_request.id, :internal_review => '1', :anchor => 'followup') %>
+                <%= link_to _('Request an internal review (also called a confirmatory application)'), new_request_followup_path(info_request.url_title, internal_review: '1') %>
               </li>
             </ul>
           </li>
         <% end %>
 
+        <% if info_request.allow_new_responses_from != 'nobody' %>
         <li class="action-menu__menu__item">
           <span class="action-menu__menu__heading">
             <%= _('{{public_body_name}}',
@@ -45,6 +46,7 @@
             </li>
           </ul>
         </li>
+        <% end %>
 
         <li class="action-menu__menu__item">
           <ul class="action-menu__menu__submenu anyone_actions">
@@ -59,7 +61,7 @@
               </li>
             <% else %>
               <li>
-               <%= link_to _("Report this request"), new_request_report_path(:request_id => info_request.url_title) %><span class="action-menu__info-link">
+                <%= link_to _("Report this request"), new_request_report_path(info_request.url_title) %><span class="action-menu__info-link">
                 <%= link_to _("Help"), help_about_path(:anchor => "reporting") %>
               </span>
               </li>
