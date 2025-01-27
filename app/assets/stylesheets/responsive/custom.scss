@@ -9,8 +9,10 @@
 
 /* General styling of nav menu items */
 %menu-item {
-  color: $color_white;
-
+  &:link,
+  &:visited {
+    color: $color_white;
+  }
   &:hover,
   &:active,
   &:focus {
@@ -21,9 +23,11 @@
 
 /* Selected menu item */
 %selected-menu-item {
-  color: $color_white;
-  background-color: darken($color_primary, 15%);
-
+  &:link,
+  &:visited {
+    color: $color_white;
+    background-color: darken($color_primary, 15%);
+  }
   &:hover,
   &:active,
   &:focus {
@@ -42,8 +46,10 @@ body{
 }
 
 a {
-  color: $link-color;
-
+  &:link,
+  &:visited {
+    color: $link-color;
+  }
   &:hover,
   &:active,
   &:focus {
@@ -248,15 +254,13 @@ a.link_button_green_large {
 .navigation {
   border-bottom: none;
 
-  a, a:link {
+  a {
     text-decoration: none;
     @extend %menu-item;
   }
 
-  .selected {
-    a, a:link {
-      @extend %selected-menu-item;
-    }
+  .selected a {
+    @extend %selected-menu-item;
   }
 
   @include respond-min( $main_menu-mobile_menu_cutoff ){
