@@ -242,6 +242,10 @@ a.link_button_green_large {
   background-color: $topnav_bg;
 }
 
+.subnav {
+  background-color: darken($topnav_bg, 10%);
+}
+
 .site-title__logo {
   // Smaller logo on mobiles
   width: ($logo-width / 2);
