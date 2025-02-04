@@ -82,7 +82,8 @@ Rails.configuration.to_prepare do
                            :site_name => site_name)
       end
 
-      @league_table_28_days = RequestClassification.league_table(10, [ "created_at >= ?", Time.zone.now - 28.days ])
+      @league_table_28_days = RequestClassification.league_table(10,
+        [ "request_classifications.created_at >= ?", Time.zone.now - 28.days ])
       @league_table_all_time = RequestClassification.league_table(10)
       @play_urls = true
     end
