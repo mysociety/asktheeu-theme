@@ -40,7 +40,7 @@ Rails.configuration.to_prepare do
       Timeout.timeout(1) do
         Blog.new.posts
       end
-    rescue Timeout::Error
+    rescue Timeout::Error, REXML::ParseException
     end
 
     def create_timestamp(time=Time.zone.now)
