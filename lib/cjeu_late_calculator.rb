@@ -22,7 +22,7 @@ module CjeuLateCalculator
   private
 
   def cjeu?
-    public_body.url_title == 'cjeu'
+    public_body.url_name == 'cjeu'
   end
 end
 
