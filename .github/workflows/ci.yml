@@ -1,0 +1,146 @@
+name: CI
+
+on:
+  push:
+    branches: [master, develop]
+  pull_request:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.head_ref || github.run_id }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  rspec:
+    name: Core ${{ matrix.core }} / Ruby ${{ matrix.ruby || 'deployed' }} / PostgreSQL ${{ matrix.postgres }}
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+        - { core: develop, os: ubuntu-latest, ruby: '3.4', postgres: 15.19 }
+        # The deployed core has C extension gems that newer GCC can't build.
+        - { core: deployed, os: ubuntu-24.04, postgres: 15.19 }
+
+    env:
+      DATABASE_URL: postgres://postgres:postgres@localhost:5432/alaveteli_test
+      RAILS_ENV: test
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    steps:
+    - name: Extract associated required Alaveteli PR number
+      id: pr_alaveteli_number
+      run: |
+        if [ "${{ github.event_name }}" = "pull_request" ]; then
+          PR_DESCRIPTION=$(gh pr view https://github.com/mysociety/asktheeu-theme/pull/${{ github.event.pull_request.number }} --json body -q '.body')
+          echo "PR_ALAVETELI_NUMBER=$(echo $PR_DESCRIPTION | grep -o 'https://github.com/mysociety/alaveteli/pull/[0-9]*' | grep -o '[0-9]*$')" >> $GITHUB_ENV
+        fi
+
+    # An empty ref checks out the default branch, so check the values.
+    - name: Get Alaveteli branch name
+      id: pr_alaveteli_branch
+      run: |
+        if [ "${{ matrix.core }}" = "deployed" ]; then
+          VERSION=$(curl -fsS https://www.asktheeu.org/version.json || true)
+          SHA=$(echo "$VERSION" | jq -r .alaveteli_git_commit)
+          RUBY=$(echo "$VERSION" | jq -r .ruby_version)
+          if [[ ! "$SHA" =~ ^[0-9a-f]{40}$ || ! "$RUBY" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+            echo "No core SHA or Ruby version in https://www.asktheeu.org/version.json" >&2
+            exit 1
+          fi
+          echo "PR_ALAVETELI_BRANCH=$SHA" >> $GITHUB_ENV
+          echo "ALAVETELI_RUBY=$RUBY" >> $GITHUB_ENV
+        elif [[ ! -z "$PR_ALAVETELI_NUMBER" ]]; then
+          echo "PR_ALAVETELI_BRANCH=$(gh pr view https://github.com/mysociety/alaveteli/pull/$PR_ALAVETELI_NUMBER --json headRefName -q '.headRefName')" >> $GITHUB_ENV
+        else
+          echo "PR_ALAVETELI_BRANCH=develop" >> $GITHUB_ENV
+        fi
+
+    - name: Checkout Alaveteli
+      uses: actions/checkout@v4
+      with:
+        repository: mysociety/alaveteli
+        ref: ${{ env.PR_ALAVETELI_BRANCH }}
+        path: core
+        submodules: true
+        fetch-depth: 1
+
+    - name: Start PostgreSQL
+      run: |
+        docker build \
+          --build-arg POSTGRES_VERSION=${{ matrix.postgres }} \
+          --file docker/Dockerfile-postgres --tag alaveteli-postgres .
+        docker run --detach --name postgres \
+          --env POSTGRES_PASSWORD=postgres --publish 5432:5432 \
+          alaveteli-postgres
+        for _ in $(seq 60); do
+          if docker exec postgres \
+               pg_isready -q -h 127.0.0.1 -U postgres -d alaveteli_test; then
+            exit 0
+          fi
+          sleep 2
+        done
+        docker logs postgres
+        exit 1
+      working-directory: core
+
+    - name: Create Alaveteli theme directory
+      run: |
+        mkdir alaveteli-themes
+
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        path: alaveteli-themes/asktheeu-theme
+
+    - name: Make apt archives writable for the cache
+      run: sudo chown $USER /var/cache/apt/archives
+
+    - name: Cache apt packages
+      uses: actions/cache@v6
+      with:
+        path: /var/cache/apt/archives/*.deb
+        key: apt-${{ matrix.os }}-${{ hashFiles('core/config/packages') }}
+
+    - name: Install packages
+      env:
+        DEBIAN_FRONTEND: noninteractive
+      run: |
+        sudo apt-get -y update
+        sudo apt-get -y install --no-install-recommends \
+          exim4-daemon-light \
+          $(cut -d ' ' -f 1 config/packages | grep -Ev '(^#|wkhtml|bundler|^ruby|^rake)')
+      working-directory: core
+
+    - name: Install Ruby ${{ matrix.ruby || env.ALAVETELI_RUBY }}
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: ${{ matrix.ruby || env.ALAVETELI_RUBY }}
+        bundler-cache: true
+        working-directory: core
+
+    - name: Configure application and storage
+      run: |
+        cp config/general.yml-example config/general-asktheeu-theme.yml
+        cp config/storage.yml-example config/storage.yml
+        mkdir log
+      working-directory: core
+
+    - name: Install theme
+      run: |
+        script/switch-theme.rb asktheeu-theme
+        bundle exec rake themes:install
+      working-directory: core
+
+    - name: Migrate database
+      run: |
+        bundle exec rails db:migrate
+      working-directory: core
+
+    - name: Run tests
+      run: |
+        bundle exec rspec --format Fivemat lib/themes/asktheeu-theme/spec
+      working-directory: core
